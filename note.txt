@@ -1,0 +1,8 @@
+如果要新建子模块的话，
+Group填写：com.levi.springboot   ->对应的是主模块
+Artifact填写：                   ->子模块的名称（自定义模块）
+
+1、levi-api：抒写的是接口
+2、levi-common：存放的是公共的类
+3、是web相关的内容（业务层）
+
