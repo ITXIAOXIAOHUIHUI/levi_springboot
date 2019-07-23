@@ -17,6 +17,7 @@
     <properties>
         <java.version>1.8</java.version>
         <version.shiro>1.2.3</version.shiro>
+        <version.log4j2>2.10.0</version.log4j2>
     </properties>
 <!-- 聚合-->
     <modules>
@@ -58,7 +59,17 @@
             <artifactId>shiro-ehcache</artifactId>
             <version>${version.shiro}</version>
         </dependency>
-
+        <!--log4j2日志-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jcl</artifactId>
+            <version>${version.log4j2}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+        </dependency>
     </dependencies>
 
     <build>
