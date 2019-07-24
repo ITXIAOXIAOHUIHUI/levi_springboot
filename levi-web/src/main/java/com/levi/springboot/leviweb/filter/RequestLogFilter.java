@@ -32,7 +32,7 @@ public class RequestLogFilter implements Filter {
      * @throws ServletException
      */
     @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain) throws IOException, ServletException {
         long s = System.currentTimeMillis();
         RequestLog log = new RequestLog();
 

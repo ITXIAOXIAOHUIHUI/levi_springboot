@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <property name="now" value="now()" dbms="mysql"/>
+
+    <!-- runOnChange ="false"是如果id+author+内容 md5加密之后不改变是不变得-->
+    <!--<changeSet id="init-schema" author="jhh" runOnChange="false">-->
+        <!--<preConditions onFail="MARK_RAN">-->
+            <!--<sqlCheck expectedResult="0">-->
+                <!-- select count(*) from user_name where user_name = 22;-->
+            <!--</sqlCheck>-->
+        <!--</preConditions>-->
+        <!--<comment>新增脚本</comment>-->
+        <!--<sql>-->
+            <!--INSERT INTO `user_name` ( `user_name`, `phone`, `address`) VALUES ( '22', '33', '22');-->
+        <!--</sql>-->
+        <!--<rollback>-->
+            <!-- DELETE from  user_name where user_name = 22;-->
+        <!--</rollback>-->
+    <!--</changeSet>-->
+</databaseChangeLog>
