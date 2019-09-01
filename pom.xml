@@ -21,9 +21,11 @@
     </properties>
 <!-- 聚合-->
     <modules>
-        <module>./levi-web</module>
-        <module>./levi-common</module>
-        <module>./levi-api</module>
+        <module>lev-framework-model</module>
+        <module>levi-framework-common</module>
+        <module>levi-framework-utils</module>
+        <module>levi-service-api</module>
+        <module>levi-service-manage-cms</module>
     </modules>
 
 
