@@ -6,12 +6,11 @@
         <groupId>com.levi.springboot</groupId>
         <artifactId>levi-springboot</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.levi.springboot</groupId>
-    <artifactId>lev-framework-model</artifactId>
+    <groupId>com.levi.springboot.model</groupId>
+    <artifactId>levi-framework-model</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>lev-framework-model</name>
+    <name>levi-framework-model</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

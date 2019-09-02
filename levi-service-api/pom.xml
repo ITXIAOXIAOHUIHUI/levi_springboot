@@ -6,9 +6,8 @@
         <groupId>com.levi.springboot</groupId>
         <artifactId>levi-springboot</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.levi.springboot</groupId>
+    <groupId>com.levi.springboot.api</groupId>
     <artifactId>levi-service-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>levi-service-api</name>
