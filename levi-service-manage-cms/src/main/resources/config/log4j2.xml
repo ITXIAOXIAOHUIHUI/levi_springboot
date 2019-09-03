@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Configuration>
+    <property name="LOG_HOME" value="d:/logs"/>
     <Appenders>
         <Console name="consolelog" target="SYSTEM_OUT">
             <PatternLayout pattern="%d - %m%n" />
         </Console>
 
-        <RollingRandomAccessFile name="fileInfoLog" fileName="logs/log_info.log" immediateFlush="true"
+        <RollingRandomAccessFile name="fileInfoLog" fileName="${LOG_HOME}/log_info.log" immediateFlush="true"
                                  filePattern="logs/log_info.log.%d{yyyy-MM-dd-HH}-%i.gz">
             <Filters>
                 <ThresholdFilter level="INFO"/>
@@ -21,7 +22,7 @@
             <DefaultRolloverStrategy max="200"/>
         </RollingRandomAccessFile>
 
-        <RollingRandomAccessFile name="error" fileName="logs/log_error.log" immediateFlush="true"
+        <RollingRandomAccessFile name="error" fileName="${LOG_HOME}/log_error.log" immediateFlush="true"
                                  filePattern="logs/log_error.log.%d{yyyy-MM-dd-HH}-%i.gz">
             <Filters>
                 <ThresholdFilter level="ERROR"/>
@@ -36,9 +37,9 @@
             </Policies>
             <DefaultRolloverStrategy max="200"/>
         </RollingRandomAccessFile>
-        <RollingRandomAccessFile name="LOG_COMMUNICATION" fileName="logs/communication/log_communication.log"
+        <RollingRandomAccessFile name="LOG_COMMUNICATION" fileName="${LOG_HOME}/communication/log_communication.log"
                                  immediateFlush="true"
-                                 filePattern="logs/communication/log_communication.log.%d{yyyy-MM-dd-HH}-%i.gz">
+                                 filePattern="${LOG_HOME}/communication/log_communication.log.%d{yyyy-MM-dd-HH}-%i.gz">
             <PatternLayout>
                 <Pattern>%d - %m%n</Pattern>
             </PatternLayout>

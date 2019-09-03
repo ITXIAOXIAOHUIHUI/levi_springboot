@@ -5,10 +5,11 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/levi-framework-common/pom.xml" />
-        <option value="$PROJECT_DIR$/lev-framework-model/pom.xml" />
         <option value="$PROJECT_DIR$/levi-framework-utils/pom.xml" />
         <option value="$PROJECT_DIR$/levi-service-api/pom.xml" />
         <option value="$PROJECT_DIR$/levi-service-manage-cms/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-framework-model/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-govern-center/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

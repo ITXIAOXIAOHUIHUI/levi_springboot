@@ -21,7 +21,4 @@
             <!-- DELETE from  user_name where user_name = 22;-->
         <!--</rollback>-->
     <!--</changeSet>-->
-    <changeSet >
-
-    </changeSet>
 </databaseChangeLog>

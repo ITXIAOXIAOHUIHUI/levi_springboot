@@ -6,14 +6,13 @@
         <groupId>com.levi.springboot</groupId>
         <artifactId>levi-springboot</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>com.levi.springboot.api</groupId>
-    <artifactId>levi-service-api</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>levi-service-api</name>
+    <groupId>com.levi.springboot.model</groupId>
+    <artifactId>levi-framework-model</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>levi-framework-model</name>
     <description>Demo project for Spring Boot</description>
-    <packaging>jar</packaging>
-
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -25,22 +24,12 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>com.levi.springboot.common</groupId>
             <artifactId>levi-framework-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>com.levi.springboot.model</groupId>
-            <artifactId>levi-framework-model</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
+        <!--添加swagger-->
+        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -51,6 +40,29 @@
             <artifactId>swagger-bootstrap-ui</artifactId>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>1.10.9.RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.1.9.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.23.4</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 

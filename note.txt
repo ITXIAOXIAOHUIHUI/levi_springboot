@@ -2,10 +2,30 @@
 Group填写：com.levi.springboot   ->对应的是主模块
 Artifact填写：                   ->子模块的名称（自定义模块）
 
-1、levi-api：抒写的是接口
-2、levi-common：存放的是公共的类
-3、是web相关的内容（业务层）
+一：模块说明
+    1、lev-framework-model： 抒写一些mybatis工具生成的类
+    2、levi-framework-common：存放的是公共的类
+    3、levi-framework-utils  存放一些工具类
+    4、levi-service-api     对外暴露的接口
+    5、levi-service-manage-cms  后台的服务
 
-5、脚本统一使用liquibase来维护，见changeLog.xml例子
-4、任务1、通过过滤器实现保存每一条的请求体内容
+二：liquibase的脚本升级
+
+
+三：swagger的文档注释
+
+
+
+四：日志的存储
+
+
+五：mongodb与mysql的使用
+
+
+六：前段页面与后台逻辑的抒写
+
+
+七：
+
+
 

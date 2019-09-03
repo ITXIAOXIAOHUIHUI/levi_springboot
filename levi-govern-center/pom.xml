@@ -7,27 +7,31 @@
         <artifactId>levi-springboot</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.levi.springboot.utils</groupId>
-    <artifactId>levi-framework-utils</artifactId>
+    <groupId>com.levi.springboot.govern</groupId>
+    <artifactId>levi-govern-center</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>levi-framework-utils</name>
+    <name>levi-govern-center</name>
     <description>Demo project for Spring Boot</description>
-    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
+
+        <!-- 导入Eureka服务的依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-eureka-server</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
     </dependencies>
 

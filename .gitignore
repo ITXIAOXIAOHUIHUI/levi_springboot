@@ -7,3 +7,17 @@
 *.iml
 out
 gen
+/logs/
+levi-framework-common/src/main/resources/static/
+levi-framework-common/src/main/resources/templates/
+levi-framework-model/src/main/resources/static/
+levi-framework-model/src/main/resources/templates/
+levi-framework-utils/src/main/java/com/levi/springboot/utils/
+levi-framework-utils/src/main/resources/static/
+levi-framework-utils/src/main/resources/templates/
+levi-govern-center/src/main/resources/static/
+levi-govern-center/src/main/resources/templates/
+levi-service-api/src/main/resources/static/
+levi-service-api/src/main/resources/templates/
+levi-service-manage-cms/src/main/resources/static/
+levi-service-manage-cms/src/main/resources/templates/
