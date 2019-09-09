@@ -21,4 +21,29 @@
             <!-- DELETE from  user_name where user_name = 22;-->
         <!--</rollback>-->
     <!--</changeSet>-->
+    <changeSet id="201909051748" author="jianghaihui" runOnChange="false">
+<!--        <preConditions onFail="MARK_RAN">-->
+<!--            <tableExists tableName="request_log"/>-->
+<!--        </preConditions>-->
+        <comment>添加接口的请求日志</comment>
+        <sql>
+            CREATE TABLE `request_log` (
+            `id` bigint(12) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+            `api_config_id` bigint(20) DEFAULT NULL COMMENT '接口配置id',
+            `interface_name` longtext CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '接口名称',
+            `interface_type` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '接口类型',
+            `process_result` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '处理结果',
+            `process_time` bigint(13) DEFAULT NULL COMMENT '处理时间',
+            `creation_date` bigint(13) DEFAULT NULL COMMENT '创建时间',
+            `request` longtext CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '请求request',
+            `response` longtext CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '返回response',
+            `error_msg` longtext CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '错误代码',
+            PRIMARY KEY (`id`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='接口调用日记表';
+        </sql>
+        <rollback>
+             DELETE from  request_log;
+        </rollback>
+    </changeSet>
+
 </databaseChangeLog>

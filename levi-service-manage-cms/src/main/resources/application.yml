@@ -2,7 +2,7 @@ server:
   port: 8888
 spring:
   liquibase:
-    check-change-log-location: true  #¼ì²é´æ´¢±ä»¯µÄÎÄ¼şÊÇ·ñ´æÔÚ
+    check-change-log-location: true   #æ£€æŸ¥å­˜å‚¨å˜åŒ–çš„æ–‡ä»¶æ˜¯å¦å­˜åœ¨
     drop-first: false
     enabled: true
     change-log: classpath:/liqubase/changeLog.xml
@@ -20,12 +20,12 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     poolPreparedStatements: true
-    # ÅäÖÃ¼à¿ØÍ³¼ÆÀ¹½ØµÄfilters£¬È¥µôºó¼à¿Ø½çÃæsqlÎŞ·¨Í³¼Æ£¬'wall'ÓÃÓÚ·À»ğÇ½
+    # é…ç½®ç›‘æ§ç»Ÿè®¡æ‹¦æˆªçš„filtersï¼Œå»æ‰åç›‘æ§ç•Œé¢sqlæ— æ³•ç»Ÿè®¡ï¼Œ'wall'ç”¨äºé˜²ç«å¢™
     filters: stat,wall,log4j
-    # Í¨¹ıconnectPropertiesÊôĞÔÀ´´ò¿ªmergeSql¹¦ÄÜ£»ÂıSQL¼ÇÂ¼
+    # é€šè¿‡connectPropertieså±æ€§æ¥æ‰“å¼€mergeSqlåŠŸèƒ½ï¼›æ…¢SQLè®°å½•
     connectionProperties:
       druid.stat.mergeSql=true;druid.stat.slowSqlMillis: 5000
-    # ºÏ²¢¶à¸öDruidDataSourceµÄ¼à¿ØÊı¾İ
+    # åˆå¹¶å¤šä¸ªDruidDataSourceçš„ç›‘æ§æ•°æ®
     #spring.datasource.useGlobalDataSourceStat=true
   application:
     name: levi-service-manage-cms
@@ -38,11 +38,12 @@ logging:
 
 eureka:
   client:
-    registerWithEureka: true #·şÎñ×¢²á¿ª¹Ø
-    fetchRegistry: true #·şÎñ·¢ÏÖ¿ª¹Ø
-    serviceUrl: #Eureka¿Í»§¶ËÓëEureka·şÎñ¶Ë½øĞĞ½»»¥µÄµØÖ·£¬¶à¸öÖĞ¼äÓÃ¶ººÅ·Ö¸ô
+    registerWithEureka: true  #æœåŠ¡æ³¨å†Œå¼€å…³
+    fetchRegistry: true #æœåŠ¡å‘ç°å¼€å…³
+    serviceUrl: #æœåŠ¡å‘ç°å¼€å…³
+      #defaultZone: ${EUREKA_SERVER:http://eureka01:50101/eureka/,http://eureka02:50102/eureka/}
       defaultZone: ${EUREKA_SERVER:http://localhost:50101/eureka/,http://localhost:50102/eureka/}
-#  instance:
-#    prefer-ip-address:  true  #½«×Ô¼ºµÄipµØÖ·×¢²áµ½Eureka·şÎñÖĞ
-#    ip-address: ${IP_ADDRESS:127.0.0.1}
-#    instance-id: ${spring.application.name}:${server.port} #Ö¸¶¨ÊµÀıid
+  instance:
+    prefer-ip-address:  true  #å°†è‡ªå·±çš„ipåœ°å€æ³¨å†Œåˆ°EurekaæœåŠ¡ä¸­
+    ip-address: ${IP_ADDRESS:127.0.0.1}
+    instance-id: ${spring.application.name}:${server.port} #æŒ‡å®šå®ä¾‹id

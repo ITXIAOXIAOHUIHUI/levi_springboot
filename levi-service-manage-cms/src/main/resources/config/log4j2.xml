@@ -1,60 +1,98 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<Configuration>
-    <property name="LOG_HOME" value="d:/logs"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
     <Appenders>
-        <Console name="consolelog" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d - %m%n" />
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%X{requestURIWithQueryString}] %-5p %t %c{7} - %m%n</Pattern>
+            </PatternLayout>
         </Console>
 
-        <RollingRandomAccessFile name="fileInfoLog" fileName="${LOG_HOME}/log_info.log" immediateFlush="true"
-                                 filePattern="logs/log_info.log.%d{yyyy-MM-dd-HH}-%i.gz">
-            <Filters>
-                <ThresholdFilter level="INFO"/>
-                <ThresholdFilter level="ERROR" onMatch="DENY" onMismatch="ACCEPT"/>
-            </Filters>
+        <RollingFile name="PROJECT" fileName="logs/app.log"
+                     filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout>
-                <pattern>%d - %m%n</pattern>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%X{requestURIWithQueryString}] %-5p %t %c{7} - %m%n</Pattern>
             </PatternLayout>
             <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <SizeBasedTriggeringPolicy size="512 MB" />
+                <SizeBasedTriggeringPolicy size="100 MB"/>
             </Policies>
-            <DefaultRolloverStrategy max="200"/>
-        </RollingRandomAccessFile>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
 
-        <RollingRandomAccessFile name="error" fileName="${LOG_HOME}/log_error.log" immediateFlush="true"
-                                 filePattern="logs/log_error.log.%d{yyyy-MM-dd-HH}-%i.gz">
-            <Filters>
-                <ThresholdFilter level="ERROR"/>
-            </Filters>
+        <RollingFile name="ACCESS" fileName="logs/app_access.log"
+                     filePattern="${app_home}/logs/access/access_%d{yyyyMMddHH}.%i.log.zip">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%X{requestURIWithQueryString}] %-5p %t %c{7} - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="100 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
 
+        <RollingFile name="SERVICE" fileName="logs/app_service.log"
+                     filePattern="${app_home}/logs/service/service_%d{yyyyMMddHH}.%i.log.zip">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout>
-                <pattern>%d - %m%n</pattern>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%X{requestURIWithQueryString}] %-5p %t %c{7} - %m%n</Pattern>
             </PatternLayout>
             <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <SizeBasedTriggeringPolicy size="512 MB" />
+                <SizeBasedTriggeringPolicy size="100 MB"/>
             </Policies>
-            <DefaultRolloverStrategy max="200"/>
-        </RollingRandomAccessFile>
-        <RollingRandomAccessFile name="LOG_COMMUNICATION" fileName="${LOG_HOME}/communication/log_communication.log"
-                                 immediateFlush="true"
-                                 filePattern="${LOG_HOME}/communication/log_communication.log.%d{yyyy-MM-dd-HH}-%i.gz">
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+
+        <RollingFile name="ASPECT" fileName="logs/app_aspect.log"
+                     filePattern="${app_home}/logs/aspect/aspect_%d{yyyyMMddHH}.%i.log.zip">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout>
-                <Pattern>%d - %m%n</Pattern>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%X{requestURIWithQueryString}] %-5p %t %c{7} - %m%n</Pattern>
             </PatternLayout>
             <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <SizeBasedTriggeringPolicy size="512 MB"/>
+                <SizeBasedTriggeringPolicy size="100 MB"/>
             </Policies>
-            <DefaultRolloverStrategy max="200"/>
-        </RollingRandomAccessFile>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+
+        <RollingFile name="PROJECT_ERROR" fileName="logs/app_error.log"
+                     filePattern="{app.home}/logs/error/error-%d{yyyyMMddHH}.log">
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%X{requestURIWithQueryString}] %-5p %t %c{7} - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="100 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+
+        <RollingFile name="ASPECT_ERROR" fileName="logs/app_error.log"
+                     filePattern="{app.home}/logs/error/aspect/error_%d{yyyyMMddHH}.log">
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%X{requestURIWithQueryString}] %-5p %t %c{7} - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="100 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
     </Appenders>
+
     <Loggers>
         <root level="info">
-            <appender-ref ref="consolelog"/>
-            <appender-ref ref="error" />
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="PROJECT"/>
+            <appender-ref ref="PROJECT_ERROR"/>
         </root>
     </Loggers>
-
 </Configuration>
