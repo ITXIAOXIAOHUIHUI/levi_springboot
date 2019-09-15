@@ -1,13 +1,13 @@
-package com.levi.springboot.model;
+package com.levi.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LeviFrameworkModelApplication {
+public class LeviRocketProducerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LeviFrameworkModelApplication.class, args);
+        SpringApplication.run(LeviRocketProducerApplication.class, args);
     }
 
 }

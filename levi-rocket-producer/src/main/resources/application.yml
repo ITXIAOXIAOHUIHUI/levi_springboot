@@ -1,0 +1,6 @@
+rocketmq:
+  # \u751F\u4EA7\u8005\u914D\u7F6E
+  producer:
+    groupName: ${spring.application.name}
+    namesrvAddr: 192.168.40.133:9876
+    default: false

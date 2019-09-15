@@ -15,17 +15,38 @@ Artifact填写：                   ->子模块的名称（自定义模块）
 三：swagger的文档注释
 
 
-
-四：日志的存储
-
-
-五：mongodb与mysql的使用
+四：eureka与eureka的feign
 
 
-六：前段页面与后台逻辑的抒写
+五：日志的存储
 
 
-七：
+六：mongodb与mysql的使用
+
+
+七：前段页面与后台逻辑的抒写
+
+
+八：rocket MQ的使用
+
+
+
+九：redis的使用
+
+十：shiro的使用
+
+十一：ElasticSearch
+
+十二：zuul
+
+十三：HLS
+
+十四：dockers
+
+十五：Jenkins
+
+十六：devops
+
 
 
 

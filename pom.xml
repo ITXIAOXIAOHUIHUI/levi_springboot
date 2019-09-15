@@ -21,6 +21,7 @@
         <module>./levi-service-api</module>
         <module>./levi-service-manage-cms</module>
         <module>./levi-govern-center</module>
+        <module>./levi-freemarker</module>
     </modules>
 
     <properties>
@@ -36,7 +37,7 @@
         <commons-fileupload.version>1.3.3</commons-fileupload.version>
         <commons-codec.version>1.10</commons-codec.version>
         <commons-lang3.version>3.6</commons-lang3.version>
-        <okhttp.version>3.9.1</okhttp.version>
+        <okhttp.version>3.14.1</okhttp.version>
         <feign-okhttp.version>8.18.0</feign-okhttp.version>
         <lombok.version>1.16.16</lombok.version>
         <springfox-swagger.version>2.7.0</springfox-swagger.version>
@@ -45,14 +46,21 @@
         <mysql-connector-java.version>5.1.40</mysql-connector-java.version>
         <elasticsearch.version>6.2.1</elasticsearch.version>
         <guava.version>24.0-jre</guava.version>
+        <rocketmq-client.rocketmq-client>4.3.0</rocketmq-client.rocketmq-client>
+        <mybatis.version>1.3.2</mybatis.version>
     </properties>
     <!--test-->
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-client</artifactId>
+                <version>${rocketmq-client.rocketmq-client}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Finchley.SR1</version>
+                <version>Finchley.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -73,10 +81,16 @@
             </dependency>
 
 
+            <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
             <dependency>
                 <groupId>com.squareup.okhttp3</groupId>
                 <artifactId>okhttp</artifactId>
                 <version>${okhttp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.netflix.feign</groupId>
