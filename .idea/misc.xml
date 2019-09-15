@@ -10,6 +10,10 @@
         <option value="$PROJECT_DIR$/levi-service-manage-cms/pom.xml" />
         <option value="$PROJECT_DIR$/levi-framework-model/pom.xml" />
         <option value="$PROJECT_DIR$/levi-govern-center/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms-client/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-freemarker/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-rocket-producer/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-generotor/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
