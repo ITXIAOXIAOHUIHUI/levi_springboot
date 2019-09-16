@@ -4,10 +4,10 @@ server:
     uri-encoding: UTF-8
     max-threads: 1000
     min-spare-threads: 30
-  port: 7002
+  port: 7006
   connection-timeout: 5000ms
   servlet:
-    context-path: /rocket-mq
+    context-path: /rocket-consumer
 
 spring:
   application:

@@ -3,14 +3,11 @@ package com.levi.springboot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- *
- */
 @SpringBootApplication
-public class LeviRocketProducerApplication {
+public class LeviConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LeviRocketProducerApplication.class, args);
+        SpringApplication.run(LeviConsumerApplication.class, args);
     }
 
 }
