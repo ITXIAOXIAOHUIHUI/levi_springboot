@@ -25,7 +25,7 @@ public class RocketMqServiceImpl implements RocketMqService {
         //defaultMQProducer.setProducerGroup(paramConfigService.rocketGroup);
         SendResult sendResult = null;
         try {
-            Message sendMsg = new Message(paramConfigService.rocketTopic,
+            Message sendMsg = new Message("test",
                     paramConfigService.rocketTag,
                     "open_account_key", msgInfo.getBytes());
             sendResult = defaultMQProducer.send(sendMsg);

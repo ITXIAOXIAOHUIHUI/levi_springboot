@@ -2,9 +2,7 @@ package com.levi.springboot.utils.exception;
 
 import com.levi.springboot.common.response.CommonCode;
 import com.levi.springboot.common.response.ResponseResult;
-import org.springframework.boot.context.config.ResourceNotFoundException;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,8 +25,6 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ResponseResult> exceptionHandler(Exception e) {
         if (e instanceof IllegalArgumentException) {
             return ResponseEntity.status(400).body(responseResult);
-        } else if (e instanceof ResourceNotFoundException) {
-            return ResponseEntity.status(404).body(unauthorise);
         }
         return null;
     }

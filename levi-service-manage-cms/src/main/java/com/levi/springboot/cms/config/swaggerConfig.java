@@ -1,4 +1,4 @@
-package com.levi.springboot.cms.config.config;
+package com.levi.springboot.cms.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

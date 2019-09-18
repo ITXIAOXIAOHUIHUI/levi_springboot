@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/levi-rocket-producer/pom.xml" />
         <option value="$PROJECT_DIR$/levi-generotor/pom.xml" />
         <option value="$PROJECT_DIR$/levi-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-shiro/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

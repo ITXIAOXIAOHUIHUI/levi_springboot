@@ -8,9 +8,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.levi.springboot</groupId>
-    <artifactId>levi-consumer</artifactId>
+    <artifactId>levi-rocket-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>levi-consumer</name>
+    <name>levi-rocket-consumer</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
