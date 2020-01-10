@@ -37,6 +37,10 @@ spring:
     name: levi-service-manage-cms
   main:
     allow-bean-definition-overriding: true
+  boot:
+    admin:
+      client:
+        url: http://${host.ip:127.0.0.1}:8761/admin/
 
 logging:
   config: classpath:config/log4j2.xml
@@ -53,6 +57,21 @@ eureka:
     prefer-ip-address:  true  #将自己的ip地址注册到Eureka服务中
     ip-address: ${IP_ADDRESS:127.0.0.1}
     instance-id: ${spring.application.name}:${server.port} #指定实例id
+    metadata-map:
+      metrics.path: /actuator/prometheus
+      health.path: /actuato/health
+      management.context-path: /actuator
 
 mybatis:
   mapper-locations: classpath:com/levi/springboot/mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+  info:
+    git:
+      mode: full

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.levi.springboot.mapper.RequestLogMapper">
+  <resultMap id="BaseResultMap" type="com.levi.springboot.model.RequestLog">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="api_config_id" jdbcType="BIGINT" property="apiConfigId" />
+    <result column="interface_name" jdbcType="VARCHAR" property="interfaceName" />
+    <result column="interface_type" jdbcType="VARCHAR" property="interfaceType" />
+    <result column="process_result" jdbcType="VARCHAR" property="processResult" />
+    <result column="process_time" jdbcType="BIGINT" property="processTime" />
+    <result column="creation_date" jdbcType="BIGINT" property="creationDate" />
+    <result column="request" jdbcType="VARCHAR" property="request" />
+    <result column="response" jdbcType="VARCHAR" property="response" />
+    <result column="error_msg" jdbcType="VARCHAR" property="errorMsg" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, api_config_id, interface_name, interface_type, process_result, process_time, 
+    creation_date, request, response, error_msg
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from request_log
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from request_log
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.levi.springboot.model.RequestLog">
+    insert into request_log (id, api_config_id, interface_name, 
+      interface_type, process_result, process_time, 
+      creation_date, request, response, 
+      error_msg)
+    values (#{id,jdbcType=BIGINT}, #{apiConfigId,jdbcType=BIGINT}, #{interfaceName,jdbcType=VARCHAR}, 
+      #{interfaceType,jdbcType=VARCHAR}, #{processResult,jdbcType=VARCHAR}, #{processTime,jdbcType=BIGINT}, 
+      #{creationDate,jdbcType=BIGINT}, #{request,jdbcType=VARCHAR}, #{response,jdbcType=VARCHAR}, 
+      #{errorMsg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.levi.springboot.model.RequestLog">
+    insert into request_log
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="apiConfigId != null">
+        api_config_id,
+      </if>
+      <if test="interfaceName != null">
+        interface_name,
+      </if>
+      <if test="interfaceType != null">
+        interface_type,
+      </if>
+      <if test="processResult != null">
+        process_result,
+      </if>
+      <if test="processTime != null">
+        process_time,
+      </if>
+      <if test="creationDate != null">
+        creation_date,
+      </if>
+      <if test="request != null">
+        request,
+      </if>
+      <if test="response != null">
+        response,
+      </if>
+      <if test="errorMsg != null">
+        error_msg,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="apiConfigId != null">
+        #{apiConfigId,jdbcType=BIGINT},
+      </if>
+      <if test="interfaceName != null">
+        #{interfaceName,jdbcType=VARCHAR},
+      </if>
+      <if test="interfaceType != null">
+        #{interfaceType,jdbcType=VARCHAR},
+      </if>
+      <if test="processResult != null">
+        #{processResult,jdbcType=VARCHAR},
+      </if>
+      <if test="processTime != null">
+        #{processTime,jdbcType=BIGINT},
+      </if>
+      <if test="creationDate != null">
+        #{creationDate,jdbcType=BIGINT},
+      </if>
+      <if test="request != null">
+        #{request,jdbcType=VARCHAR},
+      </if>
+      <if test="response != null">
+        #{response,jdbcType=VARCHAR},
+      </if>
+      <if test="errorMsg != null">
+        #{errorMsg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.levi.springboot.model.RequestLog">
+    update request_log
+    <set>
+      <if test="apiConfigId != null">
+        api_config_id = #{apiConfigId,jdbcType=BIGINT},
+      </if>
+      <if test="interfaceName != null">
+        interface_name = #{interfaceName,jdbcType=VARCHAR},
+      </if>
+      <if test="interfaceType != null">
+        interface_type = #{interfaceType,jdbcType=VARCHAR},
+      </if>
+      <if test="processResult != null">
+        process_result = #{processResult,jdbcType=VARCHAR},
+      </if>
+      <if test="processTime != null">
+        process_time = #{processTime,jdbcType=BIGINT},
+      </if>
+      <if test="creationDate != null">
+        creation_date = #{creationDate,jdbcType=BIGINT},
+      </if>
+      <if test="request != null">
+        request = #{request,jdbcType=VARCHAR},
+      </if>
+      <if test="response != null">
+        response = #{response,jdbcType=VARCHAR},
+      </if>
+      <if test="errorMsg != null">
+        error_msg = #{errorMsg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.levi.springboot.model.RequestLog">
+    update request_log
+    set api_config_id = #{apiConfigId,jdbcType=BIGINT},
+      interface_name = #{interfaceName,jdbcType=VARCHAR},
+      interface_type = #{interfaceType,jdbcType=VARCHAR},
+      process_result = #{processResult,jdbcType=VARCHAR},
+      process_time = #{processTime,jdbcType=BIGINT},
+      creation_date = #{creationDate,jdbcType=BIGINT},
+      request = #{request,jdbcType=VARCHAR},
+      response = #{response,jdbcType=VARCHAR},
+      error_msg = #{errorMsg,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -22,6 +22,8 @@
         <module>./levi-service-manage-cms</module>
         <module>./levi-govern-center</module>
         <module>./levi-freemarker</module>
+        <module>./levi-service-search</module>
+        <module>./evi-springmachine</module>
     </modules>
 
     <properties>
@@ -48,7 +50,7 @@
         <guava.version>24.0-jre</guava.version>
         <rocketmq-client.rocketmq-client>4.2.0</rocketmq-client.rocketmq-client>
         <mybatis.version>1.3.2</mybatis.version>
-        <rocketmq.version>4.3.0</rocketmq.version>
+        <rocketmq.version>4.4.0</rocketmq.version>
         <spring.version>5.1.5.RELEASE</spring.version>
         <spring.mybatis.version>1.3.2</spring.mybatis.version>
     </properties>

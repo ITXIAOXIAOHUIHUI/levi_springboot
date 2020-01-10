@@ -1,35 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53a8c377-d311-4f3c-a3aa-db4ecd8a4d84" name="Default" comment="spring boot 2.0 新增rocketMQ">
-      <change afterPath="$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/mapper/SysMenuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/mapper/SysUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/model/entity/SysMenuEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/model/entity/SysUserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-framework-model/src/main/resources/com/levi/springboot/mapper/SysMenuMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-framework-model/src/main/resources/com/levi/springboot/mapper/SysUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/ExceptionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/DruidConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/ShiroConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/ShiroException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/UserRealm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/ShiroController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/utils/ShiroUtils.java" afterDir="false" />
+    <list default="true" id="53a8c377-d311-4f3c-a3aa-db4ecd8a4d84" name="Default" comment="spring boot2.0 新增shiro相关内容">
+      <change afterPath="$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/mapper/RequestLogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-framework-model/src/main/resources/com/levi/springboot/mapper/RequestLogMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/CheckUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/code/IErrorCodeConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/exception/ValidatorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-generotor/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/iteratorPattern/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/jdk18/CollectorsAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/jdk18/Dish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/ExtLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/OrderNumGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/ZookeeperAbstractLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/ZookeeperDistrbuteLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/strategyPattern/AbstractStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/strategyPattern/ConcreteStrategyA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/strategyPattern/Context.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms-client/src/main/java/com/levi/springboot/client/config/RabbitmqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/activity/BindFlowerActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/BindFlowerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/filter/RequestLogFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/service/BindFlowerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/service/impl/BindFlowerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/workflower/BindingCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/workflower/Country.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/workflower/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/workflower/Region.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-search/src/main/java/com/levi/springboot/config/ElasticsearchConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-search/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-service-search/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-springmachine/src/main/java/com/levi/springmachine/config/StateMachingConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-springmachine/src/main/java/com/levi/springmachine/enums/Events.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-springmachine/src/main/java/com/levi/springmachine/enums/States.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/levi-consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-framework-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/levi-framework-model/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/levi-framework-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/levi-framework-utils/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/controller/RocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/controller/RocketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/service/impl/RocketMqServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/service/impl/RocketMqServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-service-manage-cms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/levi-service-manage-cms/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/LeviServiceManageCmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/LeviServiceManageCmsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/config/swaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/swaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/controller/ExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/ExceptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/levi-generator/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-generator/src/main/java/com/levi/springboot/leviweb/dao/RequestLogMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-generator/src/main/java/com/levi/springboot/leviweb/entity/RequestLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/model/RequestLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-generator/src/main/java/com/levi/springboot/leviweb/entity/RequestLogWithBLOBs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-generotor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/levi-generotor/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-generotor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/levi-generotor/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-service-manage-cms-client/src/main/java/com/levi/springboot/LeviServiceManageCmsClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-service-manage-cms-client/src/main/java/com/levi/springboot/LeviServiceManageCmsClientApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/ShiroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/ShiroController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/levi-service-manage-cms/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-service-manage-cms/src/main/resources/liqubase/changeLog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/levi-service-manage-cms/src/main/resources/liqubase/changeLog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-service-manage-cms/src/test/java/com/levi/springboot/cms/LeviServiceManageCmsApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-shiro/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-shiro/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-shiro/src/main/java/com/levi/springboot/LeviShiroApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-shiro/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-shiro/src/test/java/com/levi/springboot/LeviShiroApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <list id="e5e1caee-8bb5-4c1f-9e33-8462fd17b194" name="Revert: 新增过滤器用于请求记录" comment="" />
@@ -52,6 +75,9 @@
     <ignored path="$PROJECT_DIR$/levi-generotor/target/" />
     <ignored path="$PROJECT_DIR$/levi-consumer/target/" />
     <ignored path="$PROJECT_DIR$/levi-shiro/target/" />
+    <ignored path="$PROJECT_DIR$/levi-pattern/target/" />
+    <ignored path="$PROJECT_DIR$/levi-service-search/target/" />
+    <ignored path="$PROJECT_DIR$/levi-springmachine/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,11 +104,56 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/levi-framework-model/pom.xml">
+        <entry file="file://$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/CheckUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/exception/ValidatorException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/note.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="44" />
+            <state relative-caret-position="209">
+              <caret line="132" column="54" selection-start-line="131" selection-start-column="16" selection-end-line="132" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/levi-framework-utils/pom.xml">
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/code/IErrorCodeConstant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -92,48 +163,51 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ro</find>
-      <find>validation-query</find>
-      <find>max-evictable-idle-time-millis</find>
-      <find>max-pool-prepared-statement-per-connection-size</find>
-      <find>initial-size</find>
-      <find>poolPreparedStatements</find>
-      <find>shiro-spring</find>
-      <find>shiro-core</find>
-      <find>connectionproperties</find>
-      <find>spring.version</find>
-      <find>1.5</find>
-      <find>spring-boot</find>
-      <find>spring-boot-starter-logging</find>
-      <find>spring-boot-starter-web</find>
-      <find>sys_menu</find>
-      <find>driverClassName</find>
-      <find>connectionProperties</find>
-      <find>druid</find>
-      <find>org.mybatis</find>
-      <find>filters</find>
-      <find>com.boot.shiro.mapper.SysMenuMapper</find>
-      <find>m</find>
-      <find>com.boot.shiro.entity.SysUserEntity</find>
-      <find>com.boot.shiro.entity.SysMenuEntity</find>
-      <find>model</find>
-      <find>mybatis-plus-support</find>
-      <find>sessionManager</find>
-      <find>mybatis</find>
-      <find>spring.mybatis.version</find>
       <find>ybatis-spring</find>
+      <find>mybatis-plus-boot-starter</find>
+      <find>mysql-connector-java</find>
+      <find>mysql-connector</find>
+      <find>exc</find>
+      <find>generator.location</find>
+      <find>request_lo</find>
+      <find>Cacheable</find>
+      <find>algorithm</find>
+      <find>autoCreateTopicEnable</find>
+      <find>https</find>
+      <find>rocket</find>
+      <find>rocketmq.version</find>
+      <find>4.4.0</find>
+      <find>7002</find>
+      <find>192.168.</find>
+      <find>rocketTopic</find>
+      <find>201909051748</find>
+      <find>服务发</find>
+      <find>serviceUrl</find>
+      <find>findList</find>
+      <find>Dish.Type.FISH</find>
+      <find>testGroupByFunctionAndAnCollectors</find>
+      <find>testGroupByFunctionAndAndCollectors</find>
+      <find>testGroupByFunctionAndCollectors</find>
+      <find>异常</find>
+      <find>pork</find>
+      <find>spring-cloud-starter-eureka</find>
+      <find>groupingBy</find>
+      <find>conf</find>
     </findStrings>
     <replaceStrings>
-      <replace />
       <replace>com.levi.springboot.mapper.SysMenuMapper</replace>
       <replace>com.levi.springboot.model.entity.SysMenuEntity</replace>
       <replace>com.levi.springboot.model.entity.SysUserEntity</replace>
+      <replace>&quot;3&quot;</replace>
+      <replace />
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -142,58 +216,66 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/levi-generotor/src/main/java/com/levi/springboot/main/MyBatisGeneratorApp.java" />
-        <option value="$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/exception/ErrorResponse.java" />
-        <option value="$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/exception/ResourceNotFoundException.java" />
-        <option value="$PROJECT_DIR$/levi-framework-common/src/main/java/com/levi/springboot/common/response/CommonCode.java" />
-        <option value="$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/exception/GlobalExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/levi-framework-common/src/main/java/com/levi/springboot/common/response/Response.java" />
-        <option value="$PROJECT_DIR$/levi-framework-common/pom.xml" />
-        <option value="$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/ResourceNotFoundExceptionExt.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/service/RocketMqService.java" />
-        <option value="$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/config/ConsumerConfig.java" />
-        <option value="$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/service/impl/ParamConfigService.java" />
-        <option value="$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/config/RocketMsgListener.java" />
-        <option value="$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/config/ProducerConfig.java" />
-        <option value="$PROJECT_DIR$/levi-consumer/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/levi-consumer/src/main/resources/application-dev.yml" />
-        <option value="$PROJECT_DIR$/levi-consumer/src/main/java/com/levi/springboot/consumer/listener/RocketMsgListener.java" />
-        <option value="$PROJECT_DIR$/levi-consumer/src/main/java/com/levi/springboot/consumer/message/ReceiverMessage.java" />
-        <option value="$PROJECT_DIR$/levi-consumer/src/main/java/com/levi/springboot/consumer/config/ConsumerConfig.java" />
-        <option value="$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/LeviRocketProducerApplication.java" />
-        <option value="$PROJECT_DIR$/levi-rocket-producer/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/levi-rocket-producer/pom.xml" />
-        <option value="$PROJECT_DIR$/levi-rocket-producer/src/main/resources/application-dev.yml" />
-        <option value="$PROJECT_DIR$/levi-consumer/pom.xml" />
-        <option value="$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/ExceptionUtil.java" />
-        <option value="$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/controller/RocketController.java" />
-        <option value="$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/service/impl/RocketMqServiceImpl.java" />
-        <option value="$PROJECT_DIR$/levi-shiro/pom.xml" />
-        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/ExceptionController.java" />
-        <option value="$PROJECT_DIR$/levi-framework-utils/pom.xml" />
-        <option value="$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/GlobalExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/controller/ExceptionController.java" />
-        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/resources/liqubase/changeLog.xml" />
-        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/swaggerConfig.java" />
-        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/DruidConfig.java" />
-        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/SecurityConfig.java" />
-        <option value="$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/model/entity/SysMenuEntity.java" />
-        <option value="$PROJECT_DIR$/levi-framework-model/src/main/resources/com/levi/springboot/mapper/SysMenuMapper.xml" />
-        <option value="$PROJECT_DIR$/levi-framework-model/src/main/resources/com/levi/springboot/mapper/SysUserMapper.xml" />
-        <option value="$PROJECT_DIR$/levi-framework-model/pom.xml" />
-        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/utils/ShiroUtils.java" />
-        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/UserRealm.java" />
         <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/ShiroException.java" />
-        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/ShiroController.java" />
         <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/ShiroConfig.java" />
         <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/LeviServiceManageCmsApplication.java" />
-        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/mapper/SysMenuMapper.java" />
         <option value="$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/mapper/SysUserMapper.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/levi-service-manage-cms/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/model/RequestLogMapper.java" />
+        <option value="$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/mapper/RequestLogMapper.java" />
+        <option value="$PROJECT_DIR$/levi-generotor/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/levi-generotor/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-generotor/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/levi-generator/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/resources/liqubase/changeLog.xml" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/filter/RequestLogFilter.java" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/workflower/Country.java" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/workflower/Region.java" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/workflower/Home.java" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/workflower/BindingCallback.java" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/BindFlowerController.java" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/activity/BindFlowerActivity.java" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/service/BindFlowerService.java" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/service/impl/BindFlowerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/levi-service-search/src/main/java/com/levi/springboot/config/ElasticsearchConfig.java" />
+        <option value="$PROJECT_DIR$/levi-service-search/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/strategyPattern/AbstractStrategy.java" />
+        <option value="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/strategyPattern/ConcreteStrategyA.java" />
+        <option value="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/strategyPattern/Context.java" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms-client/src/main/java/com/levi/springboot/LeviServiceManageCmsClientApplication.java" />
+        <option value="$PROJECT_DIR$/levi-rocket-producer/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/iteratorPattern/Test.java" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/Student.java" />
+        <option value="$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/ShiroController.java" />
+        <option value="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/jdk18/Dish.java" />
+        <option value="$PROJECT_DIR$/levi-springmachine/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-springmachine/src/main/java/com/levi/springmachine/enums/States.java" />
+        <option value="$PROJECT_DIR$/levi-springmachine/src/main/java/com/levi/springmachine/enums/Events.java" />
+        <option value="$PROJECT_DIR$/levi-springmachine/src/main/java/com/levi/springmachine/config/StateMachingConfig.java" />
+        <option value="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/jdk18/ThreadA.java" />
+        <option value="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/jdk18/CollectorsAPI.java" />
+        <option value="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/OrderNumGenerator.java" />
+        <option value="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/OrderService.java" />
+        <option value="$PROJECT_DIR$/levi-pattern/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/ExtLock.java" />
+        <option value="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/ZookeeperAbstractLock.java" />
+        <option value="$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/ZookeeperDistrbuteLock.java" />
+        <option value="$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/exception/ValidatorException.java" />
+        <option value="$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/code/IErrorCodeConstant.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-framework-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/CheckUtils.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:/java/apache-maven-3.5.3" />
+        <option name="userSettingsFile" value="D:\quick_tron\maven-info\levi_springboot\settings.xml" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -208,6 +290,15 @@
           <item name="levi-framework-utils" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="levi-generotor" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="levi-generotor" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
       </expand>
       <select />
     </treeState>
@@ -216,10 +307,10 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="y" value="2" />
-    <option name="width" value="1378" />
-    <option name="height" value="733" />
+    <option name="x" value="217" />
+    <option name="y" value="325" />
+    <option name="width" value="1374" />
+    <option name="height" value="753" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -228,8 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="CatdeaLogs" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,16 +329,54 @@
             <path>
               <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
               <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="levi-framework-model" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-framework-utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-framework-utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-framework-utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-framework-utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-framework-utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-framework-utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="CatdeaLogs" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -264,20 +391,24 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/levi-framework-model/src/main/resources/com/levi/springboot/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/levi-service-search/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-service-api\src\main\java\com\levi\springboot" />
-      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-framework-model\src\main\java\com\levi\springboot\model" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.levi.springboot.mapper" />
       <recent name="com.levi.springboot.cms" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-service-search\src\main\resources" />
+      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-service-search\src\main\java\com\levi\springboot" />
+      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-framework-model\src\main\resources\com\levi\springboot\mapper" />
+      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-framework-model\src\main\java\com\levi\springboot\model" />
+      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-framework-model\src\main\java\com\levi\springboot\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.levi.springboot.cms.controller" />
@@ -286,12 +417,9 @@
       <recent name="com.levi.springboot.consumer.listener" />
       <recent name="com.levi.springboot.consumer.config" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-framework-model\src\main\resources\com\levi\springboot\mapper" />
-      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-framework-model\src\main\java\com\levi\springboot" />
-      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-framework-model\src\main\java\com\levi\springboot\model\entity" />
-      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-consumer\src\main\resources" />
-      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-service-manage-cms\src\main\resources\config" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-service-api\src\main\java\com\levi\springboot" />
+      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-framework-model\src\main\java\com\levi\springboot\model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -310,9 +438,51 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.12905718" />
+    <option name="contentProportion" value="0.24729522" />
   </component>
-  <component name="RunManager" selected="Spring Boot.LeviServiceManageCmsApplication">
+  <component name="RunManager" selected="Application.OrderService">
+    <configuration name="CollectorsAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.levi.design.pattern.jdk18.CollectorsAPI" />
+      <module name="levi-pattern" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.levi.design.pattern.jdk18.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.levi.design.pattern.lock.OrderService" />
+      <module name="levi-pattern" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.levi.design.pattern.lock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShiroController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.levi.springboot.cms.controller.ShiroController" />
+      <module name="levi-service-manage-cms" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.levi.springboot.cms.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShiroUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.levi.springboot.cms.utils.ShiroUtils" />
       <module name="levi-service-manage-cms" />
@@ -320,6 +490,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.levi.springboot.cms.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.levi.design.pattern.iteratorPattern.Test" />
+      <module name="levi-pattern" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.levi.design.pattern.iteratorPattern.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -382,15 +566,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LeviGovernCenterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="levi-govern-center" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.levi.springboot.levigoverncenter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.levi.springboot.levigoverncenter.LeviGovernCenterApplication" />
+    <configuration name="LeviPatternApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="levi-pattern" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.levi.design.pattern.LeviPatternApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -424,9 +602,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LeviServiceSearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="levi-service-search" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.levi.springboot.LeviServiceSearchApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LeviShiroApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="levi-shiro" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.levi.springboot.LeviShiroApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LeviSpringmachineApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="levi-springmachine" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.levi.springmachine.LeviSpringmachineApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -472,6 +664,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.ShiroUtils" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.ShiroController" />
+      <item itemvalue="Application.CollectorsAPI" />
+      <item itemvalue="Application.OrderService" />
       <item itemvalue="Spring Boot.eureka01" />
       <item itemvalue="Spring Boot.eureka02" />
       <item itemvalue="Spring Boot.LeviServiceApiApplication" />
@@ -485,12 +681,17 @@
       <item itemvalue="Spring Boot.LeviGenerotorApplication" />
       <item itemvalue="Spring Boot.LeviConsumerApplication" />
       <item itemvalue="Spring Boot.LeviShiroApplication" />
-      <item itemvalue="Spring Boot.LeviGovernCenterApplication" />
+      <item itemvalue="Spring Boot.LeviPatternApplication" />
+      <item itemvalue="Spring Boot.LeviServiceSearchApplication" />
+      <item itemvalue="Spring Boot.LeviSpringmachineApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OrderService" />
+        <item itemvalue="Application.CollectorsAPI" />
+        <item itemvalue="Application.ShiroController" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.ShiroUtils" />
-        <item itemvalue="Spring Boot.LeviGovernCenterApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -533,7 +734,25 @@
       <workItem from="1568645093579" duration="36000" />
       <workItem from="1568692234708" duration="14068000" />
       <workItem from="1568770484681" duration="10305000" />
-      <workItem from="1568799235462" duration="1617000" />
+      <workItem from="1568799235462" duration="12098000" />
+      <workItem from="1569121844981" duration="1087000" />
+      <workItem from="1569134954512" duration="19130000" />
+      <workItem from="1570599756037" duration="1354000" />
+      <workItem from="1570671507939" duration="1194000" />
+      <workItem from="1570757379639" duration="5597000" />
+      <workItem from="1571622638194" duration="2555000" />
+      <workItem from="1571802288960" duration="5778000" />
+      <workItem from="1571906815795" duration="14905000" />
+      <workItem from="1572230394779" duration="4775000" />
+      <workItem from="1572268717621" duration="845000" />
+      <workItem from="1572336420329" duration="129000" />
+      <workItem from="1572337617046" duration="13000" />
+      <workItem from="1573305922323" duration="1954000" />
+      <workItem from="1575958431316" duration="3421000" />
+      <workItem from="1576639851650" duration="733000" />
+      <workItem from="1577349360479" duration="149000" />
+      <workItem from="1577349634210" duration="7393000" />
+      <workItem from="1578624392274" duration="3428000" />
     </task>
     <task id="LOCAL-00001" summary="添加swagger文档注解">
       <created>1567393764194</created>
@@ -577,11 +796,18 @@
       <option name="project" value="LOCAL" />
       <updated>1568638486862</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="spring boot2.0 新增shiro相关内容">
+      <created>1568807301943</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1568807301943</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173417000" />
+    <option name="totallyTimeSpent" value="258338000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -593,10 +819,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="217" y="325" width="1374" height="753" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30559757" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.30711043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -606,22 +832,23 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.41311476" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.13606557" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.3180328" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.23770492" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.604918" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.19344263" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.29836065" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.10655738" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.3590164" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.43278688" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.20983607" />
-      <window_info anchor="bottom" id="Run Dashboard" order="11" weight="0.25409836" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49924356" weight="0.21147542" />
+      <window_info anchor="bottom" id="Run Dashboard" order="11" weight="0.13442624" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.17213115" />
-      <window_info anchor="bottom" id="Spring" order="13" weight="0.5606557" />
+      <window_info anchor="bottom" id="Spring" order="13" sideWeight="0.49924356" weight="0.5606557" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3295082" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Thumbnails" order="16" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -633,7 +860,7 @@
       <window_info anchor="right" id="Maven" order="10" weight="0.50832075" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30559757" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31164902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -643,22 +870,23 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.41311476" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.13606557" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.18032786" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.23770492" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.604918" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.19344263" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.29836065" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.10655738" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.3590164" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.43278688" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.20983607" />
-      <window_info anchor="bottom" id="Run Dashboard" order="11" visible="true" weight="0.25409836" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49924356" weight="0.21147542" />
+      <window_info anchor="bottom" id="Run Dashboard" order="11" weight="0.13442624" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.17213115" />
-      <window_info anchor="bottom" id="Spring" order="13" weight="0.5606557" />
+      <window_info anchor="bottom" id="Spring" order="13" sideWeight="0.49924356" weight="0.5606557" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3295082" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Thumbnails" order="16" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -728,7 +956,8 @@
     <MESSAGE value="修复编码格式不一致导致项目出错" />
     <MESSAGE value="新增eureka注册中心" />
     <MESSAGE value="spring boot 2.0 新增rocketMQ" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring boot 2.0 新增rocketMQ" />
+    <MESSAGE value="spring boot2.0 新增shiro相关内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring boot2.0 新增shiro相关内容" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -763,378 +992,359 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/levi-rocket-producer/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/rocketmq/rocketmq-client/4.3.0/rocketmq-client-4.3.0-sources.jar!/org/apache/rocketmq/client/impl/producer/DefaultMQProducerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="609" selection-start-line="609" selection-end-line="609" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-rocket-producer/src/main/resources/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-consumer/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-rocket-producer/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1325">
-          <caret line="53" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/service/impl/ParamConfigService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/service/RocketMqService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/controller/RocketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="27" column="55" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/service/impl/RocketMqServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/LeviRocketProducerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/ExceptionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-shiro/mvnw" />
-    <entry file="file://$PROJECT_DIR$/levi-service-api/src/main/java/com/levi/springboot/cms/CmsPageControllerApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="30" column="76" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-shiro/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/GlobalExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/logs/app_error.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-2473" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/logs/app_service.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-framework-utils/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="41" column="21" selection-start-line="37" selection-start-column="8" selection-end-line="41" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/resources/liqubase/changeLog.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="121" column="66" selection-start-line="121" selection-start-column="66" selection-end-line="121" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/config/swaggerConfig.java" />
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/swaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-support/2.1.9/mybatis-plus-support-2.1.9.jar!/com/baomidou/mybatisplus/annotations/TableName.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/model/entity/SysUserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/model/entity/SysMenuEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authz/AuthorizationInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-framework-model/src/main/resources/com/levi/springboot/mapper/SysUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="4" column="74" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-framework-model/src/main/resources/com/levi/springboot/mapper/SysMenuMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="86" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/DruidConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="88" column="41" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authz/SimpleAuthorizationInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/utils/ShiroUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="67" column="44" lean-forward="true" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#900#901#0" expanded="true" />
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
-            <element signature="e#1101#1102#0" expanded="true" />
-            <element signature="e#1152#1153#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1269#1270#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1391#1392#0" expanded="true" />
-            <element signature="e#1444#1445#0" expanded="true" />
-            <element signature="e#1504#1505#0" expanded="true" />
-            <element signature="e#1557#1558#0" expanded="true" />
-            <element signature="e#1596#1597#0" expanded="true" />
-            <element signature="e#1668#1669#0" expanded="true" />
-            <element signature="e#1703#1704#0" expanded="true" />
-            <element signature="e#1754#1755#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/ShiroException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/ExceptionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/ShiroController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="69" column="28" lean-forward="true" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.8.RELEASE/spring-boot-autoconfigure-2.1.8.RELEASE.jar!/org/springframework/boot/autoconfigure/validation/ValidationAutoConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="44" column="48" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/ShiroConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/mapper/SysUserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-framework-model/src/main/java/com/levi/springboot/mapper/SysMenuMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/logs/app.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-2525" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/levi-service-manage-cms.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/config/UserRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/LeviServiceManageCmsApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="57" column="91" selection-start-line="57" selection-start-column="91" selection-end-line="57" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-shiro/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="78" column="25" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/debug.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/info.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="125">
           <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/levi-framework-model/pom.xml">
+    <entry file="file://$PROJECT_DIR$/levi-consumer/src/main/java/com/levi/springboot/LeviConsumerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-consumer/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-rocket-producer/src/main/java/com/levi/springboot/LeviRocketProducerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-rocket-producer/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/iteratorPattern/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-govern-center/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-113" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-govern-center/src/main/java/com/levi/springboot/levigoverncenter/LeviGovernCenterApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/pom.xml">
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="44" />
+        <state relative-caret-position="175">
+          <caret line="7" column="41" selection-start-line="5" selection-start-column="8" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/LeviServiceManageCmsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/BindFlowerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="34" column="91" selection-start-line="34" selection-start-column="91" selection-end-line="34" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/ShiroController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="76" column="14" lean-forward="true" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-service-api/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/java/com/levi/springboot/cms/controller/ExceptionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/GlobalExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13800">
+          <caret line="579" column="22" selection-start-line="579" selection-start-column="22" selection-end-line="579" selection-end-column="22" />
+          <folding>
+            <element signature="e#26957#26958#0" expanded="true" />
+            <element signature="e#27022#27023#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/jdk18/Dish.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-govern-center/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-service-manage-cms/src/main/resources/liqubase/changeLog.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2525">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19000">
+          <caret line="806" column="13" selection-start-line="806" selection-start-column="13" selection-end-line="806" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-framework-common/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-springmachine/mvnw" />
+    <entry file="file://$PROJECT_DIR$/levi-springmachine/HELP.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/java/util/stream/Collectors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="850" column="31" selection-start-line="850" selection-start-column="31" selection-end-line="850" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-service-search/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="41" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-springmachine/src/main/java/com/levi/springmachine/LeviSpringmachineApplication.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-springmachine/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-springmachine/src/main/java/com/levi/springmachine/controller.java" />
+    <entry file="file://$PROJECT_DIR$/levi-springmachine/src/main/java/com/levi/springmachine/enums/States.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-springmachine/src/main/java/com/levi/springmachine/enums/Events.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-springmachine/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="43" column="48" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/statemachine/spring-statemachine-core/2.0.1.RELEASE/spring-statemachine-core-2.0.1.RELEASE.jar!/org/springframework/statemachine/config/StateMachineConfigurerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/statemachine/spring-statemachine-core/2.0.1.RELEASE/spring-statemachine-core-2.0.1.RELEASE.jar!/org/springframework/statemachine/config/AbstractStateMachineConfigurerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/statemachine/spring-statemachine-core/2.0.1.RELEASE/spring-statemachine-core-2.0.1.RELEASE.jar!/org/springframework/statemachine/config/EnumStateMachineConfigurerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/jdk18/ThreadA.java" />
+    <entry file="file://$PROJECT_DIR$/levi-springmachine/src/main/java/com/levi/springmachine/config/StateMachingConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/jdk18/CollectorsAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-pattern/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/OrderNumGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/ExtLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/ZookeeperAbstractLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-pattern/src/main/java/com/levi/design/pattern/lock/ZookeeperDistrbuteLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/code/IErrorCodeConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/note.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="132" column="54" selection-start-line="131" selection-start-column="16" selection-end-line="132" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-framework-utils/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/exception/ValidatorException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-framework-utils/src/main/java/com/levi/springboot/utils/exception/CheckUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1155,6 +1365,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1177,6 +1388,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1201,6 +1413,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
