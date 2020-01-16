@@ -1,7 +1,11 @@
 package com.levi.design.pattern.jdk18;
 
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Maps;
+
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @author jianghaihui
@@ -19,6 +23,7 @@ public class CollectorsAPI {
             new Dish("pizza", true, 550, "2"),
             new Dish("prawns", false, 300, "3"),
             new Dish("salmon", false, 450, "3"));
+    public static  Map<String,String> map = Maps.newHashMap();
 
     public static void main(String[] args) {
         //1.求平均值
@@ -26,13 +31,31 @@ public class CollectorsAPI {
         //testaveragingInt();
        // testAveragingLong();
         //testCollectingAndThen();
+       // existValue(menu);
 
         //2.统计
        // testCounting();
        // testGroupByFunction();
-       testGroupByFunctionAndCollectors();
-        testGroupByFunctionAndAnCollectors();
+      // testGroupByFunctionAndCollectors();
+        //testGroupByFunctionAndAnCollectors();
         //testSummarizingInt();
+        Map<BrokerType, WcsBroker> brokerMap = Maps.newHashMap();
+        WcsBroker wcsBroker = new WcsBrokerImpl();
+        wcsBroker.getZoneCodes();
+        sortedByCondition(menu);
+    }
+    public static boolean existValue(List<Dish> menu){
+        boolean flag = menu.stream().anyMatch(m->m.getFood().equals("salmon"));
+        System.out.println(flag+"++++++++");
+        return flag;
+    }
+
+
+    public static void computeIfAbsent(Map<BrokerType, WcsBroker> brokerMap){
+        map.put("ok","success");
+        map.put("error","fail");
+        // engine broker
+
     }
 
     //按照某一个属性进行统计，得出统计的数量,个数，总和，最大值，平均值
@@ -40,6 +63,29 @@ public class CollectorsAPI {
         IntSummaryStatistics intSummaryStatistics = menu.stream().collect(Collectors.summarizingInt(Dish::getPrice));
         Optional.ofNullable(intSummaryStatistics).ifPresent(System.out::println);
         //IntSummaryStatistics{count=9, sum=4200, min=120, average=466.666667, max=800}
+    }
+
+    public static void getToMap(List<Dish> menu){
+        Map<String,Dish> map = menu.stream().collect(Collectors.toMap(Dish::getFood,dish->dish));
+    }
+
+    public static void sortedPrice(List<Dish> menu){
+        List<Dish> sortedMenu = menu.stream().sorted((o1, o2) -> {
+            System.out.println(o1.getPrice()-o2.getPrice()+"++++");
+                    return o1.getPrice()-o2.getPrice();
+                }
+        )
+                .collect(Collectors.toList());
+        sortedMenu.stream().forEach(m->{
+            System.out.println(m);
+        });
+    }
+
+    private static void sortedByCondition(List<Dish> menu){
+        List<Dish> sortedMenu = menu.stream().sorted(Comparator.comparing(Dish::getPrice)).collect(Collectors.toList());
+        sortedMenu.stream().forEach(m->{
+            System.out.println(m);
+        });
     }
 
     private static void testGroupByFunctionAndAnCollectors(){

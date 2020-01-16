@@ -24,4 +24,5 @@ public class Dish {
         this.price = price;
         this.meat = meat;
     }
+
 }
