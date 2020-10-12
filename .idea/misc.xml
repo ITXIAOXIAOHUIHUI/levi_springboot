@@ -18,6 +18,7 @@
         <option value="$PROJECT_DIR$/levi-pattern/pom.xml" />
         <option value="$PROJECT_DIR$/levi-service-search/pom.xml" />
         <option value="$PROJECT_DIR$/levi-springmachine/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-email/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

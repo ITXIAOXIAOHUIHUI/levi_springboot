@@ -11,6 +11,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 /**
  * @author jianghaihui
  * @date 2020/1/10 15:18
@@ -22,11 +24,12 @@ public class EmailController {
 
     private Logger logger = LoggerFactory.getLogger(EmailController.class);
 
-    @Autowired
+    @Resource
     private EmailService emailService;
     @PostMapping("/add")
     @ApiOperation(value = "收件人添加", notes = "收件人添加")
     @ResponseBody
+
     public CmsPageResult addEmail(@RequestBody EmailInfo emailInfo){
         try{
             int result = emailService.insertServer(emailInfo);

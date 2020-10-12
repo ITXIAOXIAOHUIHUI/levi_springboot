@@ -1,5 +1,6 @@
 package com.levi.springboot.email.mapper;
 
+import io.swagger.models.auth.In;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -12,5 +13,5 @@ public interface EmailService {
      *
      * @param emailInfo
      */
-    public int insertServer(EmailInfo emailInfo);
+    public Integer insertServer(EmailInfo emailInfo);
 }

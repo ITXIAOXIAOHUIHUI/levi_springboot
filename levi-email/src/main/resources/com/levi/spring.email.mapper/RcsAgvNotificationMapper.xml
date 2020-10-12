@@ -11,7 +11,7 @@
     </sql>
 
 
-    <select id="insertServer" parameterType="com.levi.springboot.email.mapper.EmailInfo" resultType="java.lang.Integer">
+    <select id="insertServer">
         insert into email_info (receiver)
         values (#{receiver,jdbcType=VARCHAR})
     </select>

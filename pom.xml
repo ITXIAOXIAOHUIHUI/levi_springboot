@@ -23,7 +23,6 @@
         <module>./levi-govern-center</module>
         <module>./levi-freemarker</module>
         <module>./levi-service-search</module>
-        <module>./evi-springmachine</module>
     </modules>
 
     <properties>
