@@ -23,6 +23,7 @@
         <module>./levi-govern-center</module>
         <module>./levi-freemarker</module>
         <module>./levi-service-search</module>
+        <module>levi-thread</module>
     </modules>
 
     <properties>

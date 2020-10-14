@@ -1,0 +1,11 @@
+server:
+  port: 10080
+
+spring:
+  application:
+    name: levi-web
+  cloud:
+    service-registry:
+      auto-registration:
+        fail-fast: true # successful registration required
+

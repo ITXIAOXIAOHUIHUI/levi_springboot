@@ -19,13 +19,13 @@
         <option value="$PROJECT_DIR$/levi-service-search/pom.xml" />
         <option value="$PROJECT_DIR$/levi-springmachine/pom.xml" />
         <option value="$PROJECT_DIR$/levi-email/pom.xml" />
+        <option value="$PROJECT_DIR$/levi-web/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/levi-api/pom.xml" />
         <option value="$PROJECT_DIR$/levi-common/pom.xml" />
-        <option value="$PROJECT_DIR$/levi-web/pom.xml" />
       </set>
     </option>
   </component>
