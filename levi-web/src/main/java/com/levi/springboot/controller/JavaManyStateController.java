@@ -28,5 +28,12 @@ public class JavaManyStateController {
         return result;
     }
 
+    @PostMapping(value = "/transfer-level3-inventory")
+    public Object transferLevel3Inventory(@RequestBody PickingBackDto pickingBackDto){
+
+        String result = pickingWorkFeedbackPolicyMap.get(pickingBackDto.getManyStateEnum().getInstance()).handlePickWorkFeedBack(pickingBackDto);
+
+        return result;
+    }
 
 }

@@ -1,0 +1,98 @@
+[
+	{
+		"id": 1,
+		"zoneCode": "kckq",
+		"zoneType": "STORAGE_AGV",
+		"zoneName": "AGV存货",
+		"warehouseId": 9001,
+		"virtualed": false,
+		"modeCode": "W2P",
+		"workPattern": null,
+		"remark": null,
+		"state": null
+	},
+	{
+		"id": 2,
+		"zoneCode": "ZONE_STORAGE_MANUAL",
+		"zoneType": "STORAGE_MANUAL",
+		"zoneName": "人工存货",
+		"warehouseId": 9001,
+		"virtualed": false,
+		"modeCode": "W2P",
+		"workPattern": null,
+		"remark": null,
+		"state": null
+	},
+	{
+		"id": 3,
+		"zoneCode": "STATION",
+		"zoneType": "STATION",
+		"zoneName": "工作站",
+		"warehouseId": 9001,
+		"virtualed": false,
+		"modeCode": "G2P",
+		"workPattern": null,
+		"remark": null,
+		"state": null
+	},
+	{
+		"id": 4,
+		"zoneCode": "INVENTORY_DIFF",
+		"zoneType": "INVENTORY_DIFF",
+		"zoneName": "库存差异",
+		"warehouseId": 9001,
+		"virtualed": true,
+		"modeCode": "G2P",
+		"workPattern": null,
+		"remark": null,
+		"state": null
+	},
+	{
+		"id": 5,
+		"zoneCode": "TEMPORARY_DELIVERY",
+		"zoneType": "TEMPORARY_DELIVERY",
+		"zoneName": "发货暂存",
+		"warehouseId": 9001,
+		"modeCode": "G2P",
+		"virtualed": true,
+		"workPattern": null,
+		"remark": null,
+		"state": null
+	},
+	{
+		"id": 6,
+		"zoneCode": "TEMPORARY_COLLECT",
+		"zoneType": "TEMPORARY_COLLECT",
+		"zoneName": "集货暂存",
+		"warehouseId": 9001,
+		"virtualed": true,
+		"modeCode": "G2P",
+		"workPattern": null,
+		"remark": null,
+		"state": null
+	},
+	{
+		"id": 7,
+		"zoneCode": "TEMPORARY_RECEIVING",
+		"zoneType": "TEMPORARY_RECEIVING",
+		"zoneName": "收货暂存",
+		"warehouseId": 9001,
+		"virtualed": true,
+		"modeCode": "G2P",
+		"workPattern": null,
+		"remark": null,
+		"state": null
+	},
+	{
+		"id": 8,
+		"zoneCode": "TEMPORARY_RETURN",
+		"zoneType": "TEMPORARY_RETURN",
+		"zoneName": "返库暂存",
+		"warehouseId": 9001,
+		"virtualed": true,
+		"modeCode": "G2P",
+		"workPattern": null,
+		"remark": null,
+		"state": null
+	}
+]

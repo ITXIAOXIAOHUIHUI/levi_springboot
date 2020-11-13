@@ -1,0 +1,13 @@
+[
+  {
+    "id": 9001,
+    "warehouseCode": "WH-9001",
+    "warehouseName": "测试仓",
+    "tenantId": 1,
+    "tenantCode": "kc",
+    "tenantName": "快仓",
+    "state": null,
+    "address": null,
+    "remark": null
+  }
+]

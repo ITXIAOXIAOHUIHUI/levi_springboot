@@ -1,0 +1,164 @@
+[
+	{
+		"warehouseId": 9001,
+		"stationCode": "101",
+		"pointCode": "101-01",
+		"pointType": "G2P_ONLINE_BUCKET",
+		"enabled": true,
+		"workFace": "2",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "101",
+		"pointCode": "101-02",
+		"pointType": "G2P_ONLINE_BOXMOVE",
+		"enabled": true,
+		"workFace": "2",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "102",
+		"pointCode": "102-01",
+		"pointType": "G2P_ONLINE_BUCKET",
+		"enabled": true,
+		"workFace": "2",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "102",
+		"pointCode": "102-02",
+		"pointType": "G2P_ONLINE_BOXMOVE",
+		"enabled": true,
+		"workFace": "2",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "103",
+		"pointCode": "103-01",
+		"pointType": "G2P_ONLINE_BUCKET",
+		"enabled": true,
+		"workFace": "2",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "103",
+		"pointCode": "103-02",
+		"pointType": "G2P_ONLINE_BOXMOVE",
+		"enabled": true,
+		"workFace": "2",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "104",
+		"pointCode": "104-01",
+		"pointType": "G2P_ONLINE_BUCKET",
+		"enabled": true,
+		"workFace": "2",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "104",
+		"pointCode": "104-02",
+		"pointType": "G2P_ONLINE_BOXMOVE",
+		"enabled": true,
+		"workFace": "2",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "105",
+		"pointCode": "105-01",
+		"pointType": "G2P_ONLINE_BUCKET",
+		"enabled": true,
+		"workFace": "2",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "105",
+		"pointCode": "105-02",
+		"pointType": "G2P_ONLINE_BOXMOVE",
+		"enabled": true,
+		"workFace": "2",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "201",
+		"pointCode": "201-01",
+		"pointType": "G2P_OFFLINE",
+		"enabled": true,
+		"workFace": "1,2,3",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "201",
+		"pointCode": "201-02",
+		"pointType": "G2P_OFFLINE",
+		"enabled": true,
+		"workFace": "1,2,3",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "201",
+		"pointCode": "201-03",
+		"pointType": "G2P_OFFLINE",
+		"enabled": true,
+		"workFace": "1,2,3",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "201",
+		"pointCode": "201-04",
+		"pointType": "G2P_OFFLINE",
+		"enabled": true,
+		"workFace": "1,2,3",
+		"mapVersion": "map#1"
+	},
+		{
+		"warehouseId": 9001,
+		"stationCode": "202",
+		"pointCode": "202-01",
+		"pointType": "G2P_OFFLINE",
+		"enabled": true,
+		"workFace": "1,2,3",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "202",
+		"pointCode": "202-02",
+		"pointType": "G2P_OFFLINE",
+		"enabled": true,
+		"workFace": "1,2,3",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "202",
+		"pointCode": "202-03",
+		"pointType": "G2P_OFFLINE",
+		"enabled": true,
+		"workFace": "1,2,3",
+		"mapVersion": "map#1"
+	},
+	{
+		"warehouseId": 9001,
+		"stationCode": "202",
+		"pointCode": "202-04",
+		"pointType": "G2P_OFFLINE",
+		"enabled": true,
+		"workFace": "1,2,3",
+		"mapVersion": "map#1"
+	}
+]

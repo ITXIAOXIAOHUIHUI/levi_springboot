@@ -1,12 +1,9 @@
 package com.levi.springboot.mapper;
 
 import com.levi.springboot.model.entity.SysMenuEntity;
-import org.apache.ibatis.annotations.Mapper;
-
 
 import java.util.List;
 
-@Mapper
 public interface SysMenuMapper {
     /**
      * 根据父菜单，查询子菜单

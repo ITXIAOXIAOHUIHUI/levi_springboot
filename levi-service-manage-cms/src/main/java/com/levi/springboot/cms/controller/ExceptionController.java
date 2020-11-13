@@ -1,6 +1,6 @@
 package com.levi.springboot.cms.controller;
 
-import com.levi.springboot.utils.exception.ResourceNotFoundExceptionExt;
+import com.levi.springboot.utils.ResourceNotFoundExceptionExt;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

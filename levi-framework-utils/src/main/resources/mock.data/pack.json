@@ -1,0 +1,273 @@
+[
+  {
+    "id": 1,
+    "packCode": "001",
+    "ownerCode": "KC",
+    "skuId": 1,
+    "packUnitDtoList":[
+      {
+        "id":111,
+        "packUnitCode":"111",
+        "packUnitLevel":"FIRST",
+        "packUnitName" : "件",
+        "quantity" : 1
+      },
+      {
+        "id":222,
+        "packUnitCode":"222",
+        "packUnitLevel":"SECOND",
+        "packUnitName" : "箱",
+        "quantity" : 5
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "packCode": "002",
+    "ownerCode": "KC",
+    "skuId": 1,
+    "packUnitDtoList":[
+      {
+        "id":111,
+        "packUnitCode":"111",
+        "packUnitLevel":"FIRST",
+        "packUnitName" : "件",
+        "quantity" : 1
+      },
+      {
+        "id":222,
+        "packUnitCode":"222",
+        "packUnitLevel":"SECOND",
+        "packUnitName" : "箱",
+        "quantity" : 5
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "packCode": "003",
+    "ownerCode": "KC",
+    "skuId": 2,
+    "packUnitDtoList":[
+      {
+        "id":111,
+        "packUnitCode":"111",
+        "packUnitLevel":"FIRST",
+        "packUnitName" : "件",
+        "quantity" : 1
+      },
+      {
+        "id":222,
+        "packUnitCode":"222",
+        "packUnitLevel":"SECOND",
+        "packUnitName" : "箱",
+        "quantity" : 5
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "packCode": "004",
+    "ownerCode": "KC-A",
+    "skuId": 3,
+    "packUnitDtoList":[
+      {
+        "id":111,
+        "packUnitCode":"111",
+        "packUnitLevel":"FIRST",
+        "packUnitName" : "件",
+        "quantity" : 1
+      },
+      {
+        "id":222,
+        "packUnitCode":"222",
+        "packUnitLevel":"SECOND",
+        "packUnitName" : "箱",
+        "quantity" : 5
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "packCode": "005",
+    "ownerCode": "KC-A",
+    "skuId": 4,
+    "packUnitDtoList":[
+      {
+        "id":111,
+        "packUnitCode":"111",
+        "packUnitLevel":"FIRST",
+        "packUnitName" : "件",
+        "quantity" : 1
+      },
+      {
+        "id":222,
+        "packUnitCode":"222",
+        "packUnitLevel":"SECOND",
+        "packUnitName" : "箱",
+        "quantity" : 5
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "packCode": "006",
+    "ownerCode": "KC-A",
+    "skuId": 5,
+    "packUnitDtoList":[
+      {
+        "id":111,
+        "packUnitCode":"111",
+        "packUnitLevel":"FIRST",
+        "packUnitName" : "件",
+        "quantity" : 1
+      },
+      {
+        "id":222,
+        "packUnitCode":"222",
+        "packUnitLevel":"SECOND",
+        "packUnitName" : "箱",
+        "quantity" : 5
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "packCode": "007",
+    "ownerCode": "KC-A",
+    "skuId": 6,
+    "packUnitDtoList":[
+      {
+        "id":111,
+        "packUnitCode":"111",
+        "packUnitLevel":"FIRST",
+        "packUnitName" : "件",
+        "quantity" : 1
+      },
+      {
+        "id":222,
+        "packUnitCode":"222",
+        "packUnitLevel":"SECOND",
+        "packUnitName" : "箱",
+        "quantity" : 5
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "packCode": "008",
+    "ownerCode": "KC-B",
+    "skuId": 7,
+    "packUnitDtoList":[
+      {
+        "id":111,
+        "packUnitCode":"111",
+        "packUnitLevel":"FIRST",
+        "packUnitName" : "件",
+        "quantity" : 1
+      },
+      {
+        "id":222,
+        "packUnitCode":"222",
+        "packUnitLevel":"SECOND",
+        "packUnitName" : "箱",
+        "quantity" : 5
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "packCode": "009",
+    "ownerCode": "KC-B",
+    "skuId": 8,
+    "packUnitDtoList":[
+      {
+        "id":111,
+        "packUnitCode":"111",
+        "packUnitLevel":"FIRST",
+        "packUnitName" : "件",
+        "quantity" : 1
+      },
+      {
+        "id":222,
+        "packUnitCode":"222",
+        "packUnitLevel":"SECOND",
+        "packUnitName" : "箱",
+        "quantity" : 5
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "packCode": "010",
+    "ownerCode": "KC-B",
+    "skuId": 9,
+    "packUnitDtoList":[
+      {
+        "id":111,
+        "packUnitCode":"111",
+        "packUnitLevel":"FIRST",
+        "packUnitName" : "件",
+        "quantity" : 1
+      },
+      {
+        "id":222,
+        "packUnitCode":"222",
+        "packUnitLevel":"SECOND",
+        "packUnitName" : "箱",
+        "quantity" : 5
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "packCode": "011",
+    "ownerCode": "jiading",
+    "skuId": 10,
+    "packUnitDtoList":[
+      {
+        "id":111,
+        "packUnitCode":"111",
+        "packUnitLevel":"FIRST",
+        "packUnitName" : "件",
+        "quantity" : 1
+      },
+      {
+        "id":222,
+        "packUnitCode":"222",
+        "packUnitLevel":"SECOND",
+        "packUnitName" : "箱",
+        "quantity" : 5
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "packCode": "012",
+    "ownerCode": "KC-B",
+    "skuId": 8,
+    "packUnitDtoList": [{
+      "id": 1,
+      "packUnitCode": "101"
+    }]
+  },
+  {
+    "id": 13,
+    "packCode": "013",
+    "ownerCode": "KC-A",
+    "skuId": 5,
+    "packUnitDtoList": [{
+      "id": 2,
+      "packUnitCode": "102"
+    },{
+      "id": 3,
+      "packUnitCode": "103"
+    }]
+  },
+  {
+    "id": 14,
+    "packCode": "005",
+    "ownerCode": "KC-B",
+    "skuId": 3
+  }
+]

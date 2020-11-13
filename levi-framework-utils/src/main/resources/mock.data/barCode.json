@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "barCode": "69240301",
+    "skuId": 1,
+    "skuCode": "69240301",
+    "skuName": "测试商品-1",
+    "ownerId": 1,
+    "ownerCode": "KC",
+    "ownerName": "快仓",
+    "entityId": 1,
+    "entityCode": "1",
+    "quantity": 1,
+    "entityObject": "sku",
+    "state": "effective"
+  },
+  {
+    "id": 2,
+    "barCode": "69240302",
+    "skuId": 2,
+    "skuCode": "69240302",
+    "skuName": "测试商品-2",
+    "ownerId": 1,
+    "ownerCode": "KC",
+    "ownerName": "快仓",
+    "entityId": 2,
+    "entityCode": "2",
+    "quantity": 1,
+    "entityObject": "sku",
+    "state": "effective"
+  }
+]

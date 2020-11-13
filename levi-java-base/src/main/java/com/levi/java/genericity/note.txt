@@ -1,0 +1,45 @@
+                    范型
+链接：https://juejin.im/post/6844903917835419661
+1、范型的好处是：
+    在编译的时候能够检查类型安全，并且所有的强制转换都是自动和隐式的。
+    ？ 表示不确定的 java 类型
+    T (type) 表示具体的一个java类型
+    K V (key value) 分别代表java键值中的Key Value
+    E (element) 代表Element
+
+2、上界通配符 < ? extends E>：
+    在类型参数中使用 extends 表示这个泛型中的参数必须是 E 或者 E 的子类，这样有两个好处：
+
+3、下界通配符 < ? super E>：
+    在类型参数中使用 super 表示这个泛型中的参数必须是 E 或者 E 的父类。
+    private <T> void test(List<? super T> dst, List<T> src){
+        for (T t : src) {
+            dst.add(t);
+        }
+    }
+
+    public static void main(String[] args) {
+        List<Dog> dogs = new ArrayList<>();
+        List<Animal> animals = new ArrayList<>();
+        new Test3().test(animals,dogs);
+    }
+    // Dog 是 Animal 的子类
+    class Dog extends Animal {
+
+    }
+
+dst 类型 “大于等于” src 的类型，这里的“大于等于”是指 dst 表示的范围比 src 要大，因此装得下 dst 的容器也就能装 src 。
+
+4、？ 和 T 的区别
+    区别1：通过 T 来 确保 泛型参数的一致性
+    区别2：类型参数可以多重限定而通配符不行
+    区别3：通配符可以使用超类限定而类型参数不行
+
+
+5、Class<T> 和 Class<?> 区别
+    // 通过反射的方式生成  multiLimit
+    // 对象，这里比较明显的是，我们需要使用强制类型转换
+    MultiLimit multiLimit = (MultiLimit)
+    Class.forName("com.glmapper.bridge.boot.generic.MultiLimit").newInstance();
+    对于上述代码，在运行期，如果反射的类型不是 MultiLimit 类，那么一定会报 java.lang.ClassCastException 错误。
+

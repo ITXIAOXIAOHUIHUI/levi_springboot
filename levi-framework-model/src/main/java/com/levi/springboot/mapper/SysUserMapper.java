@@ -1,12 +1,13 @@
 package com.levi.springboot.mapper;
 
 import com.levi.springboot.model.entity.SysUserEntity;
-import org.apache.ibatis.annotations.Mapper;
+
+
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-@Mapper
+
 public interface SysUserMapper {
     /**
      * 查询用户的所有权限

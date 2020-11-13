@@ -1,0 +1,4 @@
+1、ip:端口/auth/oauth/token
+     JWT令牌：redis
+     身份令牌：cookie
+
