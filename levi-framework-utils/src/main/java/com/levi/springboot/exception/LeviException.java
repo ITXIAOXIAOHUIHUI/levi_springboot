@@ -36,19 +36,7 @@ public class LeviException extends Exception {
         }
     }
 
-    public LeviException(IWesErrorCode errorCode, Object... args) {
-        super(format(errorCode.getMessage(), args));
-        this.code = errorCode.getCode();
-        this.args = args;
-    }
 
-
-
-    public LeviException(IWesErrorCode errorCode, Throwable ex, Object... args) {
-        super(format(errorCode.getMessage(), args), ex);
-        this.code = errorCode.getCode();
-        this.args = args;
-    }
 
     public LeviException(String code, String message, Throwable ex, Object... args) {
         super(format(message, args), ex);

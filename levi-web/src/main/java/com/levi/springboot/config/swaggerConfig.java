@@ -23,7 +23,7 @@ public class swaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.levi.springboot"))
+                .apis(RequestHandlerSelectors.basePackage("com.levi.springboot.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

@@ -17,7 +17,7 @@ public interface UserService {
     public User getUser(@WebParam(name = "userId") String userId);
 
     @WebMethod
-    @RequestWrapper(localName = "execute", targetNamespace = "http://route.webservice.gateway.veh.me.evun.cn")
+    @RequestWrapper(localName = "SendCbsAddress", targetNamespace = "http://route.webservice.gateway.veh.me.evun.cn")
     public String SendCbsAddress(@WebParam(name = "requestXML")  WSRequestRoot  requestXML);
 
     /**

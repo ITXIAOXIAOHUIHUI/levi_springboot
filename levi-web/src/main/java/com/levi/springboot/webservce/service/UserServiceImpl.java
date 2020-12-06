@@ -1,8 +1,7 @@
-package com.mracale.springboot.Service.impl;
+package com.levi.springboot.webservce.service;
 
 import com.levi.springboot.webservce.domain.User;
 import com.levi.springboot.webservce.domain.WSRequestRoot;
-import com.levi.springboot.webservce.service.UserService;
 import org.springframework.stereotype.Component;
 
 import javax.jws.WebService;
@@ -14,9 +13,6 @@ import java.util.UUID;
  * @ClassName:UserServiceImpl
  * @Description:测试服务接口实现类
  */
-@WebService(serviceName="UserService",//对外发布的服务名
-        targetNamespace="http://service.springboot.mracale.com",//指定你想要的名称空间，通常使用使用包名反转
-        endpointInterface="com.levi.springboot.webservce.service.UserService")//服务接口全路径, 指定做SEI（Service EndPoint Interface）服务端点接口
 @Component
 public class UserServiceImpl implements UserService {
 
@@ -29,10 +25,12 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-    //@Override
+    @Override
     public String SendCbsStatus(String jsonPara) {
+
         System.out.println(jsonPara);
-        return null;
+
+        return "SUCCESS";
     }
 
     @Override

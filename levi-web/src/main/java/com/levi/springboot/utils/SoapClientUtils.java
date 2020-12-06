@@ -2,9 +2,11 @@ package com.levi.springboot.utils;
 
 import com.levi.springboot.jinjiang.generated.AGVInterfaceServiceSoap;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.cxf.endpoint.Client;
 import org.apache.cxf.interceptor.LoggingInInterceptor;
 import org.apache.cxf.interceptor.LoggingOutInterceptor;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
+import org.apache.cxf.jaxws.endpoint.dynamic.JaxWsDynamicClientFactory;
 import org.springframework.web.client.ResourceAccessException;
 
 import java.lang.reflect.Method;
@@ -30,8 +32,24 @@ public class SoapClientUtils {
         return null;
     }
 
+   
+
+    public    String exchange(String url, String serviceName, String requestEntity)  {
+        // 创建动态客户端
+        JaxWsDynamicClientFactory dcf = JaxWsDynamicClientFactory.newInstance();
+        Client client = dcf.createClient(url);
+        Object[] objects = new Object[0];
+        try {
+            // invoke("方法名",参数1,参数2,参数3....);
+            objects = client.invoke(serviceName, requestEntity);
+            return (String)objects[0];
+        } catch (java.lang.Exception e) {
+            log.info("exception:{}",e);
+            throw  new RuntimeException("exception");
+        }
+    }
+
     private String callWebservice(String url, String serviceName, String jsonPara) {
-       AGVInterfaceServiceSoap myWebService = getInterface(url);
         Class<?> serviceSoapClass = AGVInterfaceServiceSoap.class;
 
         try {
