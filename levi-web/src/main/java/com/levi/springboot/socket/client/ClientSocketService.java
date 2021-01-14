@@ -42,14 +42,14 @@ public class ClientSocketService implements InitializingBean {
             new JxSocketConfig("192.168.29.211", 8006) ,
             new JxSocketConfig("192.168.29.211", 8007) ).collect(Collectors.toList());
 
-    @Value("${qxts.socket.host}")
+   // @Value("${qxts.socket.host}")
     private String host;
 
-    @Value("${qxts.socket.port}")
+   // @Value("${qxts.socket.port}")
     private int port;
 
     //30s 间隔多少秒发送一次心跳检测
-    @Value("${qxts.socket.heart.interval.time}")
+ //   @Value("${qxts.socket.heart.interval.time}")
     private int socketHeartIntervalTime;
 
     public static Map<String,Socket> socketMap = new ConcurrentHashMap<>();
@@ -64,7 +64,7 @@ public class ClientSocketService implements InitializingBean {
         for (JxSocketConfig config : list) {
             String ip = config.getLedIp();
             int port = config.getPort();
-            start(config.getLedIp(), config.getPort());
+            //start(config.getLedIp(), config.getPort());
             //ClientRecvThread recvThread = new ClientRecvThread(config.getLedIp(),config.getPort());
             /*ClientThreadPooll recvThread = new ClientThreadPooll(ip,port);
             new Thread(recvThread).start();
