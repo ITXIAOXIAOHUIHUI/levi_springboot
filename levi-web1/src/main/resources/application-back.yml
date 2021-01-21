@@ -1,0 +1,100 @@
+server:
+  port: 10080
+
+spring:
+  application:
+    name: evo-interface-hw
+  cloud:
+    service-registry:
+      auto-registration:
+        fail-fast: true # successful registration required
+  # mongodb config
+  data:
+    mongodb:
+      host: ${host.ip:127.0.0.1}
+      port: 27017
+      database: evo-interface
+  message:
+    queue:
+      rocketmq:
+        namesrvAddr: ${queue.url:192.168.199.253:9876}
+    consumer:
+      queue: rocketMQ
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.199.253:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    instance-id: ${spring.application.name}:${server.port}:@project.version@
+    ip-address: ${host.ip:192.168.199.253}
+    prefer-ip-address: true
+
+evo-basic:
+  ribbon:
+    listOfServers: ${basic.service.url:192.168.20.93:8023}
+
+# configuration of the actuator endpoints
+management:
+  metrics:
+    export:
+      prometheus: # prometheus configuration
+        enabled: true
+        descriptions: true
+        step: 1m
+  endpoint:
+    prometheus:
+      enabled: true
+    threaddump:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*" # enable all endpoints
+
+logging:
+  level:
+    com.kc: trace
+    org.springframework.cloud: info
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 30000
+evo-interface:
+  http-client:
+    config:
+      connectTimeout: 2000
+      socketTimeout: -1
+      connectionRequestTimeout: -1
+      maxTotal: 30
+      maxPerRoute: 5
+  x-task-scheduler:
+    pollPause: 10000
+    poolSize: 5
+    nameSuffix: async-works
+    queueName: schedulable-works-queue
+    maxReties: 10
+  cube:
+    cuckoos:
+    - name: best
+      cuckoo:
+        appKey: appKey-best
+        appSecret: appSecret-best
+        paths:
+        - key: order-callback
+          value: /callback/order-status
+          method: POST
+          type: JSON
+filter:
+  swagger:
+    url: /**.js;/v2/api-docs;/swagger-resources;/**.html;/**.css;/webjars/**;/loggingRecords/**
+
+#物料集成的分页给WES的大小
+sku:
+  pageSize: ${page.size:100}
