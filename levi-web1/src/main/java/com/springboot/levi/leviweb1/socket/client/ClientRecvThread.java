@@ -1,5 +1,6 @@
 package com.springboot.levi.leviweb1.socket.client;
 
+import com.springboot.levi.leviweb1.socket.util.SocketInfo;
 import com.springboot.levi.leviweb1.socket.util.SocketUtil;
 import com.springboot.levi.leviweb1.socket.util.StreamUtil;
 import org.slf4j.Logger;
@@ -22,6 +23,7 @@ public class ClientRecvThread implements Runnable {
     private Socket socket;
 
     private String ip;
+    private SocketInfo socketInfo;
 
     private int port;
     private volatile boolean isStop = false;
@@ -29,8 +31,15 @@ public class ClientRecvThread implements Runnable {
     public static Map<String, Socket> socketMap = new ConcurrentHashMap<>();
 
 
+
     public ClientRecvThread(Socket socket) {
         this.socket = socket;
+    }
+
+    public ClientRecvThread(Socket socket, SocketInfo socketInfo) {
+        this.socket = socket;
+        this.socketInfo = socketInfo;
+
     }
 
     @Override
@@ -43,31 +52,33 @@ public class ClientRecvThread implements Runnable {
         try {
             inputStream = socket.getInputStream();
             outputStream = socket.getOutputStream();
-            dataOutputStream = new DataOutputStream(outputStream);
             dataInputStream = new DataInputStream(inputStream);
             //SocketMsgVo msgDataVo = SocketUtil.readMsgData(dataInputStream);
-
             //log.info("msg data vo :{}",msgDataVo.getLen());
             while (!isStop && !socket.isClosed()) {
-
                 byte[] bytes = new byte[1];
-                StringBuffer sb = new StringBuffer();
-                System.out.println("********");
-                while ((dataInputStream.read(bytes)) != -1) {
+                StringBuffer hexStr = new StringBuffer();
+                byte[] buf = new byte[1024];
+                int byteLen = -1;
+                //while ((dataInputStream.read(bytes)) != -1) {
+                while ((byteLen = dataInputStream.read(buf, 0, 1024)) > 0) {
                     System.out.println("+++++");
                     String tempStr = ByteArrayToHexStr(bytes);
-                    sb.append(tempStr);
-                    System.out.println("=========");
+                    hexStr.append(tempStr);
                     //返回下次调用可以不受阻塞地从此流读取或跳过的估计字节数,如果等于0则表示已经读完
                     if (dataInputStream.available() == 0) {
                         System.out.println(">>>终端信息读取完毕,最后一位:" + tempStr);
                         break;
                     }
                 }
-                int a = 1 / 0;
-                System.out.println("收到的数据信息：" + sb.toString());
-                System.out.println("收到的数据信息：" + sb.toString().length());
-                String mesage = "10 06 00 00 00 00 00 00";
+                String resultStr = hexStr.toString().toUpperCase();
+                if(resultStr.length() == 0){
+                    Thread.sleep(30000);
+                    //最后唤醒线程、重建连接
+                    synchronized (socketInfo) {
+                        socketInfo.notify();
+                    }
+                }
                 //sendServer(dataOutputStream, socket, mesage);
                 // SocketMsgVo msgDataVo = SocketUtil.readMsgData(dataInputStream);
                 //log.info("客户端ip:{} port :{}收到消息:{}",socket.getInetAddress().toString(),socket.getPort(),msgDataVo.toString());

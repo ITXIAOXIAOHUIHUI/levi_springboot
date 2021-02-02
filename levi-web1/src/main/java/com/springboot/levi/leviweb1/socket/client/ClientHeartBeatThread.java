@@ -42,11 +42,10 @@ public class ClientHeartBeatThread implements Runnable {
         try {
             outputStream = socket.getOutputStream();
             dataOutputStream = new DataOutputStream(outputStream);
-            log.info("心跳检测1111");
             //客户端心跳检测
             while (!this.isStop && !socket.isClosed()) {
-                log.info("心跳检测2222");
-                SocketMsgVo msgDataVo = new SocketMsgVo();
+                Thread.sleep( 30000);
+               /* SocketMsgVo msgDataVo = new SocketMsgVo();
                 msgDataVo.setFrameHeader(ReceiveDataFrameConstant.RECEIVE_FRAME_HEADER);
                 msgDataVo.setLen(0);
                 msgDataVo.setBody(null);
@@ -55,10 +54,10 @@ public class ClientHeartBeatThread implements Runnable {
                     SocketUtil.writeMsgData(dataOutputStream, msgDataVo);
                 }
                 try {
-                    Thread.sleep(socketHeartIntervalTime * 1000);
+                    Thread.sleep( 30000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
+                }*/
             }
         } catch (Exception e) {
             log.error("客户端心跳消息发送异常");

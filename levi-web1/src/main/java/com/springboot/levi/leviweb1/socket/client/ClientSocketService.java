@@ -32,14 +32,8 @@ public class ClientSocketService implements InitializingBean {
 
     public static List<Socket> socketList = new ArrayList<>();
 
-    private List<JxSocketConfig> list = Stream.of(new JxSocketConfig("192.168.29.211", 8000),
-            new JxSocketConfig("192.168.29.211", 8001),
-            new JxSocketConfig("192.168.29.211", 8002),
-            new JxSocketConfig("192.168.29.211", 8003),
-            new JxSocketConfig("192.168.29.211", 8004),
-            new JxSocketConfig("192.168.29.211", 8005),
-            new JxSocketConfig("192.168.29.211", 8006),
-            new JxSocketConfig("192.168.29.211", 8007)).collect(Collectors.toList());
+    private List<JxSocketConfig> list = Stream.of(new JxSocketConfig("192.168.89.1", 8000)
+    ).collect(Collectors.toList());
 
     // @Value("${qxts.socket.host}")
     private String host;
@@ -63,7 +57,7 @@ public class ClientSocketService implements InitializingBean {
         for (JxSocketConfig config : list) {
             String ip = config.getLedIp();
             int port = config.getPort();
-            //start(config.getLedIp(), config.getPort());
+            start(config.getLedIp(), config.getPort());
             //ClientRecvThread recvThread = new ClientRecvThread(config.getLedIp(),config.getPort());
             /*ClientThreadPooll recvThread = new ClientThreadPooll(ip,port);
             new Thread(recvThread).start();
@@ -87,10 +81,10 @@ public class ClientSocketService implements InitializingBean {
                     socket = SocketUtil.createClientSocket(socketInfo.getIp(), socketInfo.getPort());
                     log.info("客户端 socket 在[{}]连接正常", port);
                     socketMap.put(ip + "_" + port, socket);
-                    ClientRecvThread recvThread = new ClientRecvThread(socket);
+                    ClientRecvThread recvThread = new ClientRecvThread(socket ,socketInfo);
                     new Thread(recvThread).start();
-                    ClientHeartBeatThread heartBeatThread = new ClientHeartBeatThread(socket, socketHeartIntervalTime, socketInfo);
-                    new Thread(heartBeatThread).start();
+                   // ClientHeartBeatThread heartBeatThread = new ClientHeartBeatThread(socket, socketHeartIntervalTime, socketInfo);
+                   // new Thread(heartBeatThread).start();
                     //1、连接成功后阻塞，由心跳检测异常唤醒
                     //方式1
                     synchronized (socketInfo) {
