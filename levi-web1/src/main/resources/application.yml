@@ -1,11 +1,11 @@
 server:
-  port: 8888
+  port: 8080
 spring:
   datasource:
     username: ${db.username:root}
     password: ${db.password:123456}
     url: ${db.data.url:jdbc:mysql://${db.url:localhost:3306}/evo_interface?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8}
-    driver-class-name: ${db.driver:com.mysql.jdbc.Driver}
+    driver-class-name: ${db.driver:com.mysql.cj.jdbc.Driver}
     hikari:
       idle-timeout: 80000
       connection-timeout: 80000
@@ -15,6 +15,14 @@ spring:
       leak-detection-threshold: 100000
   flyway:
     enabled: false
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    servlet:
+      content-type: text/html
+    mode: HTML
+    cache: false
+    encoding: utf-8
 
 mybatis-plus:
   configuration:
@@ -47,11 +55,15 @@ mybatis-plus:
   global-config.db-config.db-type: MYSQL
 
 
-warehouseId: 1
-warehouseCode:
-waitSecond: 10000
-hoist.waitTime: 5000
-backArea: FreeParkingArea
+
+levi-interface:
+  x-task-scheduler:
+    pollPause: 10000
+    poolSize: 2
+    nameSuffix: async-works
+    queueName: schedulable-works-queue
+    maxReties: 10
+
 hoist:
   request:
     url: http://172.28.200.99:10090

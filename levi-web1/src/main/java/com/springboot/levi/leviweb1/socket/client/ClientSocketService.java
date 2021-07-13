@@ -57,7 +57,7 @@ public class ClientSocketService implements InitializingBean {
         for (JxSocketConfig config : list) {
             String ip = config.getLedIp();
             int port = config.getPort();
-            start(config.getLedIp(), config.getPort());
+           //start(config.getLedIp(), config.getPort());
             //ClientRecvThread recvThread = new ClientRecvThread(config.getLedIp(),config.getPort());
             /*ClientThreadPooll recvThread = new ClientThreadPooll(ip,port);
             new Thread(recvThread).start();

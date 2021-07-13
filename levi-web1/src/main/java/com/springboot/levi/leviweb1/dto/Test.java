@@ -1,11 +1,14 @@
 package com.springboot.levi.leviweb1.dto;
 
+import com.google.common.collect.*;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 /**
@@ -16,158 +19,54 @@ import java.util.stream.Collectors;
 @Slf4j
 public class Test {
 
-    private String led1;
+    private Long id;
 
-    private String lea2;
+    private Integer num;
 
+    private BigDecimal price;
+
+    private String name;
+
+    private String category;
+
+
+
+
+    public Test(Long id, Integer num, BigDecimal price, String name, String category) {
+        this.id = id;
+        this.num = num;
+        this.price = price;
+        this.name = name;
+        this.category = category;
+    }
 
     public static void main(String[] args) {
-        List<Test> list = new ArrayList<>();
-        Test test = new Test();
-        test.setLed1("1");
-        test.setLea2("2");
-        list.add(test);
-
-        String  str = "[ {\n" +
-                "  \"line\" : \"L001\",\n" +
-                "  \"led1\" : \"1\",\n" +
-                "  \"led2\" : \"0\",\n" +
-                "  \"led3\" : \"0\",\n" +
-                "  \"led4\" : \"0\",\n" +
-                "  \"led5\" : \"0\",\n" +
-                "  \"led6\" : \"0\",\n" +
-                "  \"led7\" : \"0\",\n" +
-                "  \"status\" : \"0\",\n" +
-                "  \"attr1\" : \"\",\n" +
-                "  \"attr2\" : \"\",\n" +
-                "  \"attr3\" : \"\",\n" +
-                "  \"attr4\" : \"\",\n" +
-                "  \"attr5\" : \"\",\n" +
-                "  \"attr6\" : \"\",\n" +
-                "  \"createdAt\" : 0,\n" +
-                "  \"updatedAt\" : 0\n" +
-                "}, {\n" +
-                "  \"line\" : \"L002\",\n" +
-                "  \"led1\" : \"1\",\n" +
-                "  \"led2\" : \"0\",\n" +
-                "  \"led3\" : \"0\",\n" +
-                "  \"led4\" : \"0\",\n" +
-                "  \"led5\" : \"0\",\n" +
-                "  \"led6\" : \"0\",\n" +
-                "  \"led7\" : \"0\",\n" +
-                "  \"status\" : \"0\",\n" +
-                "  \"attr1\" : \"\",\n" +
-                "  \"attr2\" : \"\",\n" +
-                "  \"attr3\" : \"\",\n" +
-                "  \"attr4\" : \"\",\n" +
-                "  \"attr5\" : \"\",\n" +
-                "  \"attr6\" : \"\",\n" +
-                "  \"createdAt\" : 0,\n" +
-                "  \"updatedAt\" : 0\n" +
-                "}, {\n" +
-                "  \"line\" : \"L003\",\n" +
-                "  \"led1\" : \"1\",\n" +
-                "  \"led2\" : \"0\",\n" +
-                "  \"led3\" : \"0\",\n" +
-                "  \"led4\" : \"0\",\n" +
-                "  \"led5\" : \"0\",\n" +
-                "  \"led6\" : \"0\",\n" +
-                "  \"led7\" : \"0\",\n" +
-                "  \"status\" : \"0\",\n" +
-                "  \"attr1\" : \"\",\n" +
-                "  \"attr2\" : \"\",\n" +
-                "  \"attr3\" : \"\",\n" +
-                "  \"attr4\" : \"\",\n" +
-                "  \"attr5\" : \"\",\n" +
-                "  \"attr6\" : \"\",\n" +
-                "  \"createdAt\" : 0,\n" +
-                "  \"updatedAt\" : 0\n" +
-                "}, {\n" +
-                "  \"line\" : \"L004\",\n" +
-                "  \"led1\" : \"1\",\n" +
-                "  \"led2\" : \"0\",\n" +
-                "  \"led3\" : \"0\",\n" +
-                "  \"led4\" : \"0\",\n" +
-                "  \"led5\" : \"0\",\n" +
-                "  \"led6\" : \"0\",\n" +
-                "  \"led7\" : \"0\",\n" +
-                "  \"status\" : \"0\",\n" +
-                "  \"attr1\" : \"\",\n" +
-                "  \"attr2\" : \"\",\n" +
-                "  \"attr3\" : \"\",\n" +
-                "  \"attr4\" : \"\",\n" +
-                "  \"attr5\" : \"\",\n" +
-                "  \"attr6\" : \"\",\n" +
-                "  \"createdAt\" : 0,\n" +
-                "  \"updatedAt\" : 0\n" +
-                "}, {\n" +
-                "  \"line\" : \"L005\",\n" +
-                "  \"led1\" : \"1\",\n" +
-                "  \"led2\" : \"0\",\n" +
-                "  \"led3\" : \"0\",\n" +
-                "  \"led4\" : \"0\",\n" +
-                "  \"led5\" : \"0\",\n" +
-                "  \"led6\" : \"0\",\n" +
-                "  \"led7\" : \"0\",\n" +
-                "  \"status\" : \"0\",\n" +
-                "  \"attr1\" : \"\",\n" +
-                "  \"attr2\" : \"\",\n" +
-                "  \"attr3\" : \"\",\n" +
-                "  \"attr4\" : \"\",\n" +
-                "  \"attr5\" : \"\",\n" +
-                "  \"attr6\" : \"\",\n" +
-                "  \"createdAt\" : 0,\n" +
-                "  \"updatedAt\" : 0\n" +
-                "}, {\n" +
-                "  \"line\" : \"L006\",\n" +
-                "  \"led1\" : \"1\",\n" +
-                "  \"led2\" : \"0\",\n" +
-                "  \"led3\" : \"0\",\n" +
-                "  \"led4\" : \"0\",\n" +
-                "  \"led5\" : \"0\",\n" +
-                "  \"led6\" : \"0\",\n" +
-                "  \"led7\" : \"0\",\n" +
-                "  \"status\" : \"0\",\n" +
-                "  \"attr1\" : \"\",\n" +
-                "  \"attr2\" : \"\",\n" +
-                "  \"attr3\" : \"\",\n" +
-                "  \"attr4\" : \"\",\n" +
-                "  \"attr5\" : \"\",\n" +
-                "  \"attr6\" : \"\",\n" +
-                "  \"createdAt\" : 0,\n" +
-                "  \"updatedAt\" : 0\n" +
-                "}, {\n" +
-                "  \"line\" : \"L007\",\n" +
-                "  \"led1\" : \"1\",\n" +
-                "  \"led2\" : \"0\",\n" +
-                "  \"led3\" : \"0\",\n" +
-                "  \"led4\" : \"0\",\n" +
-                "  \"led5\" : \"0\",\n" +
-                "  \"led6\" : \"0\",\n" +
-                "  \"led7\" : \"0\",\n" +
-                "  \"status\" : \"0\",\n" +
-                "  \"attr1\" : \"\",\n" +
-                "  \"attr2\" : \"\",\n" +
-                "  \"attr3\" : \"\",\n" +
-                "  \"attr4\" : \"\",\n" +
-                "  \"attr5\" : \"\",\n" +
-                "  \"attr6\" : \"\",\n" +
-                "  \"createdAt\" : 0,\n" +
-                "  \"updatedAt\" : 0\n" +
-                "} ]\n";
+        Test prod1 = new Test(1L, 1, new BigDecimal("15.5"), "面包", "零食");
+        Test prod2 = new Test(2L, 2, new BigDecimal("20"), "饼干", "零食");
+        Test prod6 = new Test(2L, 2, new BigDecimal("20"), "饼干", "零食");
+        Test prod3 = new Test(3L, 3, new BigDecimal("30"), "月饼", "零食");
+        Test prod4 = new Test(4L, 3, new BigDecimal("10"), "青岛啤酒", "啤酒");
+        Test prod5 = new Test(5L, 10, new BigDecimal("15"), "百威啤酒", "啤酒");
+        Test prod7 = new Test(7L, 10, new BigDecimal("15"), "百威啤酒", "啤酒");
+        List<Test> prodList = Lists.newArrayList(prod1, prod2, prod3, prod4, prod5,prod6);
+        ImmutableList<Test> of = ImmutableList.copyOf(prodList);
 
 
-        Map<String, Test> collect = list.stream().collect(Collectors.toMap(t -> t.getLed1(), t -> t));
-        for(String key : collect.keySet()){
-            System.out.println(key);
-            Test test1 = collect.get(key);
-            log.info("test1 :{}",test1.toString());
-            System.out.println(test1.getLea2() instanceof  String);
-            if("1".equals("1")){
-                System.out.println("+++++");
-            }
-        }
-        System.out.println();
+        prodList.stream().collect(Collectors.groupingBy(Test::getId, Maps::newTreeMap, ImmutableList.toImmutableList()))
+                .forEach((id,prods)->{
+                    System.out.println("key::"+id);
+                    System.out.println("value::"+prods);
+
+                });
+
+        Map<String, List<Test>> prodMap = prodList.stream().collect
+                (Collectors.groupingBy(item -> item.getCategory() + "_" + item.getName()));
+
+
+        System.out.println(prodMap);
+        TreeMap<Long, ImmutableList<Test>> collect = prodList.stream().collect(Collectors.groupingBy(Test::getId, Maps::newTreeMap, ImmutableList.toImmutableList()));
+
 
     }
+
 }
