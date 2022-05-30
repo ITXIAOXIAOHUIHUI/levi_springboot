@@ -1,28 +1,29 @@
 package com.springboot.levi.leviweb1.socket.util;
 
 /**
+ * @author ws
  * @desc 字节码转换工具
  * @time 2020/10/16
- * @author ws
  */
 public class ByteTransformUtil {
 
     /**
      * 合并两个byte数组
+     *
      * @param bt1
      * @param bt2
      * @return
      */
-    public static byte[] byteMerger(byte[] bt1, byte[] bt2){
-        byte[] bt3 = new byte[bt1.length+bt2.length];
-        int i=0;
-        for(byte bt: bt1){
-            bt3[i]=bt;
+    public static byte[] byteMerger(byte[] bt1, byte[] bt2) {
+        byte[] bt3 = new byte[bt1.length + bt2.length];
+        int i = 0;
+        for (byte bt : bt1) {
+            bt3[i] = bt;
             i++;
         }
 
-        for(byte bt: bt2){
-            bt3[i]=bt;
+        for (byte bt : bt2) {
+            bt3[i] = bt;
             i++;
         }
         return bt3;
@@ -31,6 +32,7 @@ public class ByteTransformUtil {
 
     /**
      * int 转 byte[]   低字节在前（低字节序）
+     *
      * @param n
      * @return
      */
@@ -45,6 +47,7 @@ public class ByteTransformUtil {
 
     /**
      * int 转 byte[]   高字节在前（高字节序）
+     *
      * @param n
      * @return
      */
@@ -58,47 +61,50 @@ public class ByteTransformUtil {
     }
 
     public static void main(String[] args) {
-       // System.out.println(toHH(0));
-        String message = "10 06 "+ 01 + " "+40 +" 00 00 00 00";
+        // System.out.println(toHH(0));
+        String message = "10 06 " + 01 + " " + 40 + " 00 00 00 00";
         System.out.println(message);
     }
 
     /**
      * byte[] 转 int 低字节在前（低字节序）
+     *
      * @param b
      * @return
      */
-    public int lowInHighToInt(byte[] b){
+    public int lowInHighToInt(byte[] b) {
         int res = 0;
-        for(int i=0;i<b.length;i++){
-            res += (b[i] & 0xff) << (i*8);
+        for (int i = 0; i < b.length; i++) {
+            res += (b[i] & 0xff) << (i * 8);
         }
         return res;
     }
 
     /**
      * byte[] 转 int 高字节在前（高字节序）
+     *
      * @param b
      * @return
      */
-    public static int toInt(byte[] b){
+    public static int toInt(byte[] b) {
         int res = 0;
-        for(int i=0;i<b.length;i++){
-            res += (b[i] & 0xff) << ((3-i)*8);
+        for (int i = 0; i < b.length; i++) {
+            res += (b[i] & 0xff) << ((3 - i) * 8);
         }
         return res;
     }
 
     /**
      * 字节数组转16进制
+     *
      * @param bytes 需要转换的byte数组
-     * @return  转换后的Hex字符串
+     * @return 转换后的Hex字符串
      */
     public static String bytesToHex(byte[] bytes) {
         StringBuffer sb = new StringBuffer();
-        for(int i = 0; i < bytes.length; i++) {
+        for (int i = 0; i < bytes.length; i++) {
             String hex = Integer.toHexString(bytes[i] & 0xFF);
-            if(hex.length() < 2){
+            if (hex.length() < 2) {
                 sb.append(0);
             }
             sb.append(hex);
@@ -108,6 +114,7 @@ public class ByteTransformUtil {
 
     /**
      * 16进制直接转换成为字符串(无需Unicode解码)
+     *
      * @param hexStr
      * @return
      */

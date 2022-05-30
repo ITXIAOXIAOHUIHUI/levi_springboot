@@ -33,8 +33,9 @@ public class ConsumerConfig {
     private int consumeMessageBatchMaxSize;
     @Resource
     private ReceiverMessage msgListener;
+
     @Bean
-    public DefaultMQPushConsumer getRocketMQConsumer(){
+    public DefaultMQPushConsumer getRocketMQConsumer() {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(groupName);
         consumer.setNamesrvAddr(namesrvAddr);
         consumer.setConsumeThreadMin(consumeThreadMin);
@@ -46,10 +47,10 @@ public class ConsumerConfig {
             String[] topicTagsArr = topics.split(";");
             for (String topicTags : topicTagsArr) {
                 String[] topicTag = topicTags.split("~");
-                consumer.subscribe(topicTag[0],topicTag[1]);
+                consumer.subscribe(topicTag[0], topicTag[1]);
             }
             consumer.start();
-        }catch (MQClientException e){
+        } catch (MQClientException e) {
             e.printStackTrace();
         }
         return consumer;

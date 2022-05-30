@@ -27,129 +27,133 @@ import java.util.Map;
 @Component("SpringBeanFactory.WES")
 @Slf4j
 public class SpringBeanFactory implements ApplicationContextAware, InitializingBean, BeanPostProcessor {
-	/** ApplicationContext 对象 */
-	private ApplicationContext applicationContext;
+    /**
+     * ApplicationContext 对象
+     */
+    private ApplicationContext applicationContext;
 
-	/** 单子 */
-	private static SpringBeanFactory instance = new SpringBeanFactory();
+    /**
+     * 单子
+     */
+    private static SpringBeanFactory instance = new SpringBeanFactory();
 
-	public static void setInstance(SpringBeanFactory instance) {
-		SpringBeanFactory.instance = instance;
-	}
+    public static void setInstance(SpringBeanFactory instance) {
+        SpringBeanFactory.instance = instance;
+    }
 
-	private static SpringBeanFactory getInstance() {
-		return SpringBeanFactory.instance;
-	}
+    private static SpringBeanFactory getInstance() {
+        return SpringBeanFactory.instance;
+    }
 
-	/**
-	 * 获取服务类对象
-	 *
-	 * @param
-	 * @return
-	 */
-	public static String[] getBeanDefinitionNames() {
-		String[] names = getInstance().applicationContext.getBeanDefinitionNames();
-		return names;
-	}
+    /**
+     * 获取服务类对象
+     *
+     * @param
+     * @return
+     */
+    public static String[] getBeanDefinitionNames() {
+        String[] names = getInstance().applicationContext.getBeanDefinitionNames();
+        return names;
+    }
 
-	/**
-	 * 获取服务类对象
-	 *
-	 * @param type
-	 * @return
-	 */
-	public static <T> T getService(Class<T> type) {
-		return getBean(type);
-	}
+    /**
+     * 获取服务类对象
+     *
+     * @param type
+     * @return
+     */
+    public static <T> T getService(Class<T> type) {
+        return getBean(type);
+    }
 
-	@Override
-	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-		this.applicationContext = applicationContext;
-	}
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext = applicationContext;
+    }
 
-	public static ApplicationContext getApplicationContext(){
-		return getInstance().applicationContext;
-	}
+    public static ApplicationContext getApplicationContext() {
+        return getInstance().applicationContext;
+    }
 
-	/**
-	 * (non-Javadoc)
-	 *
-	 * @see InitializingBean#afterPropertiesSet()
-	 */
-	public void afterPropertiesSet() throws Exception {
-		SpringBeanFactory.setInstance(this);
-		String[] names = this.applicationContext.getBeanDefinitionNames();
-		for (int i = 0; i < names.length; i++) {
-			log.debug(" == names[" + i + "]:" + names[i]);
-		}
-	}
+    /**
+     * (non-Javadoc)
+     *
+     * @see InitializingBean#afterPropertiesSet()
+     */
+    public void afterPropertiesSet() throws Exception {
+        SpringBeanFactory.setInstance(this);
+        String[] names = this.applicationContext.getBeanDefinitionNames();
+        for (int i = 0; i < names.length; i++) {
+            log.debug(" == names[" + i + "]:" + names[i]);
+        }
+    }
 
-	/**
-	 * (non-Javadoc)
-	 */
-	public <T> T getInnerBean(String name, Class<T> targetClass) {
-		return (T) this.applicationContext.getBean(name, targetClass);
-	}
+    /**
+     * (non-Javadoc)
+     */
+    public <T> T getInnerBean(String name, Class<T> targetClass) {
+        return (T) this.applicationContext.getBean(name, targetClass);
+    }
 
-	/**
-	 * (non-Javadoc)
-	 */
-	public Object getBean(String name) {
-		return this.applicationContext.getBean(name);
-	}
+    /**
+     * (non-Javadoc)
+     */
+    public Object getBean(String name) {
+        return this.applicationContext.getBean(name);
+    }
 
-	public static <T> T getBean(Class<T> type) {
-		return instance.getInnerBean(type);
-	}
+    public static <T> T getBean(Class<T> type) {
+        return instance.getInnerBean(type);
+    }
 
-	public static <T> T getBean(String name , Class<T> type) {
-		return instance.getInnerBean(name, type);
-	}
+    public static <T> T getBean(String name, Class<T> type) {
+        return instance.getInnerBean(name, type);
+    }
 
-	public static <T> Map<String, T> getBeansOfType(Class<T> targetClass) {
-		return instance.applicationContext.getBeansOfType(targetClass);
-	}
+    public static <T> Map<String, T> getBeansOfType(Class<T> targetClass) {
+        return instance.applicationContext.getBeansOfType(targetClass);
+    }
 
-	/**
-	 * 根据接口获得实体
-	 */
-	@SuppressWarnings("unchecked")
-	private <T> T getInnerBean(Class<T> type) {
-		String[] names = this.applicationContext.getBeanNamesForType(type);
-		if (names == null || names.length == 0) {
-			return null;
-		}
-		String beanName = names[0];
-		for (String name : names) {
-			if(StringUtils.equalsIgnoreCase(name, type.getSimpleName())) {
-				beanName = name;
-				break;
-			}
-		}
-		return (T) this.applicationContext.getBean(beanName);
-	}
+    /**
+     * 根据接口获得实体
+     */
+    @SuppressWarnings("unchecked")
+    private <T> T getInnerBean(Class<T> type) {
+        String[] names = this.applicationContext.getBeanNamesForType(type);
+        if (names == null || names.length == 0) {
+            return null;
+        }
+        String beanName = names[0];
+        for (String name : names) {
+            if (StringUtils.equalsIgnoreCase(name, type.getSimpleName())) {
+                beanName = name;
+                break;
+            }
+        }
+        return (T) this.applicationContext.getBean(beanName);
+    }
 
-	/**
-	 * (non-Javadoc)
-	 */
-	public boolean containsObject(String name) {
-		return this.applicationContext.containsBean(name);
-	}
+    /**
+     * (non-Javadoc)
+     */
+    public boolean containsObject(String name) {
+        return this.applicationContext.containsBean(name);
+    }
 
-	/**
-	 * (non-Javadoc)
-	 */
-	public void bind(Object target) {
-		this.applicationContext.getAutowireCapableBeanFactory().autowireBeanProperties(target, AutowireCapableBeanFactory.AUTOWIRE_BY_NAME, false);
-	}
+    /**
+     * (non-Javadoc)
+     */
+    public void bind(Object target) {
+        this.applicationContext.getAutowireCapableBeanFactory().autowireBeanProperties(target, AutowireCapableBeanFactory.AUTOWIRE_BY_NAME, false);
+    }
 
-	@Override
-	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-		return bean;
-	}
+    @Override
+    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+        return bean;
+    }
 
-	@Override
-	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-		return bean;
-	}
+    @Override
+    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+        return bean;
+    }
 }

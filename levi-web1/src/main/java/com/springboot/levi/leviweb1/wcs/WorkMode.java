@@ -28,30 +28,30 @@ public class WorkMode {
 
     public static final String value = "true";
 
-    public static  boolean isClassicG2pEnable(List<String> capacities) {
-        return capacities.contains( getPrefix(G2P_PICKING)) ||
+    public static boolean isClassicG2pEnable(List<String> capacities) {
+        return capacities.contains(getPrefix(G2P_PICKING)) ||
                 capacities.contains(getPrefix(G2P_GUIDED_PUTAWAY)) ||
                 capacities.contains(getPrefix(G2P_DIRECT_PUTAWAY)) ||
                 capacities.contains(getPrefix(G2P_COUNTCHECK));
     }
 
-    public static  boolean isG2PEnable (List<String> capacities) {
-        return capacities.contains( getPrefix(G2P_PICKING)) ||
+    public static boolean isG2PEnable(List<String> capacities) {
+        return capacities.contains(getPrefix(G2P_PICKING)) ||
                 capacities.contains(getPrefix(G2P_GUIDED_PUTAWAY)) ||
                 capacities.contains(getPrefix(G2P_DIRECT_PUTAWAY)) ||
                 capacities.contains(getPrefix(G2P_COUNTCHECK)) ||
                 capacities.contains(getPrefix(SI_CARRY)) ||
                 capacities.contains(getPrefix(TALLY)) ||
-                capacities.contains(getPrefix(BUCKET_CONVEY)) ;
+                capacities.contains(getPrefix(BUCKET_CONVEY));
     }
 
     private static String getPrefix(String s) {
         return s.substring(0, s.indexOf('.'));
     }
 
-    public static  boolean isBucketMoveEnable (List<String> capacities) {
-        return  capacities.contains(getPrefix(G2P_DIRECT_PUTAWAY)) ||
+    public static boolean isBucketMoveEnable(List<String> capacities) {
+        return capacities.contains(getPrefix(G2P_DIRECT_PUTAWAY)) ||
                 capacities.contains(getPrefix(G2P_COUNTCHECK)) ||
-                capacities.contains(getPrefix(BUCKET_CONVEY)) ;
+                capacities.contains(getPrefix(BUCKET_CONVEY));
     }
 }

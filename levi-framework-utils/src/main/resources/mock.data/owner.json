@@ -1,42 +1,42 @@
 [
-	{
-		"id": 1,
-		"ownerCode": "KC",
-		"ownerName": "快仓",
-		"ownerType": "common",
-		"superOwnerId": 2,
-		"superOwnerCode": null
-	},
-	{
-		"id": 2,
-		"ownerCode": "KC-A",
-		"ownerName": "快仓智能",
-		"ownerType": "platform",
-		"superOwnerId": null,
-		"superOwnerCode": null
-	},
-	{
-		"id": 3,
-		"ownerCode": "KC-B",
-		"ownerName": "快仓自动化",
-		"ownerType": "platform",
-		"superOwnerId": null,
-		"superOwnerCode": null
-	},
-	{
-		"id": 4,
-		"ownerCode": "jiading",
-		"ownerName": "嘉定",
-		"ownerType": "platform",
-		"superOwnerId": null,
-		"superOwnerCode": null
-	},
-	{
-		"id": 5,
-		"ownerCode": "SHENTONG",
-		"ownerName": "申通",
-		"ownerType": "platform",
-		"superOwnerId": null,
-		"superOwnerCode": null
-	}
+  {
+    "id": 1,
+    "ownerCode": "KC",
+    "ownerName": "快仓",
+    "ownerType": "common",
+    "superOwnerId": 2,
+    "superOwnerCode": null
+  },
+  {
+    "id": 2,
+    "ownerCode": "KC-A",
+    "ownerName": "快仓智能",
+    "ownerType": "platform",
+    "superOwnerId": null,
+    "superOwnerCode": null
+  },
+  {
+    "id": 3,
+    "ownerCode": "KC-B",
+    "ownerName": "快仓自动化",
+    "ownerType": "platform",
+    "superOwnerId": null,
+    "superOwnerCode": null
+  },
+  {
+    "id": 4,
+    "ownerCode": "jiading",
+    "ownerName": "嘉定",
+    "ownerType": "platform",
+    "superOwnerId": null,
+    "superOwnerCode": null
+  },
+  {
+    "id": 5,
+    "ownerCode": "SHENTONG",
+    "ownerName": "申通",
+    "ownerType": "platform",
+    "superOwnerId": null,
+    "superOwnerCode": null
+  }
 ]

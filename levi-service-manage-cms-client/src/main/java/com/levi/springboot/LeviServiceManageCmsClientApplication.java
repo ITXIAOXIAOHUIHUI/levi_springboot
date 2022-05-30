@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EntityScan("com.xuecheng.framework.domain.cms")//扫描实体类
-@ComponentScan(basePackages={"com.levi.springboot.client"})//扫描common下的所有类
+@ComponentScan(basePackages = {"com.levi.springboot.client"})//扫描common下的所有类
 public class LeviServiceManageCmsClientApplication {
 
     public static void main(String[] args) {

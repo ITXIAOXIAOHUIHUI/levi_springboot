@@ -20,18 +20,21 @@ public interface WcsBroker {
 
     /**
      * 返回broker的类型
+     *
      * @return BrokerType
      */
     BrokerType getType();
 
     /**
      * 返回仓库ID
+     *
      * @return warehouseId
      */
     Long getWarehouseId();
 
     /**
      * 返回库区codes
+     *
      * @return zoneCodes
      */
     Set<String> getZoneCodes();

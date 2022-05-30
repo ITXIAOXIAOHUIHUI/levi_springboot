@@ -17,14 +17,14 @@ import java.util.List;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @ToString(callSuper = true)
-public class PolicyPropertyDTO  extends BaseRequestVO  {
+public class PolicyPropertyDTO extends BaseRequestVO {
 
 
-    @ApiModelProperty(value = "对象类型ID", name = "objectClassId",example = "1")
+    @ApiModelProperty(value = "对象类型ID", name = "objectClassId", example = "1")
     @NotNull
     private Long objectClassId;
 
-    @ApiModelProperty(value = "属性名称", name = "propertyName",example = "priorityLevel")
+    @ApiModelProperty(value = "属性名称", name = "propertyName", example = "priorityLevel")
     @NotBlank
     @Length(max = 50)
     private String propertyName;
@@ -39,29 +39,29 @@ public class PolicyPropertyDTO  extends BaseRequestVO  {
      */
     private List<DictionaryItemDTO> choiceValues;
 
-    @ApiModelProperty(value = "属性描述", name = "propertyDesc",example = "优先级等级")
+    @ApiModelProperty(value = "属性描述", name = "propertyDesc", example = "优先级等级")
     @Length(max = 500)
     private String propertyDesc;
 
-    @ApiModelProperty(value = "属性数据类型", name = "dataType",example = "String")
+    @ApiModelProperty(value = "属性数据类型", name = "dataType", example = "String")
     @NotBlank
     @Length(max = 20)
     private String dataType;
 
-    @ApiModelProperty(value = "属性对象类型", name = "dataObjectClass",example = "")
+    @ApiModelProperty(value = "属性对象类型", name = "dataObjectClass", example = "")
 //	@NotBlank
 //	@Length(max = 50)
     private String dataObjectClass;
 
-    @ApiModelProperty(value = "枚举值标记", name = "choiceFlag",example = "1")
+    @ApiModelProperty(value = "枚举值标记", name = "choiceFlag", example = "1")
     @NotNull
     private Boolean choiceFlag;
 
-    @ApiModelProperty(value = "多值标记", name = "multipleFlag",example = "0")
+    @ApiModelProperty(value = "多值标记", name = "multipleFlag", example = "0")
     @NotNull
     private Boolean multipleFlag;
 
-    @ApiModelProperty(value = "排序值", name = "sortNum",example = "1")
+    @ApiModelProperty(value = "排序值", name = "sortNum", example = "1")
 //	@NotNull
     private Integer sortNum;
 }

@@ -64,7 +64,7 @@ public class ClientHeartBeatThread implements Runnable {
             log.error("客户端心跳消息发送异常");
         } finally {
             this.isStop = true;
-            log.info("客户端旧心跳线程已摧毁 ip:{} port :{}",socket.getInetAddress(),socket.getPort());
+            log.info("客户端旧心跳线程已摧毁 ip:{} port :{}", socket.getInetAddress(), socket.getPort());
             StreamUtil.closeOutputStream(dataOutputStream);
             StreamUtil.closeOutputStream(outputStream);
             SocketUtil.closeSocket(socket);

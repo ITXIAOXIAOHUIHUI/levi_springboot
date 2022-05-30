@@ -16,7 +16,7 @@ public class ReceiveDataFrameConstant {
     public static int RECEIVE_FRAME_TAIL_LENGTH = 4;  //帧尾字节长度
     public static int RECEIVE_FRAME_LENGTH_LENGTH = 4;  //帧长度长度
 
-    public static byte[] RECEIVE_FRAME_HEADER = {(byte)0xEA};  //固定帧头
-    public static byte[] RECEIVE_FRAME_TAIL = {(byte)0xDE}; //固定帧尾
+    public static byte[] RECEIVE_FRAME_HEADER = {(byte) 0xEA};  //固定帧头
+    public static byte[] RECEIVE_FRAME_TAIL = {(byte) 0xDE}; //固定帧尾
 
 }

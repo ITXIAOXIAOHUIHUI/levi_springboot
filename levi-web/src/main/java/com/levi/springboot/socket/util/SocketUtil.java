@@ -15,7 +15,7 @@ public class SocketUtil {
     private static Logger log = LoggerFactory.getLogger(SocketUtil.class);
 
     public static Socket createClientSocket(String host, int port) throws IOException {
-        Socket socket = new Socket(host,port);
+        Socket socket = new Socket(host, port);
         return socket;
     }
 
@@ -45,11 +45,11 @@ public class SocketUtil {
 
     public static SocketMsgVo readMsgData(DataInputStream dataInputStream) throws IOException {
         byte[] frameHeader = new byte[ReceiveDataFrameConstant.RECEIVE_LENGTH];
-        dataInputStream.read(frameHeader,0,1);
+        dataInputStream.read(frameHeader, 0, 1);
         String tempStr = ByteArrayToHexStr(frameHeader);
-        log.info("temStr :{}",tempStr);
+        log.info("temStr :{}", tempStr);
         SocketMsgVo msgDataVo = new SocketMsgVo();
-       // byte[] frameHeader = new byte[ReceiveDataFrameConstant.RECEIVE_HEAR];
+        // byte[] frameHeader = new byte[ReceiveDataFrameConstant.RECEIVE_HEAR];
 /*
         int len = dataInputStream.readInt();
         byte[] body = new byte[len];
@@ -59,9 +59,9 @@ public class SocketUtil {
         System.out.println("获取的数据长度为：" + len);
         SocketMsgVo msgDataVo = new SocketMsgVo();
         //msgDataVo.setFrameHeader(frameHeader);*/
-        msgDataVo.setLen(tempStr.length()+2);
-       // msgDataVo.setLen(len);
-       // msgDataVo.setFrameTail(frameTail);
+        msgDataVo.setLen(tempStr.length() + 2);
+        // msgDataVo.setLen(len);
+        // msgDataVo.setFrameTail(frameTail);
         return msgDataVo;
     }
 
@@ -70,14 +70,11 @@ public class SocketUtil {
      *
      * @param array
      */
-    public static String ByteArrayToHexStr(byte[] array)
-    {
+    public static String ByteArrayToHexStr(byte[] array) {
         StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < array.length; i++)
-        {
+        for (int i = 0; i < array.length; i++) {
             String hex = Integer.toHexString(array[i] & 0xFF);
-            if (hex.length() == 1)
-            {
+            if (hex.length() == 1) {
                 stringBuilder.append("0");
             }
             stringBuilder.append(hex);

@@ -81,10 +81,10 @@ public class ClientSocketService implements InitializingBean {
                     socket = SocketUtil.createClientSocket(socketInfo.getIp(), socketInfo.getPort());
                     log.info("客户端 socket 在[{}]连接正常", port);
                     socketMap.put(ip + "_" + port, socket);
-                    ClientRecvThread recvThread = new ClientRecvThread(socket ,socketInfo);
+                    ClientRecvThread recvThread = new ClientRecvThread(socket, socketInfo);
                     new Thread(recvThread).start();
-                   // ClientHeartBeatThread heartBeatThread = new ClientHeartBeatThread(socket, socketHeartIntervalTime, socketInfo);
-                   // new Thread(heartBeatThread).start();
+                    // ClientHeartBeatThread heartBeatThread = new ClientHeartBeatThread(socket, socketHeartIntervalTime, socketInfo);
+                    // new Thread(heartBeatThread).start();
                     //1、连接成功后阻塞，由心跳检测异常唤醒
                     //方式1
                     synchronized (socketInfo) {

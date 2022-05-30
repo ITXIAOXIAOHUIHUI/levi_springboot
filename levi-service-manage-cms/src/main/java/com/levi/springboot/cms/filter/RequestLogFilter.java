@@ -15,7 +15,7 @@ import java.util.Map;
  * @author jianghaihui
  * @date 2019/9/20 16:53
  */
-@WebFilter(filterName = "RequestLogFilter",urlPatterns = "/*")
+@WebFilter(filterName = "RequestLogFilter", urlPatterns = "/*")
 public class RequestLogFilter implements Filter {
     private static final Logger logger = LoggerFactory.getLogger(RequestLogFilter.class);
 
@@ -31,21 +31,20 @@ public class RequestLogFilter implements Filter {
         RequestLog requestLog = new RequestLog();
         //包装request和response
         HttpServletRequest httpReq = (HttpServletRequest) servletRequest;
-        HttpServletResponse httpRes = (HttpServletResponse)servletResponse;
+        HttpServletResponse httpRes = (HttpServletResponse) servletResponse;
         //拼接参数
         String url = httpReq.getRequestURI().toString();
-        String query = url +"?"+getQueryParameter(httpReq);
+        String query = url + "?" + getQueryParameter(httpReq);
         logger.info("======request timel requestUrl :");
     }
 
-    private String getQueryParameter(HttpServletRequest request){
+    private String getQueryParameter(HttpServletRequest request) {
         StringBuilder sb = new StringBuilder();
-        for(Map.Entry<String,String[]> entry :request.getParameterMap().entrySet()){
+        for (Map.Entry<String, String[]> entry : request.getParameterMap().entrySet()) {
             sb.append(entry.getKey()).append("=").append(entry).append("&");
         }
-        return sb.toString().endsWith("$") ? sb.substring(0,sb.lastIndexOf("&")):sb.toString();
+        return sb.toString().endsWith("$") ? sb.substring(0, sb.lastIndexOf("&")) : sb.toString();
     }
-
 
 
     @Override

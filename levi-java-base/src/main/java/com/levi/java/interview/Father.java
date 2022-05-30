@@ -4,7 +4,7 @@ package com.levi.java.interview;
  * @author jianghaihui
  * @date 2020/10/15 17:45
  */
-public class Father  {
+public class Father {
 
     private String userName;
 

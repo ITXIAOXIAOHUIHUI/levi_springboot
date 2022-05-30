@@ -13,6 +13,7 @@ import static com.springboot.levi.netty.im.protocol.command.Command.MESSAGE_REQU
 public class MessageRequestPacket extends Packet {
 
     private String message;
+
     @Override
     public Byte getCommand() {
         return MESSAGE_REQUEST;

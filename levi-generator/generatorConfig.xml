@@ -1,42 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>  
-<!DOCTYPE generatorConfiguration  
-  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
-  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">  
-<generatorConfiguration>  
-<!-- ���ݿ�����-->  
-    <classPathEntry  location="mysql-connector-java-5.1.26-bin.jar"/>
-    <context id="DB2Tables"  targetRuntime="MyBatis3">  
-        <commentGenerator>  
-            <property name="suppressDate" value="true"/>   
-            <property name="suppressAllComments" value="true"/>  
-        </commentGenerator>   
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!-- ���ݿ�����-->
+    <classPathEntry location="mysql-connector-java-5.1.26-bin.jar"/>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/levi_springboot?serverTimezone=UTC&amp;nullCatalogMeansCurrent=true"
-		userId="root" password="root">  
-        </jdbcConnection>  
-		
-        <javaTypeResolver>  
-            <property name="forceBigDecimals" value="true"/>  
-        </javaTypeResolver>  
-       <!-- 指定javaBean生成的位置 -->
+                        userId="root" password="root">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true"/>
+        </javaTypeResolver>
+        <!-- 指定javaBean生成的位置 -->
         <javaModelGenerator targetPackage="com.levi.springboot.model" targetProject=".\src\main\java">
             <property name="enableSubPackages" value="true"/>  <!--生产的代码路径  -->
-            <property name="trimStrings" value="true"/>  
-        </javaModelGenerator>  
-        <!--指定sql映射文件生成的位置 --> 
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!--指定sql映射文件生成的位置 -->
         <sqlMapGenerator targetPackage="com.levi.springboot.mapper" targetProject=".\src\main\resources">
-            <property name="enableSubPackages" value="true"/>  
-        </sqlMapGenerator>  
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
         <!-- 指定dao接口生成的位置，mapper接口 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.levi.springboot.mapper" targetProject=".\src\main\java">
-            <property name="enableSubPackages" value="true"/>  
-        </javaClientGenerator>  
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.levi.springboot.mapper"
+                             targetProject=".\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
         <!-- table指定每个表的生成策略  JavaBean的名字-->
-        <table tableName="request_log" domainObjectName="RequestLog" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <columnOverride column="request" javaType="java.lang.String" jdbcType="VARCHAR" />
-            <columnOverride column="response" javaType="java.lang.String" jdbcType="VARCHAR" />
-            <columnOverride column="error_msg" javaType="java.lang.String" jdbcType="VARCHAR" />
+        <table tableName="request_log" domainObjectName="RequestLog" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <columnOverride column="request" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <columnOverride column="response" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <columnOverride column="error_msg" javaType="java.lang.String" jdbcType="VARCHAR"/>
 
         </table>
-    </context>  
+    </context>
 </generatorConfiguration>  

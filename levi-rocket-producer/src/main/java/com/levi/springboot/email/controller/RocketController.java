@@ -15,20 +15,20 @@ import javax.annotation.Resource;
  */
 @RestController
 public class RocketController {
-    private static  final Logger LOGGER = LoggerFactory.getLogger(RocketMqService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(RocketMqService.class);
     @Resource
-    private RocketMqService rocketMqService ;
+    private RocketMqService rocketMqService;
 
     @RequestMapping("/sendMsg")
-    public SendResult sendMsg (){
+    public SendResult sendMsg() {
         String msg = "OpenAccount Msg";
         SendResult sendResult = null;
         try {
-            sendResult = rocketMqService.openAccountMsg(msg) ;
+            sendResult = rocketMqService.openAccountMsg(msg);
         } catch (Exception e) {
             LOGGER.error("exception:{}", e);
             e.printStackTrace();
         }
-        return sendResult ;
+        return sendResult;
     }
 }

@@ -34,25 +34,25 @@ public class ClientSocketService implements InitializingBean {
     public static List<Socket> socketList = new ArrayList<>();
 
     private List<JxSocketConfig> list = Stream.of(new JxSocketConfig("192.168.29.211", 8000),
-            new JxSocketConfig("192.168.29.211", 8001) ,
-            new JxSocketConfig("192.168.29.211", 8002) ,
-            new JxSocketConfig("192.168.29.211", 8003) ,
-            new JxSocketConfig("192.168.29.211", 8004) ,
-            new JxSocketConfig("192.168.29.211", 8005) ,
-            new JxSocketConfig("192.168.29.211", 8006) ,
-            new JxSocketConfig("192.168.29.211", 8007) ).collect(Collectors.toList());
+            new JxSocketConfig("192.168.29.211", 8001),
+            new JxSocketConfig("192.168.29.211", 8002),
+            new JxSocketConfig("192.168.29.211", 8003),
+            new JxSocketConfig("192.168.29.211", 8004),
+            new JxSocketConfig("192.168.29.211", 8005),
+            new JxSocketConfig("192.168.29.211", 8006),
+            new JxSocketConfig("192.168.29.211", 8007)).collect(Collectors.toList());
 
-   // @Value("${qxts.socket.host}")
+    // @Value("${qxts.socket.host}")
     private String host;
 
-   // @Value("${qxts.socket.port}")
+    // @Value("${qxts.socket.port}")
     private int port;
 
     //30s 间隔多少秒发送一次心跳检测
- //   @Value("${qxts.socket.heart.interval.time}")
+    //   @Value("${qxts.socket.heart.interval.time}")
     private int socketHeartIntervalTime;
 
-    public static Map<String,Socket> socketMap = new ConcurrentHashMap<>();
+    public static Map<String, Socket> socketMap = new ConcurrentHashMap<>();
 
 
     //在该类的依赖注入完毕之后，会自动调用afterPropertiesSet方法,否则外部tomcat部署会无法正常启动socket
@@ -78,16 +78,16 @@ public class ClientSocketService implements InitializingBean {
     /**
      * 启动服务
      */
-    public void start(String ip,int port){
+    public void start(String ip, int port) {
         Thread socketServiceThread = new Thread(() -> {
-            SocketInfo socketInfo ;
-            Socket socket ;
+            SocketInfo socketInfo;
+            Socket socket;
             while (true) {
                 try {
-                    socketInfo = new SocketInfo(ip,port);
+                    socketInfo = new SocketInfo(ip, port);
                     socket = SocketUtil.createClientSocket(socketInfo.getIp(), socketInfo.getPort());
                     log.info("客户端 socket 在[{}]连接正常", port);
-                    socketMap.put(ip+"_"+port,socket);
+                    socketMap.put(ip + "_" + port, socket);
                     ClientRecvThread recvThread = new ClientRecvThread(socket);
                     new Thread(recvThread).start();
                     ClientHeartBeatThread heartBeatThread = new ClientHeartBeatThread(socket, socketHeartIntervalTime, socketInfo);
@@ -99,11 +99,11 @@ public class ClientSocketService implements InitializingBean {
                             socketInfo.wait();
                             int realPort = socketInfo.getPort();
                             String realIp = socketInfo.getIp();
-                            String convertIp = realIp+"_"+realPort;
+                            String convertIp = realIp + "_" + realPort;
                             socketInfo.setIp(realIp);
                             socketInfo.setPort(socket.getPort());
-                            log.info("ip [{}]  port [{}]**************重连重连*****************",ip,port);
-                            removeMap(socketMap,convertIp);
+                            log.info("ip [{}]  port [{}]**************重连重连*****************", ip, port);
+                            removeMap(socketMap, convertIp);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -133,7 +133,7 @@ public class ClientSocketService implements InitializingBean {
         socketServiceThread.start();
     }
 
-    private synchronized void removeMap(Map<String,Socket> mapSocket,String ip) throws InterruptedException {
+    private synchronized void removeMap(Map<String, Socket> mapSocket, String ip) throws InterruptedException {
         Thread.sleep(1000);
         mapSocket.remove(ip);
     }

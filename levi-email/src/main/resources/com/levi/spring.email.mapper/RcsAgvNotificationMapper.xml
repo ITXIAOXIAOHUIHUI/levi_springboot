@@ -6,8 +6,8 @@
         <result column="receiver" jdbcType="VARCHAR" property="receiver"/>
     </resultMap>
 
-    <sql id="base_column" >
-          id,receiver
+    <sql id="base_column">
+        id,receiver
     </sql>
 
 

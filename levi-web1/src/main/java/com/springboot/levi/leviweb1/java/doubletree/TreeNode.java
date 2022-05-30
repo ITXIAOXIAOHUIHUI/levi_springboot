@@ -7,13 +7,16 @@ package com.springboot.levi.leviweb1.java.doubletree;
 public class TreeNode {
     int val;
 
-    TreeNode  left;
+    TreeNode left;
 
     TreeNode right;
 
-    TreeNode() {}
+    TreeNode() {
+    }
 
-    TreeNode(int val) { this.val = val; }
+    TreeNode(int val) {
+        this.val = val;
+    }
 
     TreeNode(int val, TreeNode left, TreeNode right) {
         this.val = val;

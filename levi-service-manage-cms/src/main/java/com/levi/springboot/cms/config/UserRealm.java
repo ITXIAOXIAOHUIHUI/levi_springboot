@@ -33,52 +33,54 @@ public class UserRealm extends AuthorizingRealm {
     /**
      * 授权（验证权限时调用）
      * 获取用户权限集合
+     *
      * @param principals
      * @return
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
         SysUserEntity user = (SysUserEntity) principals.getPrimaryPrincipal();
-        if(user == null){
-            throw  new UnknownAccountException("账号不存在");
+        if (user == null) {
+            throw new UnknownAccountException("账号不存在");
         }
         List<String> permsList;
         List<SysMenuEntity> menuList = sysMenuMapper.selectList();
         permsList = new ArrayList<>(menuList.size());
-        menuList.forEach(menu->{
+        menuList.forEach(menu -> {
             permsList.add(menu.getPerms());
         });
         //用户权限列表
         Set<String> permSet = new HashSet<>();
-        for(String perms : permsList){
-            if(StringUtils.isEmpty(perms)){
+        for (String perms : permsList) {
+            if (StringUtils.isEmpty(perms)) {
                 continue;
             }
             permSet.addAll(Arrays.asList(perms.trim().split(",")));
         }
-        SimpleAuthorizationInfo info  = new SimpleAuthorizationInfo();
+        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         info.setStringPermissions(permSet);
         return info;
     }
 
     /**
      * 认证（登录时调用）
+     *
      * @param token
      * @return 验证用户登录
      * @throws AuthenticationException
      */
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-        UsernamePasswordToken token1 = (UsernamePasswordToken)token;
+        UsernamePasswordToken token1 = (UsernamePasswordToken) token;
         //查询用户信息
         SysUserEntity user = userMapper.selectOne(token1.getUsername());
-        if(user == null){
-            throw  new UnknownAccountException("账号或密码不正确");
+        if (user == null) {
+            throw new UnknownAccountException("账号或密码不正确");
         }
-        if(user.getStatus() == 0){
+        if (user.getStatus() == 0) {
             throw new LockedAccountException("账号已被锁定，请联系管理人员");
         }
-        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user,user.getPassword(),
+        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user, user.getPassword(),
                 ByteSource.Util.bytes(user.getSalt()),
                 getName());
         return info;

@@ -7,10 +7,9 @@ import lombok.Data;
  * @date 2020/10/14 11:10
  */
 
-public enum  ManyStateEnum {
-    Lack("缺拣完成","PickingMissComplete"),
-    Cancel("作业取消","PickingCancel"),
-    ;
+public enum ManyStateEnum {
+    Lack("缺拣完成", "PickingMissComplete"),
+    Cancel("作业取消", "PickingCancel"),;
 
     private String name;
     private String instance;
@@ -35,8 +34,6 @@ public enum  ManyStateEnum {
     public void setInstance(String instance) {
         this.instance = instance;
     }
-
-
 
 
 }

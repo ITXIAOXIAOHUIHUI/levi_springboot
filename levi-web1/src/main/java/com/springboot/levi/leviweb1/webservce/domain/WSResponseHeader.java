@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
@@ -12,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @date 2020/11/13 15:43
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"msgCode","message" })
+@XmlType(propOrder = {"msgCode", "message"})
 public class WSResponseHeader {
 
     @XmlElement(name = "msgCode")

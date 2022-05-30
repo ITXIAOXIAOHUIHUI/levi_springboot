@@ -1,18 +1,18 @@
 [
-	{
-		"id": 24,
-		"warehouseId": 9001,
-		"warehouseCode": "WH-9001",
-		"warehouseName": "宝仓测试仓库",
-		"containerCode": "1",
-		"ownerCode": "KC",
-		"state": "effective",
-		"containerType": {
-			"gridRow": 2,
-			"gridColumn": 2,
-			"initialFace": "2",
-			"width": "1",
-			"height": "1"
-			}
-	}
+  {
+    "id": 24,
+    "warehouseId": 9001,
+    "warehouseCode": "WH-9001",
+    "warehouseName": "宝仓测试仓库",
+    "containerCode": "1",
+    "ownerCode": "KC",
+    "state": "effective",
+    "containerType": {
+      "gridRow": 2,
+      "gridColumn": 2,
+      "initialFace": "2",
+      "width": "1",
+      "height": "1"
+    }
+  }
 ]

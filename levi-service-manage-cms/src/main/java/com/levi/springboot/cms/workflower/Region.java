@@ -14,6 +14,7 @@ import java.lang.annotation.Target;
 public @interface Region {
     //地区名称
     String name();
+
     //所属国家
     String country();
 }

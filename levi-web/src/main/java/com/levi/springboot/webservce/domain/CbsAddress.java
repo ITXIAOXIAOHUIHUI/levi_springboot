@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlType;
  * @date 2020/11/13 16:02
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"CbsAddress" })
+@XmlType(propOrder = {"CbsAddress"})
 public class CbsAddress {
 
     @XmlElement(name = "CbsAddress")

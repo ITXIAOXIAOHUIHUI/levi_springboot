@@ -16,14 +16,15 @@ public class PickingLockObjectFactory {
     private final Object shortReGeneratorLock = new Object();
 
 
-
-    private PickingLockObjectFactory(){
+    private PickingLockObjectFactory() {
     }
-    public static PickingLockObjectFactory getInstance(){
+
+    public static PickingLockObjectFactory getInstance() {
         return InnerPickingLockInstance.pickingLockObjectFactory;
     }
-    private static class InnerPickingLockInstance{
-        private  static  PickingLockObjectFactory pickingLockObjectFactory = new PickingLockObjectFactory();
+
+    private static class InnerPickingLockInstance {
+        private static PickingLockObjectFactory pickingLockObjectFactory = new PickingLockObjectFactory();
     }
 
 

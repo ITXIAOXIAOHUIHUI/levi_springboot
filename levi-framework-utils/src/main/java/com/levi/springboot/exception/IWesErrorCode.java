@@ -7,14 +7,13 @@
 package com.levi.springboot.exception;
 
 
-
 /**
  * 错误码接口
  *
  * @author kim.cheng
  * @history 2019-1-23
  */
-public interface IWesErrorCode  {
+public interface IWesErrorCode {
 
 
 }

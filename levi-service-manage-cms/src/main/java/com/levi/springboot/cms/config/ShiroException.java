@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class ShiroException {
 
     @ExceptionHandler(AuthorizationException.class)
-    public String authorizationException (){
+    public String authorizationException() {
         return "抱歉您没有权限访问该内容!";
     }
 
     @ExceptionHandler(Exception.class)
-    public String handleException(Exception e){
+    public String handleException(Exception e) {
         return "系统异常!";
     }
 

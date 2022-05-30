@@ -7,8 +7,8 @@ package com.levi.java.interview;
 
 public class Son {
 
-    private String  school;
-    private String  company;
+    private String school;
+    private String company;
 
     private Integer age1;
     private int age2;

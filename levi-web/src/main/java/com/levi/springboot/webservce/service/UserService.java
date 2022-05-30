@@ -18,15 +18,16 @@ public interface UserService {
 
     @WebMethod
     @RequestWrapper(localName = "SendCbsAddress", targetNamespace = "http://route.webservice.gateway.veh.me.evun.cn")
-    public String SendCbsAddress(@WebParam(name = "requestXML")  WSRequestRoot  requestXML);
+    public String SendCbsAddress(@WebParam(name = "requestXML") WSRequestRoot requestXML);
 
     /**
      * 构造上游的请求报文结构
+     *
      * @param
      * @return
      */
     @WebMethod
     @RequestWrapper(localName = "SendCbsStatus", targetNamespace = "http://route.webservice.gateway.veh.me.evun.cn")
-    public String SendCbsStatus(@WebParam(name = "jsonPara") String  jsonPara);
+    public String SendCbsStatus(@WebParam(name = "jsonPara") String jsonPara);
 
 }

@@ -15,10 +15,11 @@ import java.util.Map;
  * @author jianghaihui
  * @date 2020/11/5 16:22
  */
-public  final class FunctionManager {
+public final class FunctionManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(FunctionManager.class);
 
-    private static volatile  FunctionManager manager = new FunctionManager();
+    private static volatile FunctionManager manager = new FunctionManager();
+
     public static FunctionManager getInstance() {
         return manager;
     }

@@ -8,10 +8,11 @@ import java.io.StringWriter;
  * @date 2019/9/4 13:48
  */
 public class ExceptionUtil {
-    private ExceptionUtil(){
+    private ExceptionUtil() {
 
     }
-    public static String getStackTrace(Throwable throwable){
+
+    public static String getStackTrace(Throwable throwable) {
         StringWriter sw = new StringWriter();
         try (PrintWriter pw = new PrintWriter(sw)) {
             throwable.printStackTrace(pw);

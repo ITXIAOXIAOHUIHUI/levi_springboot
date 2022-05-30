@@ -18,23 +18,22 @@ import java.lang.reflect.Method;
 @Slf4j
 public class SoapClientUtils {
 
-    public String exchange(String url, String serviceName, String requestEntity, Class<?> responseType)  {
-       String  responseEntity = null;
+    public String exchange(String url, String serviceName, String requestEntity, Class<?> responseType) {
+        String responseEntity = null;
         try {
             String resultJson = callWebservice(url, serviceName, requestEntity);
 
-            log.info("soap  server response :{}    service name :",resultJson, serviceName);
+            log.info("soap  server response :{}    service name :", resultJson, serviceName);
         } catch (ResourceAccessException e) {
-            log.error("soap  server response fail :{}    service name :",e, serviceName);
+            log.error("soap  server response fail :{}    service name :", e, serviceName);
             throw e;
         }
 
         return null;
     }
 
-   
 
-    public    String exchange(String url, String serviceName, String requestEntity)  {
+    public String exchange(String url, String serviceName, String requestEntity) {
         // 创建动态客户端
         JaxWsDynamicClientFactory dcf = JaxWsDynamicClientFactory.newInstance();
         Client client = dcf.createClient(url);
@@ -42,10 +41,10 @@ public class SoapClientUtils {
         try {
             // invoke("方法名",参数1,参数2,参数3....);
             objects = client.invoke(serviceName, requestEntity);
-            return (String)objects[0];
+            return (String) objects[0];
         } catch (java.lang.Exception e) {
-            log.info("exception:{}",e);
-            throw  new RuntimeException("exception");
+            log.info("exception:{}", e);
+            throw new RuntimeException("exception");
         }
     }
 
@@ -65,7 +64,7 @@ public class SoapClientUtils {
 
     public AGVInterfaceServiceSoap getInterface(String url) {
         JaxWsProxyFactoryBean factoryBean = new JaxWsProxyFactoryBean();
-       // factoryBean.setServiceClass(AGVInterfaceServiceSoap.class);
+        // factoryBean.setServiceClass(AGVInterfaceServiceSoap.class);
         factoryBean.setAddress(url);
 
         // 请求报文拦截器

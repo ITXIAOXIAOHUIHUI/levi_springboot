@@ -39,7 +39,7 @@ public class Test {
                 jobTypeMap.get(type)[0] = 2;
             } else if (arr[1].equals("MAX_STATION_AGV_CAPACITY")) {
                 //从配置中获取最大值
-               // int maxAgvCapacity = MiscUtils.parseIntValue(config.getValue());
+                // int maxAgvCapacity = MiscUtils.parseIntValue(config.getValue());
                 jobTypeMap.get(type)[1] = 8;
             }
         }

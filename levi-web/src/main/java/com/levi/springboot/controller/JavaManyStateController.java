@@ -21,7 +21,7 @@ public class JavaManyStateController {
     private Map<String, IPickingWorkFeedbackPolicy> pickingWorkFeedbackPolicyMap;
 
     @PostMapping(value = "/many/state")
-    public Object manyState(@RequestBody PickingBackDto pickingBackDto){
+    public Object manyState(@RequestBody PickingBackDto pickingBackDto) {
 
         String result = pickingWorkFeedbackPolicyMap.get(pickingBackDto.getManyStateEnum().getInstance()).handlePickWorkFeedBack(pickingBackDto);
 
@@ -29,7 +29,7 @@ public class JavaManyStateController {
     }
 
     @PostMapping(value = "/transfer-level3-inventory")
-    public Object transferLevel3Inventory(@RequestBody PickingBackDto pickingBackDto){
+    public Object transferLevel3Inventory(@RequestBody PickingBackDto pickingBackDto) {
 
         String result = pickingWorkFeedbackPolicyMap.get(pickingBackDto.getManyStateEnum().getInstance()).handlePickWorkFeedBack(pickingBackDto);
 

@@ -12,8 +12,7 @@ import org.springframework.statemachine.config.EnumStateMachineConfigurerAdapter
  */
 @Configuration
 @EnableStateMachine
-public class StateMachingConfig  extends EnumStateMachineConfigurerAdapter<States, Events> {
-
+public class StateMachingConfig extends EnumStateMachineConfigurerAdapter<States, Events> {
 
 
 }

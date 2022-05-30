@@ -38,6 +38,7 @@ public class PacketCodeC {
 
     /**
      * 将对象转化为二进制
+     *
      * @param byteBufAllocator
      * @param packet
      * @return
@@ -69,10 +70,10 @@ public class PacketCodeC {
 
         // 序列化算法
         byte serializeAlgorithm = byteBuf.readByte();
-        System.out.println("序列化算法 serializeAlgorithm :"+ serializeAlgorithm);
+        System.out.println("序列化算法 serializeAlgorithm :" + serializeAlgorithm);
         // 指令
         byte command = byteBuf.readByte();
-        System.out.println("指令 command :"+command);
+        System.out.println("指令 command :" + command);
 
         // 数据包长度
         int length = byteBuf.readInt();

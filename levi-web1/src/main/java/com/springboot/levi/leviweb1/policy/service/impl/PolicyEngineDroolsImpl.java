@@ -16,7 +16,7 @@ import java.util.List;
 @Component("PolicyEngineDroolsImpl")
 public class PolicyEngineDroolsImpl implements IPolicyEngine {
 
-    @SuppressWarnings({ "unchecked" })
+    @SuppressWarnings({"unchecked"})
     public PolicyDTO applyPolicy(Long warehouseId, String policyCode, Object inputObj) {
         return null;
         /*if (inputObj == null) {

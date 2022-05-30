@@ -13,12 +13,12 @@ public class Test {
     public static void main(String[] args) {
 
 
-        List<String> lines = Arrays.asList("spring", "node", "mkyong","mkyong");
+        List<String> lines = Arrays.asList("spring", "node", "mkyong", "mkyong");
 
         System.out.println(lines);
-        String item = lines.stream().filter(line-> "mkyong".equals(line)).findAny().orElse(null);
+        String item = lines.stream().filter(line -> "mkyong".equals(line)).findAny().orElse(null);
         System.out.println(item);
-        List<String> list = lines.stream().filter(line-> !"mkyong".equals(line)).collect(Collectors.toList());
+        List<String> list = lines.stream().filter(line -> !"mkyong".equals(line)).collect(Collectors.toList());
         list.forEach(System.out::println);
     }
 }

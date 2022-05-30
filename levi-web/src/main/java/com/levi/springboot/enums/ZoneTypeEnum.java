@@ -14,26 +14,25 @@ import lombok.Getter;
  * @author kim.cheng
  * @date 2019-3-12
  */
-public enum ZoneTypeEnum  {
-	STORAGE_AGV("AGV存货", false),
-	STORAGE_MANUAL("人工存货", false),
-	STATION("工作站", false),
-	INVENTORY_DIFF("库存差异", true),
-	TEMPORARY_DELIVERY("发货暂存", true),
-	TEMPORARY_COLLECT("集货暂存", true),
-	TEMPORARY_RECEIVING("收货暂存", true),
-	TEMPORARY_RETURN("返库暂存", true),
-	;
+public enum ZoneTypeEnum {
+    STORAGE_AGV("AGV存货", false),
+    STORAGE_MANUAL("人工存货", false),
+    STATION("工作站", false),
+    INVENTORY_DIFF("库存差异", true),
+    TEMPORARY_DELIVERY("发货暂存", true),
+    TEMPORARY_COLLECT("集货暂存", true),
+    TEMPORARY_RECEIVING("收货暂存", true),
+    TEMPORARY_RETURN("返库暂存", true),;
 
-	@Getter
-	private String localizedMessage;
+    @Getter
+    private String localizedMessage;
 
-	@Getter
-	private boolean virtual;
+    @Getter
+    private boolean virtual;
 
-	private ZoneTypeEnum(String text, boolean virtual){
-		this.localizedMessage = text;
-		this.virtual = virtual;
-	}
+    private ZoneTypeEnum(String text, boolean virtual) {
+        this.localizedMessage = text;
+        this.virtual = virtual;
+    }
 }
 

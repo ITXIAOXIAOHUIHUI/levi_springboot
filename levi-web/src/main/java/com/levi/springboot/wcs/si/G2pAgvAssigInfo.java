@@ -15,6 +15,7 @@ import java.util.Map;
 public class G2pAgvAssigInfo extends AbstractRunnable implements ApplicationContextAware {
 
     private G2PAgvAssignHelper[] agvAssignHelpers = null;
+
     @Override
     protected void doRun() {
 

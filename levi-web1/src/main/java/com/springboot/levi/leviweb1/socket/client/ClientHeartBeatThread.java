@@ -44,7 +44,7 @@ public class ClientHeartBeatThread implements Runnable {
             dataOutputStream = new DataOutputStream(outputStream);
             //客户端心跳检测
             while (!this.isStop && !socket.isClosed()) {
-                Thread.sleep( 30000);
+                Thread.sleep(30000);
                /* SocketMsgVo msgDataVo = new SocketMsgVo();
                 msgDataVo.setFrameHeader(ReceiveDataFrameConstant.RECEIVE_FRAME_HEADER);
                 msgDataVo.setLen(0);

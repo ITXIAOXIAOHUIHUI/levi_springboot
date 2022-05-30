@@ -14,16 +14,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class ExceptionController {
 
     @GetMapping("/illegalArgumentException")
-    public void throwException(){
-        throw  new IllegalArgumentException();
+    public void throwException() {
+        throw new IllegalArgumentException();
     }
 
     @GetMapping("/resourceNotFoundException")
-    public void throwException2(){
+    public void throwException2() {
         throw new ResourceNotFoundExceptionExt("没有权限");
     }
+
     @GetMapping
-    public void exception2(){
-        int a = 10/0;
+    public void exception2() {
+        int a = 10 / 0;
     }
 }

@@ -20,14 +20,14 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
     public void insertFill(MetaObject metaObject) {
         log.info("start insert fill.....");
         // setFieldValByName(String fieldName, Object fieldVal, MetaObject metaObject
-        this.setFieldValByName("gmt_create",new Date(),metaObject);
-        this.setFieldValByName("gmt_modified",new Date(),metaObject);
+        this.setFieldValByName("gmt_create", new Date(), metaObject);
+        this.setFieldValByName("gmt_modified", new Date(), metaObject);
     }
 
     // 更新时的填充策略
     @Override
     public void updateFill(MetaObject metaObject) {
         log.info("start update fill.....");
-        this.setFieldValByName("gmt_modified",new Date(),metaObject);
+        this.setFieldValByName("gmt_modified", new Date(), metaObject);
     }
 }

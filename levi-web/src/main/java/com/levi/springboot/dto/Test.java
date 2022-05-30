@@ -28,7 +28,7 @@ public class Test {
         test.setLea2("2");
         list.add(test);
 
-        String  str = "[ {\n" +
+        String str = "[ {\n" +
                 "  \"line\" : \"L001\",\n" +
                 "  \"led1\" : \"1\",\n" +
                 "  \"led2\" : \"0\",\n" +
@@ -158,12 +158,12 @@ public class Test {
 
 
         Map<String, Test> collect = list.stream().collect(Collectors.toMap(t -> t.getLed1(), t -> t));
-        for(String key : collect.keySet()){
+        for (String key : collect.keySet()) {
             System.out.println(key);
             Test test1 = collect.get(key);
-            log.info("test1 :{}",test1.toString());
-            System.out.println(test1.getLea2() instanceof  String);
-            if("1".equals("1")){
+            log.info("test1 :{}", test1.toString());
+            System.out.println(test1.getLea2() instanceof String);
+            if ("1".equals("1")) {
                 System.out.println("+++++");
             }
         }

@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class ParamConfigService {
     @Value("${rocket.group}")
-    public String rocketGroup ;
+    public String rocketGroup;
     @Value("${rocket.topic}")
-    public String rocketTopic ;
+    public String rocketTopic;
     @Value("${rocket.tag}")
-    public String rocketTag ;
+    public String rocketTag;
 }

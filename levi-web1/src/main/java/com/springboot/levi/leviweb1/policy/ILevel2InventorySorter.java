@@ -7,10 +7,11 @@ package com.springboot.levi.leviweb1.policy;
 public interface ILevel2InventorySorter {
 
     /**
-     *  对于2级库存排序 做计算
+     * 对于2级库存排序 做计算
+     *
      * @param orderType
      * @param warehouseId
      * @return
      */
-    int calculateSortNumber(String orderType,Long warehouseId);
+    int calculateSortNumber(String orderType, Long warehouseId);
 }

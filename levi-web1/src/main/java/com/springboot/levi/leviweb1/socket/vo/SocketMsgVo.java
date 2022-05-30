@@ -3,9 +3,9 @@ package com.springboot.levi.leviweb1.socket.vo;
 import java.util.Arrays;
 
 /**
+ * @author ws
  * @desc dcpr推送的数据包格式： 帧头（4Byte）| 长度（4Byte）| 数据（xxByte）| 帧尾（4Byte）
  * @time 2020/10/16
- * @author ws
  */
 public class SocketMsgVo {
 

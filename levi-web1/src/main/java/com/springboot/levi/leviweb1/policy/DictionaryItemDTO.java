@@ -16,7 +16,7 @@ import java.util.List;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class DictionaryItemDTO  extends BaseDTO  {
+public class DictionaryItemDTO extends BaseDTO {
 
     @ApiModelProperty(value = "字典ID", name = "dictionaryId")
     private Long dictionaryId;
@@ -60,15 +60,15 @@ public class DictionaryItemDTO  extends BaseDTO  {
 
     public List<DictionaryItemDTO> childItems;
 
-    public List<DictionaryItemDTO> getChildItems(){
-        if(childItems == null) {
+    public List<DictionaryItemDTO> getChildItems() {
+        if (childItems == null) {
             childItems = Lists.newArrayList();
         }
         return childItems;
     }
 
     public void appendChild(DictionaryItemDTO child) {
-        if(child != null) {
+        if (child != null) {
             this.getChildItems().add(child);
         }
     }

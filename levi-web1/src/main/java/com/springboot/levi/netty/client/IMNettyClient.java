@@ -20,6 +20,7 @@ public class IMNettyClient {
 
 
     private static final int MAX_RETRY = 10;
+
     public static void main(String[] args) throws InterruptedException {
 
         Bootstrap bootstrap = new Bootstrap();
@@ -48,10 +49,10 @@ public class IMNettyClient {
 
         // 4.建立连接
         Channel channel = bootstrap.connect("127.0.0.1", 8000).addListener(future -> {
-            if(future.isSuccess()){
+            if (future.isSuccess()) {
                 System.out.println("连接成功");
-            }else{
-                connect(bootstrap,"127.0.0.1", 8000);
+            } else {
+                connect(bootstrap, "127.0.0.1", 8000);
                 connect(bootstrap, "juejin.im", 80, MAX_RETRY);
                 //如果连接失败的话，就重新连接了
                 System.out.println("连接失败");
@@ -64,7 +65,7 @@ public class IMNettyClient {
     }
 
 
-    private static void connect(Bootstrap bootstrap, String host, int port ) {
+    private static void connect(Bootstrap bootstrap, String host, int port) {
         bootstrap.connect(host, port).addListener(future -> {
             if (future.isSuccess()) {
                 System.out.println("连接成功!");
@@ -74,7 +75,6 @@ public class IMNettyClient {
             }
         });
     }
-
 
 
     private static void connect(Bootstrap bootstrap, String host, int port, int retry) {

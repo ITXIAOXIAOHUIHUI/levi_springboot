@@ -8,8 +8,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-@ComponentScan(basePackages={"com.levi.springboot"})//扫描common包下的类
-@MapperScan(basePackages={"com.levi.springboot.mapper"})
+@ComponentScan(basePackages = {"com.levi.springboot"})//扫描common包下的类
+@MapperScan(basePackages = {"com.levi.springboot.mapper"})
 @EnableEurekaClient
 public class LeviServiceManageCmsApplication {
 

@@ -1,34 +1,34 @@
 [
-	{
-		"id":1,
-		"keyCode":"basic_sku_attribute_season",
-		"keyName":"商品季节属性",
-		"i18nCode":"evo.web.basic.basic_sku_attribute_season.Spring",
-		"valueCode":"Spring",
-		"state":"effective"
-	},
-	{
-		"id":2,
-		"keyCode":"basic_sku_attribute_season",
-		"keyName":"商品季节属性",
-		"i18nCode":"evo.web.basic.basic_sku_attribute_season.Spring",
-		"valueCode":"Summer",
-		"state":"effective"
-	},
-	{
-		"id":3,
-		"keyCode":"basic_sku_attribute_season",
-		"keyName":"商品季节属性",
-		"i18nCode":"evo.web.basic.basic_sku_attribute_season.Spring",
-		"valueCode":"Autumn",
-		"state":"effective"
-	},
-	{
-		"id":4,
-		"keyCode":"basic_sku_attribute_season",
-		"keyName":"商品季节属性",
-		"i18nCode":"evo.web.basic.basic_sku_attribute_season.Spring",
-		"valueCode":"Winter",
-		"state":"effective"
-	}
+  {
+    "id": 1,
+    "keyCode": "basic_sku_attribute_season",
+    "keyName": "商品季节属性",
+    "i18nCode": "evo.web.basic.basic_sku_attribute_season.Spring",
+    "valueCode": "Spring",
+    "state": "effective"
+  },
+  {
+    "id": 2,
+    "keyCode": "basic_sku_attribute_season",
+    "keyName": "商品季节属性",
+    "i18nCode": "evo.web.basic.basic_sku_attribute_season.Spring",
+    "valueCode": "Summer",
+    "state": "effective"
+  },
+  {
+    "id": 3,
+    "keyCode": "basic_sku_attribute_season",
+    "keyName": "商品季节属性",
+    "i18nCode": "evo.web.basic.basic_sku_attribute_season.Spring",
+    "valueCode": "Autumn",
+    "state": "effective"
+  },
+  {
+    "id": 4,
+    "keyCode": "basic_sku_attribute_season",
+    "keyName": "商品季节属性",
+    "i18nCode": "evo.web.basic.basic_sku_attribute_season.Spring",
+    "valueCode": "Winter",
+    "state": "effective"
+  }
 ]

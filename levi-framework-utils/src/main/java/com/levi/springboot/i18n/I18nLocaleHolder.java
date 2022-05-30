@@ -16,20 +16,20 @@ import java.util.Locale;
  */
 public class I18nLocaleHolder {
 
-	private static final ThreadLocal<Locale> LOCALE_HOLDER = new ThreadLocal<>();
+    private static final ThreadLocal<Locale> LOCALE_HOLDER = new ThreadLocal<>();
 
-	private I18nLocaleHolder() {
-	}
+    private I18nLocaleHolder() {
+    }
 
-	public static void setLocale(Locale locale) {
-		LOCALE_HOLDER.set(locale);
-	}
+    public static void setLocale(Locale locale) {
+        LOCALE_HOLDER.set(locale);
+    }
 
-	public static Locale getLocale() {
-		return LOCALE_HOLDER.get();
-	}
+    public static Locale getLocale() {
+        return LOCALE_HOLDER.get();
+    }
 
-	public static void clear() {
-		LOCALE_HOLDER.remove();
-	}
+    public static void clear() {
+        LOCALE_HOLDER.remove();
+    }
 }

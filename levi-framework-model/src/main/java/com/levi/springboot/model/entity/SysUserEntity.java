@@ -27,14 +27,14 @@ public class SysUserEntity implements Serializable {
 
     private Integer status;
 
-    @TableField(exist=false)
+    @TableField(exist = false)
     private List<Long> roleIdList;
 
     private Date createTime;
 
     private Long deptId;
 
-    @TableField(exist=false)
+    @TableField(exist = false)
     private String deptName;
 
     public void setUserId(Long userId) {

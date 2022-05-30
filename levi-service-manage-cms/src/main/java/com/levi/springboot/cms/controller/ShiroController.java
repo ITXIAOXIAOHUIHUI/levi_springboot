@@ -21,24 +21,25 @@ import java.util.stream.Collectors;
  */
 @RestController
 public class ShiroController {
-    private static Logger LOGGER = LoggerFactory.getLogger(ShiroController.class) ;
+    private static Logger LOGGER = LoggerFactory.getLogger(ShiroController.class);
 
     @Resource
-    private SysMenuMapper sysMenuMapper ;
+    private SysMenuMapper sysMenuMapper;
+
     /**
      * 登录测试
      * http://localhost:7011/userLogin?userName=admin&passWord=admin
      */
     @RequestMapping("/userLogin")
-    public void userLogin (
+    public void userLogin(
             @RequestParam(value = "userName") String userName,
-            @RequestParam(value = "passWord") String passWord){
-        try{
+            @RequestParam(value = "passWord") String passWord) {
+        try {
             Subject subject = ShiroUtils.getSubject();
             UsernamePasswordToken token = new UsernamePasswordToken(userName, passWord);
             subject.login(token);
             LOGGER.info("登录成功");
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -50,8 +51,8 @@ public class ShiroController {
      */
     @RequestMapping("/menu/list")
     @RequiresPermissions("sys:user:shiro")
-    public List list(){
-        return sysMenuMapper.selectList() ;
+    public List list() {
+        return sysMenuMapper.selectList();
     }
 
     /**
@@ -60,17 +61,17 @@ public class ShiroController {
      */
     @RequestMapping("/menu/list2")
     @RequiresPermissions("ccc:ddd:bbb")
-    public List list2(){
-        return sysMenuMapper.selectList() ;
+    public List list2() {
+        return sysMenuMapper.selectList();
     }
 
     /**
      * 退出测试
      */
     @RequestMapping("/userLogOut")
-    public String logout (){
+    public String logout() {
         ShiroUtils.logout();
-        return "success" ;
+        return "success";
     }
 
     public static void main(String[] args) {

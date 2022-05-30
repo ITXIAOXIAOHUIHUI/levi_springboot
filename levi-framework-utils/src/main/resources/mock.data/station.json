@@ -1,72 +1,72 @@
 [
-	{
-		"warehouseId": 9001,
-		"primaryZoneCode": "ZONE_STORAGE_AGV",
-		"stationCode": "101",
-		"stationType": "G2P_ONLINE",
-		"stationName": "货到人在线工作站-Mock-101",
-		"enabled": true,
-		"mapVersion": "map#1",
-		"remark": "remark..."
-	},
-	{
-		"warehouseId": 9001,
-		"primaryZoneCode": "ZONE_STORAGE_AGV",
-		"stationCode": "102",
-		"stationType": "G2P_ONLINE",
-		"stationName": "货到人在线工作站-Mock-102",
-		"enabled": true,
-		"mapVersion": "map#1",
-		"remark": "remark..."
-	},
-	{
-		"warehouseId": 9001,
-		"primaryZoneCode": "ZONE_STORAGE_AGV",
-		"stationCode": "103",
-		"stationType": "G2P_ONLINE",
-		"stationName": "货到人在线工作站-Mock-103",
-		"enabled": true,
-		"mapVersion": "map#1",
-		"remark": "remark..."
-	},
-	{
-		"warehouseId": 9001,
-		"primaryZoneCode": "ZONE_STORAGE_AGV",
-		"stationCode": "104",
-		"stationType": "G2P_ONLINE",
-		"stationName": "货到人在线工作站-Mock-104",
-		"enabled": true,
-		"mapVersion": "map#1",
-		"remark": "remark..."
-	},
-	{
-		"warehouseId": 9001,
-		"primaryZoneCode": "ZONE_STORAGE_AGV",
-		"stationCode": "105",
-		"stationType": "G2P_ONLINE",
-		"stationName": "货到人在线工作站-Mock-105",
-		"enabled": true,
-		"mapVersion": "map#1",
-		"remark": "remark..."
-	},
-	{
-		"warehouseId": 9001,
-		"primaryZoneCode": "ZONE_STORAGE_AGV",
-		"stationCode": "201",
-		"stationType": "G2P_OFFLINE",
-		"stationName": "货到人离线工作站-Mock-201",
-		"enabled": true,
-		"mapVersion": "map#1",
-		"remark": "remark..."
-	},
-	{
-		"warehouseId": 9001,
-		"primaryZoneCode": "ZONE_STORAGE_AGV",
-		"stationCode": "202",
-		"stationType": "G2P_OFFLINE",
-		"stationName": "货到人离线工作站-Mock-202",
-		"enabled": true,
-		"mapVersion": "map#1",
-		"remark": "remark..."
-	}
+  {
+    "warehouseId": 9001,
+    "primaryZoneCode": "ZONE_STORAGE_AGV",
+    "stationCode": "101",
+    "stationType": "G2P_ONLINE",
+    "stationName": "货到人在线工作站-Mock-101",
+    "enabled": true,
+    "mapVersion": "map#1",
+    "remark": "remark..."
+  },
+  {
+    "warehouseId": 9001,
+    "primaryZoneCode": "ZONE_STORAGE_AGV",
+    "stationCode": "102",
+    "stationType": "G2P_ONLINE",
+    "stationName": "货到人在线工作站-Mock-102",
+    "enabled": true,
+    "mapVersion": "map#1",
+    "remark": "remark..."
+  },
+  {
+    "warehouseId": 9001,
+    "primaryZoneCode": "ZONE_STORAGE_AGV",
+    "stationCode": "103",
+    "stationType": "G2P_ONLINE",
+    "stationName": "货到人在线工作站-Mock-103",
+    "enabled": true,
+    "mapVersion": "map#1",
+    "remark": "remark..."
+  },
+  {
+    "warehouseId": 9001,
+    "primaryZoneCode": "ZONE_STORAGE_AGV",
+    "stationCode": "104",
+    "stationType": "G2P_ONLINE",
+    "stationName": "货到人在线工作站-Mock-104",
+    "enabled": true,
+    "mapVersion": "map#1",
+    "remark": "remark..."
+  },
+  {
+    "warehouseId": 9001,
+    "primaryZoneCode": "ZONE_STORAGE_AGV",
+    "stationCode": "105",
+    "stationType": "G2P_ONLINE",
+    "stationName": "货到人在线工作站-Mock-105",
+    "enabled": true,
+    "mapVersion": "map#1",
+    "remark": "remark..."
+  },
+  {
+    "warehouseId": 9001,
+    "primaryZoneCode": "ZONE_STORAGE_AGV",
+    "stationCode": "201",
+    "stationType": "G2P_OFFLINE",
+    "stationName": "货到人离线工作站-Mock-201",
+    "enabled": true,
+    "mapVersion": "map#1",
+    "remark": "remark..."
+  },
+  {
+    "warehouseId": 9001,
+    "primaryZoneCode": "ZONE_STORAGE_AGV",
+    "stationCode": "202",
+    "stationType": "G2P_OFFLINE",
+    "stationName": "货到人离线工作站-Mock-202",
+    "enabled": true,
+    "mapVersion": "map#1",
+    "remark": "remark..."
+  }
 ]

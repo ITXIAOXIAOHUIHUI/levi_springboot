@@ -17,15 +17,14 @@ public class Test2 {
         Integer f = 321;
         Long g = 3L;
         Long h = 2L;
-        System.out.println(c==d);   //true
-        System.out.println(e==f);    //false
-        System.out.println(c==(a+b)); //true
-        System.out.println(c.equals(a+b)); //true
-        System.out.println(g==(a+b)); //true
-        System.out.println(g.equals(a+b)); //false
-        System.out.println(g.equals(a+h));//true
+        System.out.println(c == d);   //true
+        System.out.println(e == f);    //false
+        System.out.println(c == (a + b)); //true
+        System.out.println(c.equals(a + b)); //true
+        System.out.println(g == (a + b)); //true
+        System.out.println(g.equals(a + b)); //false
+        System.out.println(g.equals(a + h));//true
     }
-
 
 
 }

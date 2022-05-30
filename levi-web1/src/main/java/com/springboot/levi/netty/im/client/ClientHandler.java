@@ -20,8 +20,8 @@ import java.util.UUID;
 public class ClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
-    public void channelActive(ChannelHandlerContext ctx){
-        System.out.println(new Date() +":客户端开始登陆");
+    public void channelActive(ChannelHandlerContext ctx) {
+        System.out.println(new Date() + ":客户端开始登陆");
 
         //创建登陆对象
         LoginRequestPacket loginRequestPacket = new LoginRequestPacket();
