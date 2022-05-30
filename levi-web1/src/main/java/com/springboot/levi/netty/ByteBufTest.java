@@ -1,7 +1,9 @@
 package com.springboot.levi.netty;
 
+import com.alibaba.fastjson.JSONArray;
 import io.netty.buffer.ByteBuf;
-import io.netty.buffer.ByteBufAllocator;
+
+import java.util.List;
 
 /**
  * @author jianghaihui
@@ -10,6 +12,11 @@ import io.netty.buffer.ByteBufAllocator;
 public class ByteBufTest {
 
     public static void main(String[] args) {
+        String str = "1111".concat(":").concat("12313");
+        System.out.println(str + "str str");
+
+
+        /*
         ByteBuf buffer = ByteBufAllocator.DEFAULT.buffer(9, 100);
 
         print("allocate ByteBuf(9, 100)", buffer);
@@ -44,7 +51,15 @@ public class ByteBufTest {
         // read 方法改变读指针
         byte[] dst = new byte[buffer.readableBytes()];
         buffer.readBytes(dst);
-        print("readBytes(" + dst.length + ")", buffer);
+        print("readBytes(" + dst.length + ")", buffer);*/
+
+    }
+
+
+    /**
+     * <p>类描述：如果是键对应数组,则返回一个list到上级的map里。</p>
+     */
+    private static void populateArray(JSONArray jsonArray, List list) {
 
     }
 
@@ -61,4 +76,6 @@ public class ByteBufTest {
         System.out.println("maxWritableBytes(): " + buffer.maxWritableBytes());
         System.out.println();
     }
+
+
 }

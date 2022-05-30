@@ -19,8 +19,7 @@ import lombok.Data;
 @Data
 public class InventoryLocation {
 
-    private InventoryLocation() {
-    }
+
 
     private boolean virtual;
 
