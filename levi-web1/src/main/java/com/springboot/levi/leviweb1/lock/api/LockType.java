@@ -1,12 +1,4 @@
-/*
- * Copyright 2018 flashhold.com All right reserved. This software is the
- * confidential and proprietary information of flashhold.com ("Confidential
- * Information"). You shall not disclose such Confidential Information and shall
- * use it only in accordance with the terms of the license agreement you entered
- * into with flashhold.com.
- */
-
-package com.springboot.levi.leviweb1.lock;
+package com.springboot.levi.leviweb1.lock.api;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -14,8 +6,10 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import java.util.Objects;
 
 /**
-
- * 锁类型,例如agv/station等
+ * @program: levi_springboot
+ * @description:锁类型,例如agv/station等
+ * @author: jhh
+ * @create: 2022-06-15 16:40
  */
 public class LockType {
     /** 锁类型描述 */
@@ -42,7 +36,7 @@ public class LockType {
         if (o == null || getClass() != o.getClass()) { return false; }
         LockType lockType = (LockType)o;
         return priority == lockType.priority &&
-            Objects.equals(type, lockType.type);
+                Objects.equals(type, lockType.type);
     }
 
     @Override
@@ -53,8 +47,8 @@ public class LockType {
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
-            .append("type", type)
-            .append("sequence", priority)
-            .toString();
+                .append("type", type)
+                .append("sequence", priority)
+                .toString();
     }
 }

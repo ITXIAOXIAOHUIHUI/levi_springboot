@@ -1,5 +1,15 @@
-package com.springboot.levi.leviweb1.lock;
+/*
+ * Copyright 2018 flashhold.com All right reserved. This software is the
+ * confidential and proprietary information of flashhold.com ("Confidential
+ * Information"). You shall not disclose such Confidential Information and shall
+ * use it only in accordance with the terms of the license agreement you entered
+ * into with flashhold.com.
+ */
 
+package com.springboot.levi.leviweb1.lock.impl.local;
+
+import com.springboot.levi.leviweb1.lock.api.LockType;
+import com.springboot.levi.leviweb1.utils.LruCache;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -10,12 +20,10 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author jianghaihui
- * @date 2021/5/28 14:19
+ * @author wuxiaowu 单例锁,必须定义并注册对应的LockType 才能使用
  */
 @Slf4j
 public class SingletonLock extends LocalLock {
-
     private static final Logger LOG = LoggerFactory.getLogger(SingletonLock.class);
 
     /**
@@ -109,7 +117,7 @@ public class SingletonLock extends LocalLock {
                 // lock是否free
                 SingletonLock lock = (SingletonLock)eldest.getValue();
                 boolean free = (0 == lock.getReadHoldCount() && 0 == lock.getWriteHoldCount() && !lock
-                        .hasQueuedThreads());
+                    .hasQueuedThreads());
 
                 // cache满了,lock不是free,异常情况
                 if (full && !free) {
@@ -170,6 +178,4 @@ public class SingletonLock extends LocalLock {
     public String toString() {
         return super.toString();
     }
-
-
 }

@@ -1,13 +1,17 @@
-package com.springboot.levi.leviweb1.lock;
+package com.springboot.levi.leviweb1.lock.api;
 
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author jianghaihui
- * @date 2021/5/28 13:47
+ * @program: levi_springboot
+ * @description:
+ * @author: jhh
+ * @create: 2022-06-15 16:36
  */
-public interface ILock extends Comparable<ILock> {
-
+public interface ILock  extends Comparable<ILock>{
+    /**
+     * 申请默认阻塞时间
+     */
     /**
      * 申请锁默认阻塞时间
      */

@@ -6,6 +6,7 @@ import com.springboot.levi.leviweb1.socket.vo.JxSocketConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 import java.net.Socket;
@@ -22,6 +23,7 @@ import java.util.stream.Stream;
  * @Time 2020/2/21
  */
 @Component
+@ConditionalOnProperty(value = "${socket.turnOff}",havingValue ="${socket.turnOff}")
 public class ClientSocketService implements InitializingBean {
 
     private final static Logger log = LoggerFactory.getLogger(ClientSocketService.class);

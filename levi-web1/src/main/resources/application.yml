@@ -23,7 +23,15 @@ spring:
     mode: HTML
     cache: false
     encoding: utf-8
-
+  redis:
+    host: ${redis.ip:172.31.236.33}
+    port: ${redis.port:6379}
+#redisson配置
+redisson:
+  connection:
+    poolsize: ${redissonPoolsize:100}
+  redis:
+    database: ${redissonDatabase:10}
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
@@ -67,5 +75,7 @@ levi-interface:
 hoist:
   request:
     url: http://172.28.200.99:10090
+socket:
+  turnOff: false
 
 

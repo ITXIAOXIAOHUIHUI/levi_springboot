@@ -1,5 +1,6 @@
-package com.springboot.levi.leviweb1.lock;
+package com.springboot.levi.leviweb1.lock.impl.local;
 
+import com.springboot.levi.leviweb1.lock.api.ILock;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -9,12 +10,13 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
- * @author jianghaihui
- * @date 2021/5/28 14:18
+ * @program: levi_springboot
+ * @description:
+ * @author: jhh
+ * @create: 2022-06-15 17:14
  */
 @Slf4j
-public class LocalLock  extends ReentrantReadWriteLock implements ILock  {
-
+public class LocalLock extends ReentrantReadWriteLock implements ILock {
     /**
      * 锁的默认优先级
      */

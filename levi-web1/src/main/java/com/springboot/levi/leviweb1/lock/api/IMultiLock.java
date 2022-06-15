@@ -1,14 +1,17 @@
-package com.springboot.levi.leviweb1.lock;
+package com.springboot.levi.leviweb1.lock.api;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author jianghaihui
- * @date 2021/5/28 13:46
+ * @program: levi_springboot
+ * @description:
+ * 将多个IWalleLock预提交后
+ * 再将IWalleMultiLock当成一把锁使用即可
+ * @author: jhh
+ * @create: 2022-06-15 16:38
  */
 public interface IMultiLock {
-
     /**
      * 增加需要申请的读锁
      * @param lock 提交的读锁

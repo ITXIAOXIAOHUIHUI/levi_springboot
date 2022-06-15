@@ -1,4 +1,4 @@
-package com.springboot.levi.leviweb1.lock;
+package com.springboot.levi.leviweb1.utils;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

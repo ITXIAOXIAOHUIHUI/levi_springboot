@@ -57,7 +57,6 @@ public class GuavaCacheController {
         map.put("agvId", agvId);
         String res = restTemplate.getForObject("http://172.31.236.102:9001/api/rcs/warehouse/1/task/currentJob?agvId={agvId}", String.class, map);
         System.out.println(res);
-        Test result = JSONObject.parseObject(res, Test.class);
 
         return null;
 

@@ -1,5 +1,15 @@
-package com.springboot.levi.leviweb1.lock;
+/*
+ * Copyright 2018 flashhold.com All right reserved. This software is the
+ * confidential and proprietary information of flashhold.com ("Confidential
+ * Information"). You shall not disclose such Confidential Information and shall
+ * use it only in accordance with the terms of the license agreement you entered
+ * into with flashhold.com.
+ */
 
+package com.springboot.levi.leviweb1.lock.multi;
+
+import com.springboot.levi.leviweb1.lock.api.ILock;
+import com.springboot.levi.leviweb1.lock.api.IMultiLock;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.slf4j.Logger;
@@ -10,8 +20,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author jianghaihui
- * @date 2021/5/28 13:48
+ * @author wuxiaowu
  */
 public class MultiLock implements IMultiLock {
     private static final Logger LOG = LoggerFactory.getLogger(MultiLock.class);
@@ -208,13 +217,13 @@ public class MultiLock implements IMultiLock {
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
-                .append("holder", holder)
-                .append("state", MultiLockState.getState(state.intValue()))
-                .append("unHoldRLocks", unHoldRLocks)
-                .append("holdRLocks", holdRLocks)
-                .append("unHoldWLocks", unHoldWLocks)
-                .append("holdWLocks", holdWLocks)
-                .toString();
+            .append("holder", holder)
+            .append("state", MultiLockState.getState(state.intValue()))
+            .append("unHoldRLocks", unHoldRLocks)
+            .append("holdRLocks", holdRLocks)
+            .append("unHoldWLocks", unHoldWLocks)
+            .append("holdWLocks", holdWLocks)
+            .toString();
     }
 
     /**
@@ -275,7 +284,7 @@ public class MultiLock implements IMultiLock {
         if (!this.state.compareAndSet(expect.getValue(), update.getValue())) {
             LOG.debug("Not support current operation, state:" + MultiLockState.getState(this.state.intValue()));
             throw new RuntimeException(
-                    "Not support current operation, state:" + MultiLockState.getState(this.state.intValue()));
+                "Not support current operation, state:" + MultiLockState.getState(this.state.intValue()));
         }
     }
 
