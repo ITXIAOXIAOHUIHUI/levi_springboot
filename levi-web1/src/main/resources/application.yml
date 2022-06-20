@@ -78,4 +78,7 @@ hoist:
 socket:
   turnOff: false
 
+SI_ROLLER:
+  enabled: true
+
 

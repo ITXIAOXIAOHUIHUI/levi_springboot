@@ -1,6 +1,6 @@
 package com.springboot.levi.leviweb1.service.impl;
 
-import com.springboot.levi.leviweb1.wcs.WorkMode;
+import com.springboot.levi.leviweb1.utils.WorkMode;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 

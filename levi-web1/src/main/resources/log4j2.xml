@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="warn" monitorInterval="30">
+    <!--
+       说明：
+       1、日志级别及文件
+           日志记录采用分级记录，级别与日志文件名相对应，不同级别的日志信息记录到不同的日志文件中
+           例如：error级别记录到log_error_xxx.log或log_error.log（该文件为当前记录的日志文件），而log_error_xxx.log为归档日志，
+           日志文件按日期记录，同一天内，若日志文件大小等于或大于2M，则按0、1、2...顺序分别命名
+           例如log-level-2013-12-21.0.log
+           其它级别的日志也是如此。
+       2、文件路径
+           若开发、测试用，在Eclipse中运行项目，则到Eclipse的安装路径查找logs文件夹，以相对路径../logs。
+           若部署到Tomcat下，则在Tomcat下的logs文件中
+       3、Appender
+           FILEERROR对应error级别，文件名以log-error-xxx.log形式命名
+           FILEWARN对应warn级别，文件名以log-warn-xxx.log形式命名
+           FILEINFO对应info级别，文件名以log-info-xxx.log形式命名
+           FILEDEBUG对应debug级别，文件名以log-debug-xxx.log形式命名
+           stdout将日志信息输出到控制上，为方便开发测试使用
+    -->
+
+    <properties>
+        <property name="logDir">logs</property>
+    </properties>
+
+    <!-- 彩色日志 -->
+    <!-- 彩色日志依赖的渲染类 -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
+    <conversionRule conversionWord="wex"
+                    converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter"/>
+    <conversionRule conversionWord="wEx"
+                    converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter"/>
+    <!-- 彩色日志格式 -->
+    <!--<property name="CONSOLE_LOG_PATTERN"-->
+    <!--value="${CONSOLE_LOG_PATTERN:-%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(-&#45;&#45;){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}) %clr(%-4.4line{3}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>-->
+
+    <appenders>
+        <RollingFile name="FILEERROR" fileName="${logDir}/log_error.log"
+                     filePattern="${logDir}/error/log-error-%d{yyyy-MM-dd}-%i.gz">
+            <Filters>
+                <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+                <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <PatternLayout>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%t] %-5p %c{2} - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="500 MB"/>
+            </Policies>
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了180 -->
+            <DefaultRolloverStrategy max="180">
+                <Delete basePath="${logDir}/error" maxDepth="2">
+                    <IfFileName glob="log-error-*.gz"/>
+                    <!--3天-->
+                    <IfLastModified age="3d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="FILEWARN" fileName="${logDir}/log_warn.log"
+                     filePattern="${logDir}/warn/log-warn-%d{yyyy-MM-dd}-%i.gz">
+            <Filters>
+                <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+                <ThresholdFilter level="WARN" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <PatternLayout>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%t] %-5p %c{2} - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="500 MB"/>
+            </Policies>
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了180 -->
+            <DefaultRolloverStrategy max="180">
+                <Delete basePath="${logDir}/warn" maxDepth="2">
+                    <IfFileName glob="log-warn-*.gz"/>
+                    <!--3天-->
+                    <IfLastModified age="3d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="FILEREPORT" fileName="${logDir}/log_report.log"
+                     filePattern="${logDir}/report/log-report-%d{yyyy-MM-dd}-%i.gz">
+            <Filters>
+                <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+                <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <PatternLayout>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%t] %-5p %c{2} - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="500 MB"/>
+            </Policies>
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了180 -->
+            <DefaultRolloverStrategy max="180">
+                <Delete basePath="${logDir}/report" maxDepth="2">
+                    <IfFileName glob="log-report-*.gz"/>
+                    <!--3天-->
+                    <IfLastModified age="3d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+
+        <RollingFile name="FILEINFO" fileName="${logDir}/log_info.log"
+                     filePattern="${logDir}/info/log-info-%d{yyyy-MM-dd-HH}-%i.gz">
+            <Filters>
+                <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+                <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="NEUTRAL"/>
+            </Filters>
+            <PatternLayout>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%t] %-5p %c{2} - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="500 MB"/>
+            </Policies>
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了180 -->
+            <DefaultRolloverStrategy max="180">
+                <Delete basePath="${logDir}/info" maxDepth="2">
+                    <IfFileName glob="log-info-*.gz"/>
+                    <!--3天-->
+                    <IfLastModified age="3d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="CONSOLELOG" fileName="${logDir}/console_info.log"
+                     filePattern="${logDir}/info/console-info-%d{yyyy-MM-dd}-%i.gz">
+            <Filters>
+                <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+                <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="NEUTRAL"/>
+            </Filters>
+            <PatternLayout>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%t] %-5p %c{2} - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="500 MB"/>
+            </Policies>
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了180 -->
+            <DefaultRolloverStrategy max="180">
+                <Delete basePath="${logDir}/info" maxDepth="2">
+                    <IfFileName glob="console-info-*.gz"/>
+                    <!--3天-->
+                    <IfLastModified age="3d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <!-- HDS日志 -->
+        <RollingFile name="HDS" fileName="${logDir}/hds_log.log"
+                     filePattern="${logDir}/info/hds-log-info-%d{yyyy-MM-dd-HH}-%i.gz">
+            <Filters>
+                <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+                <!--<ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="NEUTRAL"/>-->
+            </Filters>
+            <PatternLayout>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%t] %-5p %c{2} - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="4"/>
+                <SizeBasedTriggeringPolicy size="500 MB"/>
+            </Policies>
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了180 -->
+            <DefaultRolloverStrategy max="180">
+                <Delete basePath="${logDir}/info" maxDepth="2">
+                    <IfFileName glob="hds-log-info-*.gz"/>
+                    <!--7天-->
+                    <IfLastModified age="3d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <!-- 算法日志 -->
+        <RollingFile name="ALG" fileName="${logDir}/alg_info.log"
+                     filePattern="${logDir}/info/alg-info-%d{yyyy-MM-dd-HH}-%i.gz">
+            <Filters>
+                <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+                <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="NEUTRAL"/>
+            </Filters>
+            <PatternLayout>
+                <Charset>UTF-8</Charset>
+                <Pattern>%d %F:%L [%t] %-5p %c{2} - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="500 MB"/>
+            </Policies>
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了180 -->
+            <DefaultRolloverStrategy max="180">
+                <Delete basePath="${logDir}/info" maxDepth="2">
+                    <IfFileName glob="alg-info-*.gz"/>
+                    <!--7天-->
+                    <IfLastModified age="3d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <console name="STDOUT" target="SYSTEM_OUT">
+            <!--输出日志的格式-->
+            <PatternLayout>
+                <Charset>UTF-8</Charset>
+                <!--<Pattern>%d %F:%L [%X{requestURIWithQueryString}] %-5p %c{2} - %m%n</Pattern>-->
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight{%-5level} [%t] %highlight{%c{1.}.%M(%L)}: %msg%n
+                </Pattern>
+            </PatternLayout>
+            <Filters>
+                <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+<!--                <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>-->
+            </Filters>
+        </console>
+    </appenders>
+</configuration>
