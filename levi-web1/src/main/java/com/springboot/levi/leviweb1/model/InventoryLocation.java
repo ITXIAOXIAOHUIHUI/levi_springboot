@@ -47,7 +47,7 @@ public class InventoryLocation {
         return location;
     }
 
-    public static InventoryLocation real(String bucketCode, String bucketSlotCode, String level1ContainerCode, String level2ContainerCode) {
+      public  static InventoryLocation real(String bucketCode, String bucketSlotCode, String level1ContainerCode, String level2ContainerCode) {
         InventoryLocation location = new InventoryLocation();
         location.setVirtual(false);
         location.setBucketCode(bucketCode);
