@@ -20,4 +20,5 @@ public abstract class Packet {
      */
     public abstract Byte getCommand();
 
+
 }

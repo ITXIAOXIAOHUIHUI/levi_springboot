@@ -1,9 +1,8 @@
 package com.springboot.levi.netty.client;
 
+import com.springboot.levi.netty.handler.HeartBeatTimerHandler;
 import io.netty.bootstrap.Bootstrap;
-import io.netty.channel.Channel;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelOption;
+import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.string.StringEncoder;
@@ -20,9 +19,11 @@ public class NettyClient {
     private static final int MAX_RETRY = 10;
 
     public static void main(String[] args) throws InterruptedException {
+        //客户端代码需要要一个事件循环组
+        NioEventLoopGroup group = new NioEventLoopGroup();
+        //创建客户端启动对象
 
         Bootstrap bootstrap = new Bootstrap();
-        NioEventLoopGroup group = new NioEventLoopGroup();
         bootstrap
                 // 1.指定线程模型
                 .group(group)
@@ -39,15 +40,17 @@ public class NettyClient {
                 .handler(new ChannelInitializer<Channel>() {
                     @Override
                     protected void initChannel(Channel ch) {
-                        ch.pipeline().addLast(new StringEncoder());
+                        // 心跳定时器
+                        ch.pipeline().addLast(new HeartBeatTimerHandler());
                     }
                 });
-        // 4.建立连接
+
+        // 4.建立连接(查出多个ip进行链接)
         Channel channel = bootstrap.connect("127.0.0.1", 8000).addListener(future -> {
             if (future.isSuccess()) {
                 System.out.println("连接成功");
             } else {
-                connect(bootstrap, "127.0.0.1", 8000);
+                connect1(bootstrap, "127.0.0.1", 8000);
                 connect(bootstrap, "juejin.im", 80, MAX_RETRY);
                 //如果连接失败的话，就重新连接了
                 System.out.println("连接失败");
@@ -68,7 +71,34 @@ public class NettyClient {
                 System.err.println("连接失败，开始重连");
                 connect(bootstrap, host, port);
             }
+        }
+        );
+    }
+
+    public static void connect1(Bootstrap bootstrap, String host, int port) throws Exception {
+        System.out.println("netty client start。。");
+        //启动客户端去连接服务器端
+        ChannelFuture cf = bootstrap.connect(host, port);
+        cf.addListener(new ChannelFutureListener() {
+            @Override
+            public void operationComplete(ChannelFuture future) throws Exception {
+                if (!future.isSuccess()) {
+                    //重连交给后端线程执行
+                    future.channel().eventLoop().schedule(() -> {
+                        System.err.println("重连服务端...");
+                        try {
+                            connect1(bootstrap,host,port);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }, 3000, TimeUnit.MILLISECONDS);
+                } else {
+                    System.out.println("服务端连接成功...");
+                }
+            }
         });
+        //对通道关闭进行监听
+        cf.channel().closeFuture().sync();
     }
 
 
