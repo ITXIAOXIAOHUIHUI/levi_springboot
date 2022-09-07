@@ -1,4 +1,6 @@
-package com.springboot.levi.netty.protocol;
+package com.springboot.levi.netty.protocol.request;
+
+import com.springboot.levi.netty.protocol.Packet;
 
 import static com.springboot.levi.netty.protocol.command.Command.HEARTBEAT_REQUEST;
 

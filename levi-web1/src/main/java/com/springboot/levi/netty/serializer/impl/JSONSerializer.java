@@ -1,6 +1,8 @@
-package com.springboot.levi.netty.common;
+package com.springboot.levi.netty.serializer.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.springboot.levi.netty.serializer.Serializer;
+import com.springboot.levi.netty.serializer.SerializerAlgorithm;
 
 /**
  * @author jianghaihui
@@ -10,7 +12,7 @@ public class JSONSerializer implements Serializer {
 
 
     @Override
-    public byte getSerializerAlogrithm() {
+    public byte getSerializerAlgorithm() {
         return SerializerAlgorithm.JSON;
     }
 

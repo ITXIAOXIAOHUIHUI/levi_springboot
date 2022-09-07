@@ -1,6 +1,10 @@
 package com.springboot.levi.netty.client;
 
+import com.springboot.levi.netty.codec.PacketDecoder;
+import com.springboot.levi.netty.codec.Spliter;
 import com.springboot.levi.netty.handler.HeartBeatTimerHandler;
+import com.springboot.levi.netty.handler.IMIdleStateHandler;
+import com.springboot.levi.netty.handler.MessageResponseHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -18,11 +22,40 @@ public class NettyClient {
 
     private static final int MAX_RETRY = 10;
 
+    private static final String ip = "172.31.254.157";
+
+    private static int port = 6000;
+
     public static void main(String[] args) throws InterruptedException {
         //客户端代码需要要一个事件循环组
-        NioEventLoopGroup group = new NioEventLoopGroup();
         //创建客户端启动对象
 
+        connect(ip,port);
+
+    }
+    public static boolean connect(String ip,int port){
+        NioEventLoopGroup group = new NioEventLoopGroup();
+        Bootstrap bootstrap = createBootstrap(group);
+        // 4.建立连接(查出多个ip进行链接)
+        Channel channel = bootstrap.connect(ip, port).addListener(future -> {
+            if (future.isSuccess()) {
+                System.out.println("连接成功");
+            } else {
+                connect1(bootstrap, ip, port);
+                //如果连接失败的话，就重新连接了
+                System.out.println("连接失败");
+            }
+        }).channel();
+        while (true) {
+            channel.writeAndFlush(new Date() + ": hello world!");
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+            }
+        }
+    }
+
+    private static Bootstrap createBootstrap(NioEventLoopGroup group) {
         Bootstrap bootstrap = new Bootstrap();
         bootstrap
                 // 1.指定线程模型
@@ -40,30 +73,23 @@ public class NettyClient {
                 .handler(new ChannelInitializer<Channel>() {
                     @Override
                     protected void initChannel(Channel ch) {
+                        ch.pipeline().addLast(new IMIdleStateHandler());
+
+                        //ch.pipeline().addLast(new Spliter());
+                        ch.pipeline().addLast(new PacketDecoder());
+                        // 登录响应处理器
+                        // ch.pipeline().addLast(new LoginResponseHandler());
+                        // 收消息处理器
+                        ch.pipeline().addLast(new MessageResponseHandler());
                         // 心跳定时器
                         ch.pipeline().addLast(new HeartBeatTimerHandler());
                     }
                 });
-
-        // 4.建立连接(查出多个ip进行链接)
-        Channel channel = bootstrap.connect("127.0.0.1", 8000).addListener(future -> {
-            if (future.isSuccess()) {
-                System.out.println("连接成功");
-            } else {
-                connect1(bootstrap, "127.0.0.1", 8000);
-                connect(bootstrap, "juejin.im", 80, MAX_RETRY);
-                //如果连接失败的话，就重新连接了
-                System.out.println("连接失败");
-            }
-        }).channel();
-        while (true) {
-            channel.writeAndFlush(new Date() + ": hello world!");
-            Thread.sleep(2000);
-        }
+        return bootstrap;
     }
 
 
-    private static void connect(Bootstrap bootstrap, String host, int port) {
+   /* private static void connect(Bootstrap bootstrap, String host, int port) {
         bootstrap.connect(host, port).addListener(future -> {
             if (future.isSuccess()) {
                 System.out.println("连接成功!");
@@ -73,7 +99,7 @@ public class NettyClient {
             }
         }
         );
-    }
+    }*/
 
     public static void connect1(Bootstrap bootstrap, String host, int port) throws Exception {
         System.out.println("netty client start。。");

@@ -5,29 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53a8c377-d311-4f3c-a3aa-db4ecd8a4d84" name="Default" comment="add event">
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/dobbo/netty/server/NettyServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/model/ColumnError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/model/ExcelModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/model/FiledMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/model/ObjectKit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/model/RowError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/service/ExcelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/service/impl/ExcelServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/utils/ExcelUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/HeartBeatTimerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/HeartBeatRequestPacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/Packet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/command/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/resources/note/netty.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/utils/LRU.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/ByteToMessageDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/PacketDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/Spliter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/IMIdleStateHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/MessageResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/response/HeartBeatResponsePacket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/serializer/SerializerAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-web1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/levi-web1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/controller/EexcelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/controller/ExcelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/ClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/IMNettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/IMNettyClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/NettyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Packet.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Packet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/server/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/server/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/JSONSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/serializer/impl/JSONSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/LoginRequestPacket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Packet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/PacketCodeC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/serializer/Serializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/SerializerAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/HeartBeatTimerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/HeartBeatTimerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/attribute/Attributes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/client/ClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/client/NettyClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/protocol/Packet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/protocol/PacketCodeC.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/PacketCodec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/protocol/command/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/protocol/request/LoginRequestPacket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/protocol/request/MessageRequestPacket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/protocol/response/LoginResponsePacket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/protocol/response/MessageResponsePacket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/serialize/Serializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/serialize/SerializerAlogrithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/serialize/impl/JSONSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/server/NettyServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/server/ServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/util/LoginUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/HeartBeatRequestPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/request/HeartBeatRequestPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levi-web1/src/test/java/com/springboot/levi/leviweb1/netty/PacketCodeCTest.java" beforeDir="false" />
     </list>
     <list id="e5e1caee-8bb5-4c1f-9e33-8462fd17b194" name="Revert: 新增过滤器用于请求记录" comment="" />
     <list id="8197a72b-1feb-4cb7-9895-17bacb7b2b07" name="Revert: 脚本使用liquibase来维护，见实例@jhh" comment="" />
@@ -77,61 +93,82 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/HeartBeatTimerHandler.java">
+        <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/NettyClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+            <state relative-caret-position="400">
+              <caret line="78" column="54" lean-forward="true" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="54" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2404#3111#0" expanded="true" />
+                <element signature="e#3110#3111#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/server/NettyServer.java">
+        <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/MessageResponseHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1512">
-              <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+            <state relative-caret-position="211">
+              <caret line="15" column="39" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/dobbo/netty/server/NettyServer.java">
+        <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final-sources.jar!/io/netty/channel/AbstractChannelHandlerContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            <state relative-caret-position="408">
+              <caret line="386" lean-forward="true" selection-start-line="386" selection-end-line="386" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/Spliter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
+                <element signature="e#561#562#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Command.java">
+        <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/ByteToMessageDecoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Packet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="216">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Demo.java">
+        <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/PacketDecoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+            <state relative-caret-position="837">
+              <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/java/util/List.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="237" column="12" selection-start-line="237" selection-start-column="12" selection-end-line="237" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/PacketCodec.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="101" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,37 +177,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/java/awt/datatransfer/Clipboard.java">
+        <entry file="jar://D:/maven/levi/io/netty/netty-codec/4.1.58.Final/netty-codec-4.1.58.Final.jar!/io/netty/handler/codec/LengthFieldBasedFrameDecoder.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2241">
-              <caret line="118" column="29" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/levi-web1/src/main/resources/note/netty.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="46" selection-start-column="46" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/levi-web1/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
-              <caret line="68" column="35" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/maven/lib/maven.jar!/schemas/maven-4.0.0.xsd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7614">
-              <caret line="282" column="12" selection-start-line="282" selection-start-column="12" selection-end-line="282" selection-end-column="12" />
+            <state relative-caret-position="201">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
             </state>
           </provider>
         </entry>
@@ -189,26 +199,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>SiQpSchedulerConfiguration</find>
-      <find>QP_REPLENISH_JOB_CREATE_EXECUTOR</find>
-      <find>EATE_EXECUTOR</find>
-      <find>EATE_EXECUTOR-</find>
-      <find>logDir</find>
-      <find>ContainerCreateJobRunnable</find>
-      <find>EventObject</find>
-      <find>ApplicationEvent</find>
-      <find>CreateJobInitEvent</find>
-      <find>this is create job init event</find>
-      <find>1111111111</find>
-      <find>Workbook</find>
-      <find>sheetIndex</find>
-      <find>option</find>
-      <find>worker</find>
-      <find>task</find>
-      <find>acce</find>
-      <find>channelActive</find>
-      <find>MINUTES</find>
-      <find>group</find>
       <find>ServerBootstrap</find>
       <find>Bootstrap</find>
       <find>Selector</find>
@@ -219,6 +209,26 @@
       <find>ChannelHandler</find>
       <find>ChannelPipeline</find>
       <find>优秀的曹老师，无敌的曹老师天天可以到处开车</find>
+      <find>TicketConsumer</find>
+      <find>Thread</find>
+      <find>1247801994</find>
+      <find>heartBeat isActive</find>
+      <find>Discarded message pipeline</find>
+      <find>hello world!</find>
+      <find>HeartBeatTimerHandler</find>
+      <find>channelActive</find>
+      <find>ChannelInboundHandlerAdapter</find>
+      <find>channelInactive</find>
+      <find>read</find>
+      <find>ChannelInboundHandler</find>
+      <find>fireChannelRead</find>
+      <find>getSerializerAlogrithm</find>
+      <find>HEARTBEAT_REQUEST</find>
+      <find>channel handler context ctx:</find>
+      <find>exceptionCaught</find>
+      <find>建立重连</find>
+      <find>exceptionCaught : client close</find>
+      <find>5s之后重新建立连接</find>
     </findStrings>
     <replaceStrings>
       <replace>com.levi.springboot.mapper.SysMenuMapper</replace>
@@ -234,21 +244,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/wcs/Test.java" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/service/impl/TestService.java" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/Thread/SiQpSchedulerConfiguration.java" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/resources/log4j2.xml" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/enums/BizType.java" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/dto/EventDto.java" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/event/manager.fxml" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/event/CreateJobInitEvent.java" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/event/LeviEvent.java" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/event/manager/TransportOrderStateManager.java" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/event/Dto.java" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/event/service/EventService.java" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/event/service/impl/EventServiceImpl.java" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/event/EventDto.java" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/controller/EventController.java" />
         <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/config/swaggerConfig.java" />
         <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/model/InventoryLocation.java" />
         <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/design/qiaojie/Implementor.java" />
@@ -278,13 +273,28 @@
         <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/command/Command.java" />
         <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/HeartBeatRequestPacket.java" />
         <option value="$PROJECT_DIR$/levi-web1/pom.xml" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/NettyClient.java" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/HeartBeatTimerHandler.java" />
         <option value="$PROJECT_DIR$/levi-web1/src/main/resources/note/netty.txt" />
-        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Command.java" />
         <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Packet.java" />
         <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/dobbo/netty/server/NettyServer.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/utils/LRU.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/TicketConsumer.java" />
         <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Demo.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/SynchronizedTest.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/protocol/response/MessageResponsePacket.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/IMIdleStateHandler.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Command.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/serializer/JSONSerializer.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/serializer/Serializer.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/serializer/impl/JSONSerializer.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/response/HeartBeatResponsePacket.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/IMNettyClient.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/MessageResponseHandler.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/MessageResponseHandler.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/HeartBeatTimerHandler.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/Spliter.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/NettyClient.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/PacketCodec.java" />
+        <option value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/PacketDecoder.java" />
       </list>
     </option>
   </component>
@@ -317,10 +327,10 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="1944" />
-    <option name="height" value="1044" />
+    <option name="x" value="-291" />
+    <option name="y" value="-1448" />
+    <option name="width" value="2576" />
+    <option name="height" value="1416" />
   </component>
   <component name="ProjectId" id="29rYVyciIn04IXKWgqUpv1LrYZh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -333,8 +343,182 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+              <item name="codec" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="levi_springboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="levi_springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi-web1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="levi" type="462c0819:PsiDirectoryNode" />
+              <item name="leviweb1" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="Scope" />
       <pane id="CatdeaLogs" />
     </panes>
@@ -354,7 +538,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/levi-web1/src/main/resources" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/serializer" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -362,29 +547,29 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-service-api\src\main\java\com\levi\springboot" />
-      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-framework-model\src\main\java\com\levi\springboot\model" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.levi.springboot" />
       <recent name="com.levi.springboot.email" />
       <recent name="com.levi.springboot.mapper" />
       <recent name="com.levi.springboot.cms" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.springboot.levi.netty.protocol.command" />
-      <recent name="com.springboot.levi.leviweb1.model" />
-      <recent name="com.springboot.levi.leviweb1.enums" />
-      <recent name="com.springboot.levi.leviweb1.lock.api.multi" />
-      <recent name="com.springboot.levi.leviweb1.utils" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git-info\levi_springboot\levi-web1\src\main\java\com\springboot\levi\netty\serializer" />
       <recent name="D:\git-info\levi_springboot\levi-web1\src\main\resources" />
       <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-web\src\main\java\com\levi\springboot\socket" />
       <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-framework-model\src\main\java\com\levi\springboot\auth" />
       <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-auth\src\main\resources" />
-      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-auth\src\main\java\com\levi\auth\service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.springboot.levi.netty.handler" />
+      <recent name="com.springboot.levi.netty.codec" />
+      <recent name="com.springboot.levi.netty.protocol.response" />
+      <recent name="com.springboot.levi.netty.serializer" />
+      <recent name="com.springboot.levi.netty.serializer.impl" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-service-api\src\main\java\com\levi\springboot" />
+      <recent name="D:\quick_tron\git-info\GitHub\levi_springboot\levi-framework-model\src\main\java\com\levi\springboot\model" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -415,7 +600,7 @@
     </option>
     <option name="contentProportion" value="0.12572373" />
   </component>
-  <component name="RunManager" selected="Application.Demo">
+  <component name="RunManager" selected="Application.NettyClient">
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.springboot.levi.netty.common.Demo" />
       <module name="levi-web1" />
@@ -423,6 +608,34 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.springboot.levi.netty.common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IMNettyClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.springboot.levi.netty.client.IMNettyClient" />
+      <module name="levi-web1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springboot.levi.netty.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LRU" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.springboot.levi.leviweb1.utils.LRU" />
+      <module name="levi-web1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springboot.levi.leviweb1.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -444,27 +657,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NettyServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.springboot.levi.dobbo.netty.server.NettyServer" />
+    <configuration name="SynchronizedTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.springboot.levi.netty.common.SynchronizedTest" />
       <module name="levi-web1" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.springboot.levi.dobbo.netty.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NettyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.springboot.levi.netty.server.NettyServer" />
-      <module name="levi-web1" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.springboot.levi.netty.server.*" />
+          <option name="PATTERN" value="com.springboot.levi.netty.common.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -474,24 +673,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LeviWeb1ApplicationTests.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="levi-web1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.springboot.levi.leviweb1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.springboot.levi.leviweb1" />
-      <option name="MAIN_CLASS_NAME" value="com.springboot.levi.leviweb1.LeviWeb1ApplicationTests" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -636,11 +817,9 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.NettyServer" />
-      <item itemvalue="Application.NettyClient" />
-      <item itemvalue="Application.NettyServer (1)" />
       <item itemvalue="Application.Demo" />
-      <item itemvalue="JUnit.LeviWeb1ApplicationTests.test1" />
+      <item itemvalue="Application.LRU" />
+      <item itemvalue="Application.SynchronizedTest" />
       <item itemvalue="Spring Boot.eureka01" />
       <item itemvalue="Spring Boot.eureka02" />
       <item itemvalue="Spring Boot.LeviRocketProducerApplication" />
@@ -656,14 +835,16 @@
       <item itemvalue="Spring Boot.LeviConsumerApplication (1)" />
       <item itemvalue="Spring Boot.LeviWeb1Application" />
       <item itemvalue="Spring Boot.UcenterAuthApplication" />
+      <item itemvalue="Application.IMNettyClient" />
+      <item itemvalue="Application.NettyClient" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Demo" />
-        <item itemvalue="Application.NettyServer (1)" />
-        <item itemvalue="Application.NettyServer" />
         <item itemvalue="Application.NettyClient" />
-        <item itemvalue="JUnit.LeviWeb1ApplicationTests.test1" />
+        <item itemvalue="Application.IMNettyClient" />
+        <item itemvalue="Application.SynchronizedTest" />
+        <item itemvalue="Application.Demo" />
+        <item itemvalue="Application.LRU" />
       </list>
     </recent_temporary>
   </component>
@@ -779,6 +960,13 @@
       <workItem from="1660638295750" duration="902000" />
       <workItem from="1661235941050" duration="3338000" />
       <workItem from="1661249608285" duration="84000" />
+      <workItem from="1661419818304" duration="1694000" />
+      <workItem from="1661479991193" duration="305000" />
+      <workItem from="1661765130662" duration="1201000" />
+      <workItem from="1662011501167" duration="1779000" />
+      <workItem from="1662111680466" duration="2032000" />
+      <workItem from="1662442996170" duration="1476000" />
+      <workItem from="1662521053197" duration="14627000" />
     </task>
     <task id="LOCAL-00001" summary="添加swagger文档注解">
       <created>1567393764194</created>
@@ -892,7 +1080,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658461689380</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add event">
+      <created>1661419849081</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1661419849081</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -928,7 +1123,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="473216000" />
+    <option name="totallyTimeSpent" value="496330000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -940,30 +1135,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-291" y="-1448" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Structure" order="0" sideWeight="0.625222" side_tool="true" weight="0.3920776" />
+      <window_info id="Structure" order="0" sideWeight="0.62699825" side_tool="true" weight="0.31123686" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" sideWeight="0.6918033" side_tool="true" weight="0.23600605" />
+      <window_info id="Favorites" order="4" sideWeight="0.6918033" side_tool="true" weight="0.23524657" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Web" order="6" sideWeight="0.6234818" side_tool="true" weight="0.36378336" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.37477797" weight="0.3912692" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.37300178" weight="0.31120828" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.41207814" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49880764" weight="0.26110125" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5239787" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49880764" weight="0.1973479" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4672387" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.44937834" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.44929796" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.4547582" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50039744" side_tool="true" weight="0.37831512" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49924356" weight="0.7245902" />
       <window_info anchor="bottom" id="Run Dashboard" order="11" sideWeight="0.49960256" weight="0.37802026" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3572543" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.30655226" />
       <window_info anchor="bottom" id="Spring" order="13" sideWeight="0.49924356" weight="0.55950266" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.5612789" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
@@ -980,49 +1175,49 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Maven" order="10" weight="0.50755167" />
       <window_info anchor="right" id="RestServices" order="11" weight="0.32980332" />
-      <window_info anchor="right" id="Translate" order="12" />
+      <window_info anchor="right" id="Translate" order="12" weight="0.32983023" />
       <window_info anchor="right" id="Coverage" order="13" side_tool="true" weight="0.32983023" />
     </layout>
     <layout-to-restore>
-      <window_info id="Structure" order="0" sideWeight="0.625222" side_tool="true" weight="0.3920776" />
+      <window_info id="Structure" order="0" sideWeight="0.62699825" side_tool="true" weight="0.31123686" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" sideWeight="0.6918033" side_tool="true" weight="0.23600605" />
+      <window_info id="Favorites" order="4" sideWeight="0.6918033" side_tool="true" weight="0.23524657" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Web" order="6" sideWeight="0.6234818" side_tool="true" weight="0.36378336" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.37477797" visible="true" weight="0.3912692" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.37300178" visible="true" weight="0.31120828" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.41207814" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49880764" weight="0.1722913" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5239787" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49880764" weight="0.1973479" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4672387" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.44937834" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.44929796" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.4547582" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50039744" side_tool="true" weight="0.37831512" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49924356" weight="0.7245902" />
       <window_info anchor="bottom" id="Run Dashboard" order="11" sideWeight="0.49960256" weight="0.37802026" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3572543" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.30728242" />
       <window_info anchor="bottom" id="Spring" order="13" sideWeight="0.49924356" weight="0.55950266" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.5612789" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Thumbnails" order="16" weight="0.3295082" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32983023" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.24962178" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" weight="0.3297587" />
-      <window_info anchor="right" id="Bean Validation" order="7" weight="0.32980332" />
-      <window_info anchor="right" id="Database" order="8" weight="0.32980332" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
-      <window_info anchor="right" id="Maven" order="11" weight="0.50755167" />
-      <window_info anchor="right" id="RestServices" order="12" weight="0.32980332" />
-      <window_info anchor="right" id="Translate" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.3297587" />
+      <window_info anchor="right" id="Bean Validation" order="6" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32980332" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Maven" order="10" weight="0.50755167" />
+      <window_info anchor="right" id="RestServices" order="11" weight="0.32980332" />
+      <window_info anchor="right" id="Translate" order="12" weight="0.32983023" />
+      <window_info anchor="right" id="Coverage" order="13" side_tool="true" weight="0.32983023" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1192,10 +1387,58 @@
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/HeartBeatTimerHandler.java</url>
+          <url>file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/FirstClientHandler.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/FirstClientHandler.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/Spliter.java</url>
           <line>23</line>
           <properties />
-          <option name="timeStamp" value="43" />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/PacketCodec.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/HeartBeatTimerHandler.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/MessageResponseHandler.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/MessageResponseHandler.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/PacketDecoder.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/PacketCodec.java</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1204,8 +1447,12 @@
         <watch expression="file.getInputStream()" />
       </configuration>
       <configuration name="Application">
-        <watch expression="test1" />
-        <watch expression="&quot;1&quot;.equals(test1.getLed1())" />
+        <watch expression="in.readerIndex()" />
+        <watch expression="PacketCodec.MAGIC_NUMBER" />
+        <watch expression="ctx.channel().remoteAddress()." language="JAVA" />
+        <watch expression="((InetSocketAddress) address).getAddress().getHostAddress()" language="JAVA" custom="java.net.InetSocketAddress" />
+        <watch expression="(ByteBuf) msg;" />
+        <watch expression="(ByteBuf) msg" />
       </configuration>
     </watches-manager>
   </component>
@@ -1224,260 +1471,63 @@
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>createJobInitEvent.getSource()</expression-string>
+        <expression-string>((InetSocketAddress) address).getAddress().getHostAddress()</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.net.InetSocketAddress</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((InetSocketAddress) address).getAddress().canonicalHostName</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.net.InetSocketAddress</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((InetSocketAddress) address).getAddress()</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.net.InetSocketAddress</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((InetSocketAddress) address).getHostString()</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.net.InetSocketAddress</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((InetSocketAddress) address).getPort()</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.net.InetSocketAddress</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((InetSocketAddress) address).getHostName()</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.net.InetSocketAddress</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ctx.channel().remoteAddress().</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>long instanche of a+b</expression-string>
+        <expression-string>ctx.channel().remoteAddress()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ctx.channel()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/design/qiaojie/EmailMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/design/qiaojie/AbstractionMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/design/qiaojie/NormalAbstractMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/controller/EventController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/test/java/com/springboot/levi/leviweb1/LeviWeb1ApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/javax/annotation/Resource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/model/ColumnError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/model/RowError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/model/ObjectKit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven/levi/net/sourceforge/jexcelapi/jxl/2.6.10/jxl-2.6.10.jar!/jxl/read/biff/WorkbookParser.class">
+    <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final.jar!/io/netty/channel/socket/nio/NioSocketChannel.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/model/FiledMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/service/impl/ExcelServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="22" column="68" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/LeviWeb1Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/utils/ExcelUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5049">
-          <caret line="214" column="28" selection-start-line="214" selection-start-column="28" selection-end-line="214" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven/levi/net/sourceforge/jexcelapi/jxl/2.6.10/jxl-2.6.10.jar!/jxl/Workbook.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/java/lang/StringBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9909">
-          <caret line="404" column="18" selection-start-line="404" selection-start-column="18" selection-end-line="404" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven/levi/commons-io/commons-io/2.4/commons-io-2.4.jar!/org/apache/commons/io/FileUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23706">
-          <caret line="923" column="23" selection-start-line="923" selection-start-column="23" selection-end-line="923" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven/levi/org/springframework/spring-web/5.3.3/spring-web-5.3.3.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2484">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven/levi/org/springframework/spring-webmvc/5.3.3/spring-webmvc-5.3.3.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12447">
-          <caret line="560" column="42" selection-start-line="560" selection-start-column="42" selection-end-line="560" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/service/ExcelService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/model/ExcelModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/leviweb1/controller/ExcelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="50" column="71" selection-start-line="50" selection-start-column="71" selection-end-line="50" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/resources/note/guava.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/client/ClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven/levi/io/reactivex/rxnetty/0.4.9/rxnetty-0.4.9.jar!/io/reactivex/netty/channel/SingleNioLoopProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="99" column="24" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final.jar!/io/netty/channel/nio/NioEventLoopGroup.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding>
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final.jar!/io/netty/channel/EventLoopGroup.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/server/IMNettyServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven/levi/io/netty/netty-codec/4.1.58.Final/netty-codec-4.1.58.Final.jar!/io/netty/handler/codec/string/StringEncoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding>
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-          </folding>
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1488,107 +1538,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/FirstClientHandler.java">
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/server/NettyServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="976">
+          <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
+          <folding>
+            <element signature="e#2841#2842#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/IMNettyClient.java">
+    <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final.jar!/io/netty/channel/ChannelPipeline.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-          <folding>
-            <element signature="e#1408#1714#0" expanded="true" />
-            <element signature="e#1713#1714#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="418">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final.jar!/io/netty/channel/ChannelInboundHandlerAdapter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="29" />
+        <state relative-caret-position="243">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/Packet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/command/Command.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/java/util/concurrent/TimeUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="211" column="44" selection-start-line="211" selection-start-column="37" selection-end-line="211" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final.jar!/io/netty/channel/AbstractChannelHandlerContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="164" column="13" lean-forward="true" selection-start-line="164" selection-start-column="13" selection-end-line="164" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/HeartBeatRequestPacket.java">
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/protocol/command/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-          </folding>
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/NettyClient.java">
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/protocol/response/MessageResponsePacket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+        <state relative-caret-position="135">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/HeartBeatTimerHandler.java">
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Serializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="216">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/server/NettyServer.java">
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/serialize/impl/JSONSerializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+        <state relative-caret-position="486">
+          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/dobbo/netty/server/NettyServer.java">
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/serialize/Serializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="216">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1599,41 +1618,295 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/java/awt/datatransfer/Clipboard.java">
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/im/protocol/Packet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2241">
-          <caret line="118" column="29" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="29" />
+        <state relative-caret-position="486">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/resources/note/netty.txt">
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/Packet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="46" selection-start-column="46" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="68" column="35" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/maven/lib/maven.jar!/schemas/maven-4.0.0.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7614">
-          <caret line="282" column="12" selection-start-line="282" selection-start-column="12" selection-end-line="282" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/Demo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+        <state relative-caret-position="54">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/serializer/JSONSerializer.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/common/SerializerAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/serializer/SerializerAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/serializer/Serializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/serializer/impl/JSONSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/request/HeartBeatRequestPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/response/HeartBeatResponsePacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final.jar!/io/netty/channel/SimpleChannelInboundHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final-sources.jar!/io/netty/channel/SimpleChannelInboundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="64" column="7" lean-forward="true" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/MessageResponseHandler.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/test/java/com/springboot/levi/leviweb1/netty/PacketCodeCTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="58" column="7" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/levi/io/netty/netty-codec/4.1.58.Final/netty-codec-4.1.58.Final.jar!/io/netty/handler/codec/MessageToMessageDecoder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/java/io/Serializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/java/net/SocketAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="40" column="63" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/levi/io/netty/netty-handler/4.1.58.Final/netty-handler-4.1.58.Final.jar!/io/netty/handler/timeout/IdleStateHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-729">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/levi/io/netty/netty-handler/4.1.58.Final/netty-handler-4.1.58.Final-sources.jar!/io/netty/handler/timeout/IdleStateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="98" column="49" selection-start-line="98" selection-start-column="49" selection-end-line="98" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final-sources.jar!/io/netty/channel/ChannelDuplexHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final-sources.jar!/io/netty/channel/ChannelHandlerContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="135" column="26" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/IMIdleStateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding>
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/FirstClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="45" column="102" selection-start-line="43" selection-start-column="8" selection-end-line="45" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final-sources.jar!/io/netty/bootstrap/Bootstrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="121" column="39" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/IMNettyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/java/nio/charset/Charset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="526" column="26" selection-start-line="526" selection-start-column="26" selection-end-line="526" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/levi/io/netty/netty-buffer/4.1.58.Final/netty-buffer-4.1.58.Final.jar!/io/netty/buffer/ByteBuf.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="407" column="27" selection-start-line="407" selection-start-column="27" selection-end-line="407" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final-sources.jar!/io/netty/channel/ChannelInboundHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/HeartBeatTimerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/levi/io/netty/netty-codec/4.1.58.Final/netty-codec-4.1.58.Final.jar!/io/netty/handler/codec/LengthFieldBasedFrameDecoder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/Spliter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/ByteToMessageDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/levi/io/netty/netty-transport/4.1.58.Final/netty-transport-4.1.58.Final-sources.jar!/io/netty/channel/AbstractChannelHandlerContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="386" lean-forward="true" selection-start-line="386" selection-end-line="386" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/handler/MessageResponseHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/client/NettyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="78" column="54" lean-forward="true" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="54" />
+          <folding>
+            <element signature="e#2404#3111#0" expanded="true" />
+            <element signature="e#3110#3111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/Java/jdk1.8.0_141/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="237" column="12" selection-start-line="237" selection-start-column="12" selection-end-line="237" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/protocol/PacketCodec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="101" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levi-web1/src/main/java/com/springboot/levi/netty/codec/PacketDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
         </state>
       </provider>
     </entry>
