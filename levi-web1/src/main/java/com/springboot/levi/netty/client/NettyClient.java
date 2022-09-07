@@ -1,7 +1,10 @@
 package com.springboot.levi.netty.client;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.springboot.levi.netty.codec.PacketDecoder;
 import com.springboot.levi.netty.codec.Spliter;
+import com.springboot.levi.netty.dto.ConnectDto;
 import com.springboot.levi.netty.handler.HeartBeatTimerHandler;
 import com.springboot.levi.netty.handler.IMIdleStateHandler;
 import com.springboot.levi.netty.handler.MessageResponseHandler;
@@ -10,8 +13,11 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.string.StringEncoder;
+import scala.Int;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -22,16 +28,24 @@ public class NettyClient {
 
     private static final int MAX_RETRY = 10;
 
-    private static final String ip = "172.31.254.157";
+    private static final String ip ="172.31.254.157";
+    static List<Integer> list = Lists.newArrayList();
 
-    private static int port = 6000;
+    static {
+        list.add(6001);
+        list.add(6002);
+        list.add(6003);
+        list.add(6000);
+    }
+
 
     public static void main(String[] args) throws InterruptedException {
         //客户端代码需要要一个事件循环组
         //创建客户端启动对象
-
-        connect(ip,port);
-
+        list.forEach(t->{
+            System.out.println(t+"port port");
+            connect(ip,t);
+        });
     }
     public static boolean connect(String ip,int port){
         NioEventLoopGroup group = new NioEventLoopGroup();
@@ -46,13 +60,7 @@ public class NettyClient {
                 System.out.println("连接失败");
             }
         }).channel();
-        while (true) {
-            channel.writeAndFlush(new Date() + ": hello world!");
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-            }
-        }
+       return true;
     }
 
     private static Bootstrap createBootstrap(NioEventLoopGroup group) {
