@@ -1,10 +1,12 @@
 package com.springboot.levi.netty.client;
 
+import akka.remote.transport.netty.ClientHandler;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.springboot.levi.netty.codec.PacketDecoder;
 import com.springboot.levi.netty.codec.Spliter;
 import com.springboot.levi.netty.dto.ConnectDto;
+import com.springboot.levi.netty.dto.PosttingObject;
 import com.springboot.levi.netty.handler.HeartBeatTimerHandler;
 import com.springboot.levi.netty.handler.IMIdleStateHandler;
 import com.springboot.levi.netty.handler.MessageResponseHandler;
@@ -18,6 +20,7 @@ import scala.Int;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -28,8 +31,12 @@ public class NettyClient {
 
     private static final int MAX_RETRY = 10;
 
+    private static final List<Channel> channelList = Lists.newArrayList();
     private static final String ip ="172.31.254.157";
     static List<Integer> list = Lists.newArrayList();
+    public static ConcurrentHashMap<String, PosttingObject> concurrentHashMap = new ConcurrentHashMap();
+
+    public MessageResponseHandler clientHandler = new MessageResponseHandler();
 
     static {
         list.add(6001);
@@ -47,23 +54,53 @@ public class NettyClient {
             connect(ip,t);
         });
     }
+
+    /**
+     *
+     * @param ip
+     * @param port
+     * @return
+     */
     public static boolean connect(String ip,int port){
         NioEventLoopGroup group = new NioEventLoopGroup();
-        Bootstrap bootstrap = createBootstrap(group);
+        HeartBeatTimerHandler heartBeatTimerHandler = new HeartBeatTimerHandler();
+        Bootstrap bootstrap = createBootstrap(group,heartBeatTimerHandler);
         // 4.建立连接(查出多个ip进行链接)
         Channel channel = bootstrap.connect(ip, port).addListener(future -> {
             if (future.isSuccess()) {
                 System.out.println("连接成功");
             } else {
-                connect1(bootstrap, ip, port);
+                connect( ip, port);
                 //如果连接失败的话，就重新连接了
                 System.out.println("连接失败");
             }
         }).channel();
+        PosttingObject posttingObject = new PosttingObject();
+        posttingObject.setNioEventLoopGroup(group);
+        posttingObject.setNettyClient(heartBeatTimerHandler);
+        channelList.add(channel);
+        String key = ip+"_"+ port;
+        if(!concurrentHashMap.containsKey(key)){
+            concurrentHashMap.put(port+"_"+ port,posttingObject);
+        }
+       /* list.forEach(t->{
+            String origKey = ip+"_"+t;
+            PosttingObject result = concurrentHashMap.get(origKey);
+            HeartBeatTimerHandler nettyClient = result.getNettyClient();
+            //nettyClient.
+            System.out.println(t+"port port");
+            connect(ip,t);
+        });*/
        return true;
     }
 
-    private static Bootstrap createBootstrap(NioEventLoopGroup group) {
+    /**
+     *
+     * @param group
+     * @param heartBeatTimerHandler
+     * @return
+     */
+    private static Bootstrap createBootstrap(NioEventLoopGroup group,HeartBeatTimerHandler heartBeatTimerHandler) {
         Bootstrap bootstrap = new Bootstrap();
         bootstrap
                 // 1.指定线程模型
@@ -90,7 +127,7 @@ public class NettyClient {
                         // 收消息处理器
                         ch.pipeline().addLast(new MessageResponseHandler());
                         // 心跳定时器
-                        ch.pipeline().addLast(new HeartBeatTimerHandler());
+                        ch.pipeline().addLast(heartBeatTimerHandler);
                     }
                 });
         return bootstrap;

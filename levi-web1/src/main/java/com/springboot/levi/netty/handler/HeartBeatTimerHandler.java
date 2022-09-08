@@ -23,9 +23,11 @@ public class HeartBeatTimerHandler extends ChannelInboundHandlerAdapter {
 
     private static final int HEARTBEAT_INTERVAL = 2;
 
+    private ChannelHandlerContext channelHandlerContext;
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        channelHandlerContext = ctx;
         scheduleSendHeartBeat(ctx);
         super.channelActive(ctx);
     }
