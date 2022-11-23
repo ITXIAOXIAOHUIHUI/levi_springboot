@@ -15,7 +15,7 @@ public class ContainerCreateJobRunnable implements Runnable {
     @Override
     public void run() {
 
-        log.info("+++++++++++++++");
+        //log.info("+++++++++++++++");
 
     }
 

@@ -2,7 +2,6 @@ package com.springboot.levi.leviweb1.Thread;
 
 import com.springboot.levi.leviweb1.Thread.scheduler.ContainerCreateJobSchedule;
 import com.springboot.levi.leviweb1.Thread.scheduler.ReplenishCreateJobSchedule;
-import com.springboot.levi.leviweb1.utils.WorkMode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -39,6 +38,8 @@ public class SiQpSchedulerConfiguration {
     public TaskExecutor createReplenishJob() {
         return createTaskExecutor("QP_REPLENISH_JOB_CREATE_EXECUTOR", SIZE);
     }
+
+
 
     @Bean("QP_CONTAINER_JOB_CREATE_EXECUTOR")
     @ConditionalOnProperty(value = "SI_ROLLER.enabled", havingValue = "true")
