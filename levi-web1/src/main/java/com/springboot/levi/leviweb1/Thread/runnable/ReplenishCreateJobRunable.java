@@ -12,7 +12,8 @@ import org.springframework.stereotype.Component;
 public class ReplenishCreateJobRunable implements Runnable {
     @Override
     public void run() {
-        //log.info("replenish create job ...'");
+
+
 
     }
 

@@ -11,9 +11,6 @@ import com.springboot.levi.netty.dto.PosttingObject;
 public class NettyClientSendMsg {
 
 
-    public void sendMsg(String userId){
-        PosttingObject posttingObject = NettyClient.concurrentHashMap.get(userId);
-        //posttingObject.getNettyClient().cl
-    }
+
 
 }

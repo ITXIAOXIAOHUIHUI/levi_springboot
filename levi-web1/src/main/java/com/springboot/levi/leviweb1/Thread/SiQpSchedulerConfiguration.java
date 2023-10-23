@@ -3,6 +3,7 @@ package com.springboot.levi.leviweb1.Thread;
 import com.springboot.levi.leviweb1.Thread.scheduler.ContainerCreateJobSchedule;
 import com.springboot.levi.leviweb1.Thread.scheduler.ReplenishCreateJobSchedule;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -61,13 +62,13 @@ public class SiQpSchedulerConfiguration {
         @Resource(name = "QP_CONTAINER_JOB_CREATE_EXECUTOR")
         private TaskExecutor containerJobCreate;
 
-        @Resource
+        @Autowired
         private ReplenishCreateJobSchedule replenishCreateJobSchedule;
-        @Resource
+        @Autowired
         private ContainerCreateJobSchedule containerCreateJobSchedule;
 
         @Override
-        public void run(ApplicationArguments args) throws Exception {
+        public void run(ApplicationArguments args){
             log.info(this.getClass().getCanonicalName());
             replenishJobCreate.execute(replenishCreateJobSchedule);
             containerJobCreate.execute(containerCreateJobSchedule);

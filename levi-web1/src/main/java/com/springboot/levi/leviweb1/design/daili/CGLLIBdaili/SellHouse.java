@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 
 /**
  * @program: levi_springboot
- * @description: JDK 动态代理和JDK动态代理的区别是JDK动态代理的目标对象需要实现接口，
+ * @description: JDK 静态代理和JDK动态代理的区别是JDK静态代理的目标对象需要实现接口，
  *               CGLIB动态代理的目标对象不需要实现接口，但目标对象不能是final修饰的
  * @author: jhh
  * @create: 2022-11-08 15:57

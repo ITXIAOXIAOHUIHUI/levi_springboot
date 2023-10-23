@@ -25,7 +25,7 @@ public class ReplenishCreateJobSchedule implements Runnable {
     @Qualifier("QP_REPLENISH_JOB_CREATE_EXECUTOR")
     private TaskExecutor jobCreateExecutor;
 
-    @Resource
+    @Autowired
     private ReplenishCreateJobRunable replenishCreateJobRunable;
 
     @Override

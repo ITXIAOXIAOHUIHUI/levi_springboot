@@ -6,6 +6,10 @@ import io.netty.handler.timeout.IdleStateHandler;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 空闲的检测
+ *   超过一定的时间没有就关闭重连
+ */
 public class IMIdleStateHandler extends IdleStateHandler {
 
     private static final int READER_IDLE_TIME = 115;

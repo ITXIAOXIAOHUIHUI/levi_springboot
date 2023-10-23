@@ -22,27 +22,35 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author jianghaihui
+ * @Description: 客户端的连接：
+ *  1、和多个服务端进行连接
+ *  2、发送二进制文件
+ *  3、心跳检测
+ *  4、主动给服务端发送信息
+ *  5、
  * @date 2021/1/26 11:12
  */
-public class NettyClient {
+public class ClientNettyClient {
 
     private static final int MAX_RETRY = 10;
 
+    AtomicInteger atomicInteger = new AtomicInteger();
     private static final List<Channel> channelList = Lists.newArrayList();
-    private static final String ip ="172.31.254.157";
+    private static final String ip ="172.31.253.213";
     static List<Integer> list = Lists.newArrayList();
     public static ConcurrentHashMap<String, PosttingObject> concurrentHashMap = new ConcurrentHashMap();
 
+    public static ConcurrentHashMap<String, Integer> reConectCount = new ConcurrentHashMap();
     public MessageResponseHandler clientHandler = new MessageResponseHandler();
 
     static {
         list.add(6001);
-        list.add(6002);
         list.add(6003);
-        list.add(6000);
+        list.add(6002);
     }
 
 
@@ -50,6 +58,7 @@ public class NettyClient {
         //客户端代码需要要一个事件循环组
         //创建客户端启动对象
         list.forEach(t->{
+            reConectCount.put(ip+t,0);
             System.out.println(t+"port port");
             connect(ip,t);
         });
@@ -62,6 +71,7 @@ public class NettyClient {
      * @return
      */
     public static boolean connect(String ip,int port){
+        String reKey = ip + port;
         NioEventLoopGroup group = new NioEventLoopGroup();
         HeartBeatTimerHandler heartBeatTimerHandler = new HeartBeatTimerHandler();
         Bootstrap bootstrap = createBootstrap(group,heartBeatTimerHandler);
@@ -70,9 +80,16 @@ public class NettyClient {
             if (future.isSuccess()) {
                 System.out.println("连接成功");
             } else {
+                Integer count = reConectCount.get(reKey);
+                if(count >= MAX_RETRY){
+                    System.out.println("重连最大的次数了，静止再次连接");
+                    return;
+                }
+                //System.out.println(count);
+                reConectCount.put(reKey,++count);
                 connect( ip, port);
                 //如果连接失败的话，就重新连接了
-                System.out.println("连接失败");
+                System.out.println("当前ip"+ip+"端口"+ port+ "连接失败");
             }
         }).channel();
         PosttingObject posttingObject = new PosttingObject();

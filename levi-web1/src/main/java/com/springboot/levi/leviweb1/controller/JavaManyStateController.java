@@ -24,6 +24,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author jianghaihui
@@ -93,4 +94,10 @@ public class JavaManyStateController {
     }
 
 
+
+
+
+    public static void performTask(int value) {
+        System.out.println("Performing task with value: " + value);
+    }
 }

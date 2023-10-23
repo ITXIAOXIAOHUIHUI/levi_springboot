@@ -34,4 +34,10 @@ public class MessageResponseHandler extends ChannelInboundHandlerAdapter {
 
         return buffer;
     }
+    @Override
+    public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("ctx");
+        ctx.fireChannelUnregistered();
+    }
+
 }

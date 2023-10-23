@@ -1,6 +1,6 @@
 package com.springboot.levi.netty.handler;
 
-import com.springboot.levi.netty.client.NettyClient;
+import com.springboot.levi.netty.client.ClientNettyClient;
 import com.springboot.levi.netty.protocol.request.HeartBeatRequestPacket;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -23,7 +23,10 @@ public class HeartBeatTimerHandler extends ChannelInboundHandlerAdapter {
 
     private static final int HEARTBEAT_INTERVAL = 2;
 
+    private ClientNettyClient clientNettyClient;
     private ChannelHandlerContext channelHandlerContext;
+
+
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
@@ -31,6 +34,14 @@ public class HeartBeatTimerHandler extends ChannelInboundHandlerAdapter {
         scheduleSendHeartBeat(ctx);
         super.channelActive(ctx);
     }
+
+
+    @Override
+    public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
+        log.info("channelRegistered :+"+ctx);
+        //ctx.fireChannelRegistered();
+    }
+
 
     @Override
     public void channelInactive(ChannelHandlerContext ctx) {
@@ -54,7 +65,7 @@ public class HeartBeatTimerHandler extends ChannelInboundHandlerAdapter {
         ctx.channel().eventLoop().schedule(new Runnable() {
             @Override
             public void run() {
-                boolean connect = NettyClient.connect(ip,port);
+                boolean connect = ClientNettyClient.connect(ip,port);
                 if (connect) {
                     log.info("重新连接成功");
                 } else {

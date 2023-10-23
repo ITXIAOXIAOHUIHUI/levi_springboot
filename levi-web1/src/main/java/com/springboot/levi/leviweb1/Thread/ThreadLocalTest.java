@@ -1,5 +1,11 @@
 package com.springboot.levi.leviweb1.Thread;
 
+import com.google.common.collect.Maps;
+
+import java.util.Map;
+import java.util.Random;
+import java.util.concurrent.*;
+
 /**
  * @program: levi_springboot
  * @description:
@@ -10,26 +16,65 @@ public class ThreadLocalTest {
     //声明threadLocal为静态字段
     public static final ThreadLocal<String> threadLocal=new ThreadLocal<>();
 
-    public static void main(String[] args) {
-        Thread thread1=new Thread(()->{
-            threadLocal.set(Thread.currentThread().getName());
-            System.out.println(Thread.currentThread().getName()+"Thread1中共享变量的副本:"+threadLocal.get());
-            System.out.println(Thread.currentThread().getName()+"Thread1中未共享变量的副本，值为:"+threadLocal.get());
-        },"Thread==>1");
+    private static boolean isStop = false;
+    public static void main(String[] args) throws InterruptedException {
+        /*Thread thread = new Thread(new Runnable() {
+            public void run() {
+                int i = 0;
+                while(!isStop){
+                    i++;
+                }
+            }
+        });
+        thread.start();
+        Thread.sleep(1000);
+        TimeUnit.SECONDS.sleep(1);
+        System.out.println("Stop Thread");
+        isStop = true;*/
+/*
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        Future<String> future = executor.submit(new Callable<String>() {
+            @Override
+            public String call() {
+                return Thread.currentThread().getName();
+            }
+        });
 
-        Thread thread2=new Thread(()->{
-            System.out.println(  );
-            threadLocal.set(Thread.currentThread().getName());
-            System.out.println(Thread.currentThread().getName()+"Thread2中共享变量的副本:"+threadLocal.get());
-            System.out.println(Thread.currentThread().getName()+"删除后...");
-            threadLocal.remove();
-            System.out.println(Thread.currentThread().getName()+"Thread2中未共享变量的副本，值为:"+threadLocal.get());
+        for(int i= 0 ;i <= 100000 ; i++){
+            System.out.println("threadName"+Thread.currentThread().getName()+i);
+        }
+        try {
+            String res = future.get();
+            System.out.println("resres"+res);
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
-        },"Thread==>2");
-        thread1.start();
-        thread2.start();
+        for(int i= 0 ;i <= 1000 ; i++){
+            System.out.println("threadName"+Thread.currentThread().getName()+i);
+        }*/
+
+
+        Map<String,String> map = Maps.newHashMap();
+        for(Map.Entry<String,String> result:map.entrySet()){
+            System.out.println(result.getKey());
+            System.out.println(result.getValue());
+        }
+        System.out.println();
+        /**
+         * hds空点游荡任务
+         */
+        int HDS_STRAY = 0X800;
+        System.out.println(isBitSet(HDS_STRAY,2048));
+    }
+
+
+
+    public static boolean isBitSet(int flag, int bit) {
+        return (flag & bit) == bit;
     }
 }
+
 
 
 /**

@@ -1,6 +1,5 @@
 package com.springboot.levi.netty.dto;
 
-import com.springboot.levi.netty.client.NettyClient;
 import com.springboot.levi.netty.handler.HeartBeatTimerHandler;
 import io.netty.channel.nio.NioEventLoopGroup;
 import lombok.Data;
