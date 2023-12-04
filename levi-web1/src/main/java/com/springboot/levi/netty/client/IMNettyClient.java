@@ -1,5 +1,9 @@
 package com.springboot.levi.netty.client;
 
+import com.springboot.levi.netty.codec.PacketDecoder;
+import com.springboot.levi.netty.codec.Spliter;
+import com.springboot.levi.netty.handler.HeartBeatTimerHandler;
+import com.springboot.levi.netty.handler.IMIdleStateHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
@@ -7,7 +11,6 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.codec.string.StringEncoder;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -41,27 +44,29 @@ public class IMNettyClient {
                 .handler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     protected void initChannel(SocketChannel ch) throws Exception {
+                        // 空闲检测
+                        ch.pipeline().addLast(new IMIdleStateHandler());
+
+                        ch.pipeline().addLast(new Spliter());
+                        ch.pipeline().addLast(new PacketDecoder());
                         // 指定连接数据读写逻辑
                         ch.pipeline().addLast(new FirstClientHandler());
+                        // 心跳定时器
+                        ch.pipeline().addLast(new HeartBeatTimerHandler());
                     }
                 });
 
 
         // 4.建立连接
-        Channel channel = bootstrap.connect("127.0.0.1", 8000).addListener(future -> {
+        Channel channel = bootstrap.connect("172.31.254.157", 6000).addListener(future -> {
             if (future.isSuccess()) {
                 System.out.println("连接成功");
             } else {
-                connect(bootstrap, "127.0.0.1", 8000);
-                connect(bootstrap, "juejin.im", 80, MAX_RETRY);
+                connect(bootstrap, "172.31.254.157", 6000);
                 //如果连接失败的话，就重新连接了
                 System.out.println("连接失败");
             }
         }).channel();
-        while (true) {
-            channel.writeAndFlush(new Date() + ": hello world!");
-            Thread.sleep(2000);
-        }
     }
 
 

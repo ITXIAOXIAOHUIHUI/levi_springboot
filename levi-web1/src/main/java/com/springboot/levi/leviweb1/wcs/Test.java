@@ -1,5 +1,6 @@
 package com.springboot.levi.leviweb1.wcs;
 
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.springboot.levi.leviweb1.utils.WorkMode;
 import org.apache.commons.lang3.StringUtils;
@@ -48,7 +49,14 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        System.out.println(WorkMode.SI_CARRY);
+        //System.out.println(WorkMode.SI_CARRY);
+        Map<String,List<String>> map = Maps.newHashMap();
+        List<String> list1 = Lists.newArrayList("111","222","3333");
+        map.put("11",list1);
+        List<String> strings = map.get("11");
+        strings.add("333");
+
+        System.out.println(map.get("11"));
     }
 
 }

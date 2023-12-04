@@ -1,5 +1,11 @@
 package com.levi.java.interview;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 /**
  * @author jianghaihui
  * @date 2020/10/15 17:46
@@ -86,12 +92,22 @@ public class Son {
     }
 
     public static void main(String[] args) {
-        Son son = new Son();
-        System.out.println(son.getAge1());
-        System.out.println(son.getAge2());
-        System.out.println(son.getD1());
-        System.out.println(son.getD2());
-        System.out.println(son.getHight1());
-        System.out.println(son.getHight2());
+        List<Son> result = new ArrayList<>();
+        for(int i = 0;i< 2500;i++){
+            Son son = new Son();
+            son.setCompany("aaa"+i);
+            result.add(son);
+        }
+        List<Son> basicAgvPointDOList=new ArrayList<>();
+        System.out.println(result.size());
+        int size = 1000;
+        for(int i=0; i< result.size(); i=i+size) {
+            System.out.println("aaaa"+i);
+            int toIndex = i + size > result.size() ? result.size() : i + size;
+            List<Son> subList = result.subList(i, toIndex);
+
+            basicAgvPointDOList.addAll(subList);
+        }
+        System.out.println(basicAgvPointDOList.size());
     }
 }

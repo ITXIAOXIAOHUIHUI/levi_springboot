@@ -6,6 +6,7 @@ import com.springboot.levi.leviweb1.mapper.JobBucketOutMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author jianghaihui
@@ -19,10 +20,27 @@ public class JobBucketOutServiceImpl implements JobBucketOutService {
 
 
     @Override
-    public JobBucketOutDo selectOneByJobId(String jobId) {
+    public List<JobBucketOutDo> selectOneByJobId(String state) {
         QueryWrapper<JobBucketOutDo> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("job_id", jobId);
-        return mapper.selectOne(queryWrapper);
+        queryWrapper.eq("state", "ENTER_STATION");
+        return mapper.selectList(queryWrapper);
+    }
+
+    @Override
+    public List<JobBucketOutDo> selectByStats(List<String> doneStates) {
+        QueryWrapper<JobBucketOutDo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.in("state", doneStates);
+        queryWrapper.eq("priority",1);
+        queryWrapper.last("limit 100");
+        return mapper.selectList(queryWrapper);
+    }
+
+    @Override
+    public List<JobBucketOutDo> selectByStatsCancel(List<String> doneStates) {
+        QueryWrapper<JobBucketOutDo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.notIn("state", doneStates);
+        //queryWrapper.last("limit 100");
+        return mapper.selectList(queryWrapper);
     }
 
     /**
