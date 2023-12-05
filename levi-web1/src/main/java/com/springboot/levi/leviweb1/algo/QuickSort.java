@@ -17,7 +17,7 @@ public class QuickSort {
 
     private static void quickSort(int[] arr, int low, int high) {
         if (low < high) {
-            int pivotIndex = partition(arr, low, high);
+            int pivotIndex = partition1(arr, low, high);
 
             // 递归排序基准左右两侧
             quickSort(arr, low, pivotIndex - 1);
@@ -25,6 +25,23 @@ public class QuickSort {
         }
     }
 
+
+    public static int partition1(int arr[],int low,int hight){
+        int pivot =  arr[low];
+        while(low < hight){
+            while(low < hight && arr[hight]  >= pivot){
+                    hight--;
+            }
+            arr[low] = arr[hight];
+            while (low < hight && arr[low] <= pivot){
+                low++;
+            }
+            arr[hight]  = arr[low];
+        }
+        arr[low] = pivot;
+        return low;
+
+    }
     public static int partition(int arr[], int startIndex, int endIndex) {
         //基准元素(可取随机位置)
         int p = arr[startIndex];
@@ -58,7 +75,7 @@ public class QuickSort {
 
 
     public static void main(String[] args) {
-        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        int[] arr = {64, 34, 25, 12, 12, 11, 90};
         System.out.println("Original array: " + Arrays.toString(arr));
 
         quickSort(arr);
